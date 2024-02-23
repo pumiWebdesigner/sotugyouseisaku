@@ -1,6 +1,25 @@
 @use "sass:map";
 @use "../global" as *;
 
+.button {
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #1391e6;
+}
+.button-middle {
+  width: 220px;
+  height: 56px;
+  border-radius: 30px;
+  padding-block: 16px;
+  // font-family: "Rounded M+ 1c";
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.button-reservation {
+  background: #1391e6;
+  color: #fff;
+}
 .util-btn--block,
 .util-btn--inline-block {
   padding: 4px 22px 6px;
@@ -29,28 +48,28 @@
   display: inline-block;
 }
 
-.button {
-  // 背景・文字の設定
-  display: flex;
-  align-items: center;
-  padding: 6px 10px 6px 30px;
-  width: 160px;
-  margin: 0 auto;
-  background-color: transparent;
-  @include mq(pc) {
-    transition: background 0.3s, color 0.3s, opacity 0.3s;
-    // hover時：contact以外は色反転
-    &:hover {
-      background-color: white;
-      .button__icon-path {
-        fill: map.get($color, bg-dark);
-      }
-      .button__text {
-        color: map.get($color, bg-dark);
-      }
-    }
-  }
-}
+// .button {
+//   // 背景・文字の設定
+//   display: flex;
+//   align-items: center;
+//   padding: 6px 10px 6px 30px;
+//   width: 160px;
+//   margin: 0 auto;
+//   background-color: transparent;
+//   @include mq(pc) {
+//     transition: background 0.3s, color 0.3s, opacity 0.3s;
+//     // hover時：contact以外は色反転
+//     &:hover {
+//       background-color: white;
+//       .button__icon-path {
+//         fill: map.get($color, bg-dark);
+//       }
+//       .button__text {
+//         color: map.get($color, bg-dark);
+//       }
+//     }
+//   }
+// }
 // contactは背景反転
 .button-contact {
   background-color: white;

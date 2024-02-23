@@ -201,11 +201,11 @@
   }
   li {
     margin-top: 10px;
-    @include mq(tb) {
-      @media screen and (max-width: 1200px) {
-        font-size: 12px;
-      }
-    }
+    // @include mq(tb) {
+    //   @media screen and (max-width: 1200px) {
+    //     font-size: 12px;
+    //   }
+    // }
   }
 }
 

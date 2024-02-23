@@ -31,9 +31,9 @@
   @include mq(pc) {
     font-size: 60px;
   }
-  @include mq(tb) {
-    font-size: 54px;
-  }
+  // @include mq(tb) {
+  //   font-size: 54px;
+  // }
 }
 .section__head-sub {
   // font-size: 16px;

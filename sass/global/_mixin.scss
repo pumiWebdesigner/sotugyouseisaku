@@ -2,15 +2,17 @@
 
 $size: (
   sp-max: 1023px,
-  pc-min: 1024px,
+  // pc-min: 1024px,
 );
 
 $breakpoints: (
-  // "sp": "(width <= 767px)",
   "sp": "(width <=  #{map.get($size, "sp-max")})",
-  "tb": "(768px <= width <=  1023px)",
-  "pc": "( #{map.get($size, "pc-min")} <= width)",
-  // "pc": "(768px <= width)",
+  "pc": "not (width <=  #{map.get($size, "sp-max")})",
+  // sp: "not (min-width: 768px)",
+  // "sp": "(width <= 767px)",
+  // "tb": "(768px <= width <=  1023px)",
+  // "pc": "( #{map.get($size, "pc-min")} <= width)",
+  // "pc": "(768px <= width)",,,,
 ) !default;
 
 @mixin mq($breakpoint: "sp") {
