@@ -1,45 +1,49 @@
 @use "sass:map";
 @use "../global" as *;
 
-.header__hamburger--button {
-  @include mq(pc) {
+// ハンバーガーメニューはpcで非表示
+@include mq(pc) {
+  .header__hamburger--button {
     display: none;
   }
-  width: 32px;
-  height: 32px;
-  margin: 14px 17px;
-  display: block;
-  transition: 0.5s;
-  position: relative;
 }
-.drawer-bar {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 27px;
-  height: 2px;
-  background: map.get($color, main);
-  border-radius: 1px;
-  transition: 0.5s;
-  @for $i from 1 through 3 {
-    &:nth-child(#{$i}) {
-      top: calc(7px * #{$i} + 1px);
-    }
+// ドロワーメニューに関する設定を行う。
+// spのみで表示される設定
+@include mq(sp) {
+  .header__hamburger--button {
+    width: 32px;
+    height: 32px;
+    display: block;
+    transition: 0.5s;
+    position: relative;
   }
-
-  .drawer-open & {
-    top: 15px;
-    left: 5px;
-    background-color: white;
+  .drawer-bar {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 27px;
+    height: 2px;
+    background: map.get($color, main);
+    border-radius: 1px;
+    transition: 0.5s;
     @for $i from 1 through 3 {
       &:nth-child(#{$i}) {
-        transform: rotate(calc(45deg + 90deg * #{$i}));
+        top: calc(7px * #{$i} + 1px);
+      }
+    }
+
+    .drawer-open & {
+      top: 15px;
+      left: 5px;
+      background-color: white;
+      @for $i from 1 through 3 {
+        &:nth-child(#{$i}) {
+          transform: rotate(calc(45deg + 90deg * #{$i}));
+        }
       }
     }
   }
-}
-.drawer__nav {
-  @include mq(sp) {
+  .drawer__nav {
     display: block;
     background-color: #0060a0;
     position: fixed;
@@ -53,77 +57,60 @@
       right: 0;
     }
   }
-  // pcサイズは_header.scssのheader__navで設定
-}
-.drawer__nav-list {
-  margin: 40px auto;
-  width: 254px;
-}
-.drawer__nav-item {
-  position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 1px;
-    left: 0;
-    background: url(../../img/header/drawer-line.svg) no-repeat center;
+  .drawer__nav--list {
+    margin: 40px auto;
+    width: 254px;
   }
-  &:last-child {
-    &::after {
+  .drawer__nav--item {
+    position: relative;
+    &::before {
       content: "";
       position: absolute;
-      bottom: 0;
+      top: 0;
       width: 100%;
       height: 1px;
       left: 0;
       background: url(../../img/header/drawer-line.svg) no-repeat center;
     }
+    &:last-child {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        left: 0;
+        background: url(../../img/header/drawer-line.svg) no-repeat center;
+      }
+    }
   }
-}
-.drawer__nav--link {
-  // width: 100%;
-
-  padding-top: 16px;
-  padding-bottom: 16px;
-  // .drawer__nav-item:nth-child(1) & {
-  //   padding-top: 18px;
-  //   padding-bottom: 18px;
-  // }
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.drawer__nav--icon {
-  width: 24px;
-  height: 24px;
-  display: grid;
-  place-items: center;
-
-  // .drawer__nav-item:nth-child(1) & {
-  //   padding-left: 2px;
-  // }
-
-  // .drawer__nav-item:not(:nth-child(1)) & {
-  //   padding-left: 4px;
-  // }
-}
-.drawer__nav--icon-path {
-  fill: white;
-}
-.drawer__nav--text {
-  display: inline-block;
-  padding-left: 14px;
-  color: #fff;
-  @include font(14, 500);
-}
-.drawer__nav--arrow-right {
-  width: 14px;
-  height: 14px;
-  display: inline-block;
-  margin-left: auto;
-  // margin-right: -3px;
-  background: url(../../img/header/icon-arrow-right.svg) no-repeat center right;
+  .drawer__nav--link {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .drawer__nav--icon {
+    width: 24px;
+    height: 24px;
+    display: grid;
+    place-items: center;
+  }
+  .drawer__nav--icon-path {
+    fill: white;
+  }
+  .drawer__nav--text {
+    display: inline-block;
+    padding-left: 14px;
+    color: #fff;
+    @include font(14, 500);
+  }
+  .drawer__nav--arrow-right {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    margin-left: auto;
+    background: url(../../img/header/icon-arrow-right.svg) no-repeat center right;
+  }
 }

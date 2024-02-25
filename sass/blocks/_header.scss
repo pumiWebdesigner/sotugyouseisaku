@@ -14,17 +14,10 @@
   .drawer-open & {
     background-color: #0060a0;
   }
-  //   @include mq(pc) {
-  //     position: relative;
-  //     // display: block;
-  //     background: map.get($color, header-bg-pc);
-  //     width: map.get($header, pc-width);
-  //     // bottom: 0;
-  //     // height: 100vh;
-  //     height: auto;
-  //     // height: 100%;
-  //     color: map.get($color, font);
-  //   }
+
+  @include mq(pc) {
+    height: map.get($header, pc-height);
+  }
 }
 
 .header__container {
@@ -32,31 +25,148 @@
   justify-content: space-between;
   align-items: center;
   height: inherit;
-}
-.header__logo {
-  padding: 14px 20px;
-  img {
-    width: 270px;
-    height: 32px;
+  padding-inline: 20px 16px;
+  max-width: 1280px;
+  margin-inline: auto;
+  @include mq(pc) {
+    padding-inline: 20px;
+  }
+  @media (min-width: 1200px) {
+    padding-inline: 40px;
   }
 }
+.header__logo {
+  img {
+    max-width: 270px;
+    height: auto;
+    aspect-ratio: 270/32;
+    @media (max-width: 374px) {
+      max-width: 210px;
+    }
+  }
+}
+// ---------------------
+// ナビメニュー、電話番号、ハンバーガーをまとめたボックス
+// ---------------------
 
-// .header__nav {
-//   @include mq(pc) {
-//     display: block;
-//     // position: fixed;
-//     // z-index: 100;
-//     padding-top: 40px;
-//   }
-//   // spサイズは_drawer.scssのdrawer__navで設定
-// }
+.header__nav--contents {
+  display: flex;
+  align-items: center;
+  height: inherit;
+}
+// ---------------------
+// 以下、ｐｃ、ｓｐで設定が変わる部分
+// ---------------------
 
-// .header__nav-item {
-//   & + & {
-//     margin-top: 24px;
-//   }
-// }
-// // svg画像の色設定
-// .button__icon-path {
-//   fill: white;
-// }
+// アクセス情報はspで非表示
+@include mq(sp) {
+  .header__access {
+    display: none;
+  }
+}
+// ヘッダーメニューに関する設定を行う。
+// ｐｃのみで表示される設定
+@include mq(pc) {
+  .header__access {
+    text-align: right;
+  }
+
+  .header__access--address {
+    @include font(12, 500);
+  }
+
+  .header__access--tel {
+    display: flex;
+    margin-top: 3px;
+  }
+
+  .header__access--tel--icon {
+  }
+
+  .header__access--tel-number {
+    color: map.get($color, main);
+    text-align: center;
+    @include font(32, 700, null, -0.64);
+    padding-left: 32px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 28px;
+      height: 28px;
+      background: url(../../img/header-footer/phone.png) no-repeat center/cover;
+    }
+  }
+
+  .header__nav {
+    padding-inline: 20px;
+    @media (min-width: 1200px) {
+      padding-inline: 33px;
+    }
+  }
+  .header__nav--list {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    @media (min-width: 1200px) {
+      gap: 24px;
+    }
+    // spサイズは_drawer.scssのdrawer__navで設定
+  }
+
+  .header__nav--item {
+    position: relative;
+    padding-top: 6px;
+    padding-bottom: 7px;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0px;
+      height: 2px;
+      background: map.get($color, main);
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: width 0.3s;
+    }
+    &:nth-child(1),
+    &:hover {
+      &::after {
+        width: 20px;
+      }
+    }
+  }
+  .header__nav--link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .header__nav--icon {
+    width: 24px;
+    height: 24px;
+    display: grid;
+    place-items: center;
+  }
+  .header__nav--icon-path {
+    transition: fill 0.3s;
+    .header__nav--item:nth-child(1) &,
+    .header__nav--item:hover & {
+      fill: map.get($color, main);
+    }
+  }
+
+  .header__nav--text {
+    margin-top: 5px;
+    @include font(11, 700, 18, null);
+    text-align: center;
+    transition: color 0.3s;
+    .header__nav--item:nth-child(1) &,
+    .header__nav--item:hover & {
+      color: map.get($color, main);
+    }
+  }
+}

@@ -12,7 +12,7 @@ $breakpoints: (
   // "sp": "(width <= 767px)",
   // "tb": "(768px <= width <=  1023px)",
   // "pc": "( #{map.get($size, "pc-min")} <= width)",
-  // "pc": "(768px <= width)",,,,
+  // "pc": "(768px <= width)",,,,,
 ) !default;
 
 @mixin mq($breakpoint: "sp") {
