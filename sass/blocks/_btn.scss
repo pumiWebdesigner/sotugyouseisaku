@@ -5,58 +5,75 @@
   display: inline-block;
   text-align: center;
   border: 1px solid map.get($color, main);
+  background: #fff;
+  color: map.get($color, main);
+  &:hover {
+    background: map.get($color, main);
+    color: #fff;
+  }
 }
-.button-middle {
+.button--width {
   width: 220px;
   height: 56px;
+  line-height: 56px;
   border-radius: 30px;
-  padding-block: 15px;
-  // size,weight,height,spacing
+  // padding-block: 18px;
   @include font(16, 500);
-  // font-size: 16px;
-  // font-weight: 500;
+  @include mq(sp) {
+    // size,weight,height,spacing
+    @include font(14, 400);
+  }
+  @include mq(sp) {
+    width: 150px;
+    height: 38px;
+    line-height: 38px;
+  }
+}
+.button--label {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  @include mq(sp) {
+    gap: 8px;
+  }
+}
+.button--icon {
+  display: grid;
+  place-items: center;
 }
 
 .button-reservation {
-  background: map.get($color, main);
-  color: #fff;
-}
-
-.util-btn--block,
-.util-btn--inline-block {
-  padding: 4px 22px 6px;
-  font-size: 20px;
-  color: map.get($color, font);
-  text-align: center;
-  font-family: "Oswald", "Noto Sans JP", sans-serif;
-  font-weight: 700;
-  border: 2px solid currentColor;
-  border-radius: 40px;
-  background-color: #fff;
-  box-shadow: 0px 4px 0px 0px currentColor;
-
-  &:hover {
-    transform: translateY(4px);
-    background-color: map.get($color, hov-btn);
-    box-shadow: 0px 0px 0px 0px currentColor;
+  .button--label {
+    padding-right: 3px;
   }
 }
-.util-btn--block {
-  display: block;
-  margin-inline: auto;
-  width: 200px;
-}
-.util-btn--inline-block {
-  display: inline-block;
+
+.button-contact {
+  svg {
+    @include mq(sp) {
+      width: 17px;
+      height: 17px;
+      object-fit: cover;
+    }
+  }
 }
 
-// contactは背景反転
-.button-contact {
-  background-color: white;
-  @include mq(pc) {
-    // hover時：contact以外はopacity
-    &:hover {
-      opacity: 0.7;
-    }
+.button--color-reverse {
+  background: map.get($color, main);
+  color: #fff;
+  &:hover {
+    background: #fff;
+    color: map.get($color, main);
+  }
+}
+
+.button-reservation--icon-path {
+  .button-reservation:hover & {
+    fill: map.get($color, main);
+  }
+}
+.button-contact--icon-path {
+  .button-contact:hover & {
+    stroke: #fff;
   }
 }

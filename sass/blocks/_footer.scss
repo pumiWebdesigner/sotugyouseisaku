@@ -2,14 +2,172 @@
 @use "../global" as *;
 
 .footer {
-  background: white;
+  background: #dff1fd;
   text-align: center;
-  padding: 10px;
+  position: relative;
+  padding-top: 56px;
+  padding-bottom: 59px;
+  @include mq(sp) {
+    padding-top: 13px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height: 32px;
+    background: repeat-x url("../../img/footer/footer-wave.svg") left bottom;
+    @include mq(sp) {
+      background: repeat-x url("../../img/footer/footer-wave.svg") left 20px bottom;
+    }
+  }
+}
+.footer__inner {
+  max-width: 1000px;
+  margin-inline: auto;
+  @include mq(sp) {
+    padding-inline: 10px;
+  }
+}
+.footer__contents {
+  padding: 40px 49px;
+  border-radius: 20px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  @include mq(sp) {
+    display: block;
+    padding: 32px 10px 20px;
+    text-align: center;
+  }
+}
+
+.footer__info {
+  @include mq(pc) {
+    min-width: 477px;
+  }
+}
+
+.footer__logo {
+  img {
+    width: 404px;
+    height: auto;
+    aspect-ratio: 404/41;
+    @include mq(sp) {
+      width: 309px;
+      aspect-ratio: 309/33;
+    }
+  }
+}
+
+.footer__info--address {
+  margin-top: 10px;
+  @include font(14, 500);
+  @include mq(sp) {
+    margin-top: 13px;
+  }
+}
+.footer__info--address-text {
+  display: inline-block;
+  padding-left: 10px;
+}
+
+.footer__info--tel {
+  margin-top: 25px;
+  @include mq(sp) {
+    margin-top: 23px;
+  }
+}
+
+.footer__info--tel-number,
+.footer__info--tel-text {
+  color: map.get($color, main);
+  text-align: center;
+}
+.footer__info--tel-number {
+  display: inline-block;
+  @include font(32, 700, null, -0.64);
+  padding-left: 32px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 28px;
+    height: 28px;
+    background: url(../../img/header-footer/phone.png) no-repeat center/cover;
+  }
+}
+.footer__info--tel-text {
+  margin-top: 3px;
+  @include font(12, 500, null, null);
+  @include mq(sp) {
+    margin-top: 5px;
+  }
+}
+
+.footer__buttons {
+  margin-top: 21px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  @include mq(sp) {
+    gap: 15px;
+  }
+}
+
+.footer__time-schedule {
+  margin-top: 20px;
+  margin-inline: auto;
+  border-radius: 12px;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+  @include mq(pc) {
+    width: 477px;
+    // height: 166px;
+  }
+  @include mq(sp) {
+    width: 335px;
+    // height: 117px;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 335/117;
+  }
+}
+
+.footer__map {
+  margin-inline: auto;
+  @include mq(pc) {
+    width: 385px;
+  }
+  @include mq(sp) {
+    width: 315px;
+    margin-top: 20px;
+  }
+  iframe {
+    aspect-ratio: 1/1;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.footer__map--img {
 }
 
 .footer__copy {
-  font-size: 11px;
-  font-family: "Noto Sans JP", sans-serif;
+  display: block;
+  background: #1391e6;
+  color: #fff;
+  text-align: center;
+  @include font(14, 500, null, null);
+  padding-top: 16px;
+  padding-bottom: 18px;
 }
 .footer__pagetop {
   pointer-events: none;

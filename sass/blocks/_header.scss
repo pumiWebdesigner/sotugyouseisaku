@@ -20,7 +20,7 @@
   }
 }
 
-.header__container {
+.header__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -80,12 +80,9 @@
     margin-top: 3px;
   }
 
-  .header__access--tel--icon {
-  }
-
   .header__access--tel-number {
     color: map.get($color, main);
-    text-align: center;
+    display: inline-block;
     @include font(32, 700, null, -0.64);
     padding-left: 32px;
     position: relative;

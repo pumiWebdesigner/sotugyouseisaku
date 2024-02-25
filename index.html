@@ -33,9 +33,9 @@
     <script src="./js/script.js" defer></script>
   </head>
 
-  <body>
+  <body class="is-scroll">
     <header class="header">
-      <div class="header__container">
+      <div class="header__inner">
         <h1 class="header__logo">
           <a href="./index.html">
             <img src="./img/header-footer/logo.png" alt="みなみ歯科クリニック" width="808" height="82" />
@@ -166,7 +166,6 @@
           <div class="header__access">
             <div class="header__access--address">〒166-0001 東京都杉並区阿佐谷北7-3-1</div>
             <div class="header__access--tel">
-              <div class="header__access--tel--icon"></div>
               <div class="header__access--tel-number">03-1234-5678</div>
             </div>
           </div>
@@ -174,7 +173,10 @@
       </div>
     </header>
 
-    <div class="displ aynone" style="display: none">
+    <!-- <div class="displaynone" style="height: 4583px"></div> -->
+    <div class="displaynone" style="height: 5205px"></div>
+
+    <div class="displaynone" style="display: none">
       <!-- FirstView -->
       <div class="fv">
         <div class="fv__container">
@@ -505,25 +507,88 @@
     </div>
     <!-- footer -->
     <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__contents">
+          <div class="footer__info">
+            <div class="footer__logo">
+              <a href="./index.html">
+                <img src="./img/header-footer/logo.png" alt="みなみ歯科クリニック" width="808" height="82" />
+              </a>
+            </div>
+            <div class="footer__info--address">
+              <span class="footer__info--address-number">〒166-0001</span>
+              <span class="footer__info--address-text">東京都杉並区阿佐谷北7-3-1</span>
+            </div>
+            <div class="footer__info--tel">
+              <div class="footer__info--tel-number">03-1234-5678</div>
+              <div class="footer__info--tel-text">(年中無休 AM9:00〜PM22:00)</div>
+            </div>
+            <div class="footer__buttons">
+              <div class="button button--width button--color-reverse button-reservation">
+                <div class="button--label">
+                  <div class="button--icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="20" viewBox="0 0 30 20" fill="none">
+                      <path
+                        d="M26.988 6.36255H22.0414C21.4562 6.36255 20.9814 6.83733 20.9814 7.42253V16.609C20.9814 17.1942 21.4562 17.669 22.0414 17.669H26.988C27.5732 17.669 28.048 17.1942 28.048 16.609V7.42253C28.048 6.83733 27.5732 6.36255 26.988 6.36255ZM24.5147 16.9624C24.1239 16.9624 23.8081 16.6466 23.8081 16.2557C23.8081 15.8649 24.1239 15.5491 24.5147 15.5491C24.9056 15.5491 25.2214 15.8649 25.2214 16.2557C25.2214 16.6466 24.9056 16.9624 24.5147 16.9624ZM26.988 14.5774C26.988 14.7232 26.8688 14.8424 26.723 14.8424H22.3064C22.1607 14.8424 22.0414 14.7232 22.0414 14.5774V7.68753C22.0414 7.54178 22.1607 7.42253 22.3064 7.42253H26.723C26.8688 7.42253 26.988 7.54178 26.988 7.68753V14.5774Z"
+                        fill="white"
+                        class="button-reservation--icon-path"
+                      />
+                      <path
+                        d="M18.1274 3H4.37522C3.61598 3 3 3.61598 3 4.37521V13.5433C3 14.3025 3.61598 14.9185 4.37522 14.9185H9.87609L9.41769 16.2937H7.35486C6.97381 16.2937 6.66725 16.6003 6.66725 16.9814C6.66725 17.3624 6.97381 17.669 7.35486 17.669H15.1478C15.5288 17.669 15.8354 17.3624 15.8354 16.9814C15.8354 16.6003 15.5288 16.2937 15.1478 16.2937H13.0849L12.6265 14.9185H18.1274C18.8866 14.9185 19.5026 14.3025 19.5026 13.5433V4.37521C19.5026 3.61598 18.8866 3 18.1274 3ZM17.669 13.0849H4.83362V4.83362H17.669V13.0849Z"
+                        fill="white"
+                        class="button-reservation--icon-path"
+                      />
+                    </svg>
+                  </div>
+                  <div class="button--text-reservation">WEB予約</div>
+                </div>
+              </div>
+              <div class="button button--width button-contact">
+                <div class="button--label">
+                  <div class="button--icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M4 3.99976H20C21.1 3.99976 22 4.89976 22 5.99976V17.9998C22 19.0998 21.1 19.9998 20 19.9998H4C2.9 19.9998 2 19.0998 2 17.9998V5.99976C2 4.89976 2.9 3.99976 4 3.99976Z"
+                        stroke="#1391E6"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="button-contact--icon-path"
+                      />
+                      <path d="M22 6.13599L12 13.6125L2 6.13599" stroke="#1391E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="button-contact--icon-path" />
+                    </svg>
+                  </div>
+                  <div class="button--text-contact">お問い合わせ</div>
+                </div>
+              </div>
+            </div>
+            <div class="footer__time-schedule">
+              <img src="./img/header-footer/time-schedule.png" alt="水曜日午後は休診日となります。土日祝日含め午前の診療時間は9:00〜12:00、午後の診療時間は13:00〜22:00となります。" />
+            </div>
+          </div>
+          <div class="footer__map">
+            <div class="footer__map--img">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6583.357625903192!2d133.20286756061063!3d34.40950881939886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355101adfd5e4f9b%3A0x693a8c7c0287fe8c!2z44CSNzIyLTAwNDUg5bqD5bO255yM5bC-6YGT5biC5LmF5L-d77yR5LiB55uu77yR77yV4oiS77yS77yT!5e0!3m2!1sja!2sjp!4v1698393511303!5m2!1sja!2sjp"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <small class="footer__copy">&copy;2020-2021 みなみ歯科クリニック</small>
       <div class="footer__pagetop">
         <a href="#" aria-label="Go to top">
-          <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
-            <path
-              d="M54 28C54 42.3594 42.3594 54 28 54C13.6406 54 2 42.3594 2 28C2 13.6406 13.6406 2 28 2C42.3594 2 54 13.6406 54 28V28Z"
-              fill="#393939"
-              class="header__nav--icon-path drawer__nav--icon-path"
-              stroke="#7777FF"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path d="M38.4001 28.0001L28.0001 17.6001L17.6001 28.0001" stroke="#7777FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M28 38.4001V17.6001" stroke="#7777FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
+          <img src="./img/footer/totop.png" alt="topへ戻るボタン" />
         </a>
         <a href="#" class="button button-middle button-reservation">abcde</a>
       </div>
-      <small class="footer__copy">&copy;Pumi's Portfolio All rights reserved.</small>
     </footer>
   </body>
 </html>
