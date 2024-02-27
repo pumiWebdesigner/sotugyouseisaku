@@ -418,28 +418,6 @@ body {
   color: #fff;
 }
 
-.button--width {
-  width: 220px;
-  height: 56px;
-  line-height: 56px;
-  border-radius: 30px;
-  font-size: 1rem;
-  font-weight: 500;
-}
-@media (width <= 1023px) {
-  .button--width {
-    font-size: 0.875rem;
-    font-weight: 400;
-  }
-}
-@media (width <= 1023px) {
-  .button--width {
-    width: 150px;
-    height: 38px;
-    line-height: 38px;
-  }
-}
-
 .button--label {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -447,6 +425,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 6px;
 }
 @media (width <= 1023px) {
@@ -460,19 +441,6 @@ body {
   place-items: center;
 }
 
-.button-reservation .button--label {
-  padding-right: 3px;
-}
-
-@media (width <= 1023px) {
-  .button-contact svg {
-    width: 17px;
-    height: 17px;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-}
-
 .button--color-reverse {
   background: #1391e6;
   color: #fff;
@@ -482,11 +450,10 @@ body {
   color: #1391e6;
 }
 
-.button-reservation:hover .button-reservation--icon-path {
+.button--reservation:hover .button--icon-path {
   fill: #1391e6;
 }
-
-.button-contact:hover .button-contact--icon-path {
+.button--contact:hover .button--icon-path {
   stroke: #fff;
 }
 
@@ -878,7 +845,6 @@ body {
   text-align: center;
   position: relative;
   padding-top: 56px;
-  padding-bottom: 59px;
 }
 @media (width <= 1023px) {
   .footer {
@@ -975,6 +941,9 @@ body {
     margin-top: 23px;
   }
 }
+.footer__nav .footer__info--tel {
+  margin-top: 0;
+}
 
 .footer__info--tel-number,
 .footer__info--tel-text {
@@ -990,6 +959,12 @@ body {
   padding-left: 32px;
   position: relative;
 }
+.footer__nav .footer__info--tel-number {
+  padding-left: 22px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0em;
+}
 .footer__info--tel-number::before {
   content: "";
   position: absolute;
@@ -1001,6 +976,10 @@ body {
   height: 28px;
   background: url(../../img/header-footer/phone.png) no-repeat center/cover;
 }
+.footer__nav .footer__info--tel-number::before {
+  width: 18px;
+  height: 18px;
+}
 
 .footer__info--tel-text {
   margin-top: 3px;
@@ -1011,6 +990,11 @@ body {
   .footer__info--tel-text {
     margin-top: 5px;
   }
+}
+.footer__nav .footer__info--tel-text {
+  color: #393939;
+  font-size: 0.625rem;
+  font-weight: 500;
 }
 
 .footer__buttons {
@@ -1027,6 +1011,58 @@ body {
   .footer__buttons {
     gap: 15px;
   }
+}
+
+.button--reservation,
+.button--contact {
+  border-radius: 30px;
+  width: 220px;
+  height: 56px;
+  line-height: 56px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+@media (width <= 1023px) {
+  .button--reservation,
+  .button--contact {
+    width: 150px;
+    height: 38px;
+    line-height: 38px;
+    font-size: 0.875rem;
+    font-weight: 400;
+  }
+}
+.footer__nav .button--reservation,
+.footer__nav .button--contact {
+  border-radius: 8px;
+}
+
+.footer__nav .button--reservation {
+  width: 157px;
+  height: 47px;
+  line-height: normal;
+}
+
+.button--reservation .button--label {
+  padding-right: 3px;
+  height: inherit;
+}
+
+@media (width <= 1023px) {
+  .button--icon .button--contact svg {
+    width: 17px;
+    height: 17px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+.footer__nav .button--text {
+  line-height: 1;
+  font-size: 16px;
+}
+.footer__nav .button--text span {
+  font-size: 12px;
 }
 
 .footer__time-schedule {
@@ -1072,7 +1108,65 @@ body {
   height: auto;
 }
 
+.footer__links {
+  margin-top: 43px;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 700;
+}
+@media not (width <= 1023px) {
+  .footer__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 40px;
+  }
+}
+@media (width <= 1023px) {
+  .footer__links {
+    display: block;
+    margin-top: 62px;
+    padding-inline: 10px;
+    max-width: 355px;
+    margin-inline: auto;
+  }
+}
+
+@media (width <= 1023px) {
+  .footer__link--container {
+    margin-top: 43px;
+  }
+}
+
+.footer__link--body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+.footer__link--item {
+  margin-top: 24px;
+  padding-left: 12px;
+  position: relative;
+}
+.footer__link--item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 6px;
+  height: 12px;
+  background: url(../../img/footer/arrow-right.png);
+}
+
 .footer__copy {
+  margin-top: 59px;
   display: block;
   background: #1391e6;
   color: #fff;
@@ -1081,6 +1175,42 @@ body {
   font-weight: 500;
   padding-top: 16px;
   padding-bottom: 18px;
+}
+@media (width <= 1023px) {
+  .footer__copy {
+    margin-top: 63px;
+    padding-top: 21px;
+    padding-bottom: 74px;
+  }
+}
+
+.footer__nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+  z-index: 50;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-right: 4px;
+}
+@media not (width <= 1023px) {
+  .footer__nav {
+    display: none;
+  }
 }
 
 .footer__pagetop {
@@ -1094,6 +1224,12 @@ body {
   width: 52px;
   height: 52px;
   z-index: 30;
+}
+@media (width <= 1023px) {
+  .footer__pagetop {
+    right: 12px;
+    bottom: 80px;
+  }
 }
 .is-scroll .footer__pagetop {
   pointer-events: auto;

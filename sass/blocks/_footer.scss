@@ -6,7 +6,6 @@
   text-align: center;
   position: relative;
   padding-top: 56px;
-  padding-bottom: 59px;
   @include mq(sp) {
     padding-top: 13px;
   }
@@ -80,6 +79,9 @@
   @include mq(sp) {
     margin-top: 23px;
   }
+  .footer__nav & {
+    margin-top: 0;
+  }
 }
 
 .footer__info--tel-number,
@@ -92,6 +94,10 @@
   @include font(32, 700, null, -0.64);
   padding-left: 32px;
   position: relative;
+  .footer__nav & {
+    padding-left: 22px;
+    @include font(20, 700, null, 0);
+  }
   &::before {
     content: "";
     position: absolute;
@@ -101,16 +107,24 @@
     width: 28px;
     height: 28px;
     background: url(../../img/header-footer/phone.png) no-repeat center/cover;
+    .footer__nav & {
+      width: 18px;
+      height: 18px;
+    }
   }
 }
+
 .footer__info--tel-text {
   margin-top: 3px;
   @include font(12, 500, null, null);
   @include mq(sp) {
     margin-top: 5px;
   }
+  .footer__nav & {
+    color: map.get($color, font);
+    @include font(10, 500);
+  }
 }
-
 .footer__buttons {
   margin-top: 21px;
   display: flex;
@@ -120,7 +134,54 @@
     gap: 15px;
   }
 }
-
+.button--reservation,
+.button--contact {
+  border-radius: 30px;
+  width: 220px;
+  height: 56px;
+  line-height: 56px;
+  @include font(16, 500);
+  @include mq(sp) {
+    width: 150px;
+    height: 38px;
+    line-height: 38px;
+    @include font(14, 400);
+  }
+  .footer__nav & {
+    border-radius: 8px;
+  }
+}
+.button--reservation {
+  .footer__nav & {
+    width: 157px;
+    height: 47px;
+    line-height: normal;
+  }
+}
+.button--label {
+  .button--reservation & {
+    padding-right: 3px;
+    height: inherit;
+  }
+}
+.button--icon {
+  .button--contact svg {
+    @include mq(sp) {
+      width: 17px;
+      height: 17px;
+      object-fit: cover;
+    }
+  }
+}
+.button--text {
+  .footer__nav & {
+    line-height: 1;
+    font-size: 16px;
+    span {
+      font-size: 12px;
+    }
+  }
+}
 .footer__time-schedule {
   margin-top: 20px;
   margin-inline: auto;
@@ -157,10 +218,57 @@
   }
 }
 
-.footer__map--img {
+.footer__links {
+  margin-top: 43px;
+  @include mq(pc) {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+  @include mq(sp) {
+    display: block;
+    margin-top: 62px;
+    padding-inline: 10px;
+    max-width: 355px;
+    margin-inline: auto;
+  }
+  text-align: left;
+  @include font(16, 700);
+}
+.footer__link--container {
+  @include mq(sp) {
+    margin-top: 43px;
+  }
+}
+.footer__link--head {
+}
+
+.footer__link--body {
+  display: flex;
+  gap: 20px;
+}
+
+.footer__link--items {
+}
+
+.footer__link--item {
+  margin-top: 24px;
+  padding-left: 12px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 12px;
+    background: url(../../img/footer/arrow-right.png);
+  }
 }
 
 .footer__copy {
+  margin-top: 59px;
   display: block;
   background: #1391e6;
   color: #fff;
@@ -168,7 +276,36 @@
   @include font(14, 500, null, null);
   padding-top: 16px;
   padding-bottom: 18px;
+  @include mq(sp) {
+    margin-top: 63px;
+    padding-top: 21px;
+    padding-bottom: 74px;
+  }
 }
+
+.footer__nav {
+  @include mq(pc) {
+    display: none;
+  }
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+  z-index: map.get($layer, footer);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-right: 4px;
+}
+
+.footer__nav-info--tel {
+}
+
 .footer__pagetop {
   pointer-events: none;
   opacity: 0;
@@ -180,6 +317,10 @@
   height: 52px;
 
   z-index: map.get($layer, totop);
+  @include mq(sp) {
+    right: 12px;
+    bottom: 80px;
+  }
   // @include mq(sp) {
   //   right: 12px;
   //   bottom: 98px;

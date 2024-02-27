@@ -12,26 +12,11 @@
     color: #fff;
   }
 }
-.button--width {
-  width: 220px;
-  height: 56px;
-  line-height: 56px;
-  border-radius: 30px;
-  // padding-block: 18px;
-  @include font(16, 500);
-  @include mq(sp) {
-    // size,weight,height,spacing
-    @include font(14, 400);
-  }
-  @include mq(sp) {
-    width: 150px;
-    height: 38px;
-    line-height: 38px;
-  }
-}
+
 .button--label {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 6px;
   @include mq(sp) {
     gap: 8px;
@@ -40,22 +25,6 @@
 .button--icon {
   display: grid;
   place-items: center;
-}
-
-.button-reservation {
-  .button--label {
-    padding-right: 3px;
-  }
-}
-
-.button-contact {
-  svg {
-    @include mq(sp) {
-      width: 17px;
-      height: 17px;
-      object-fit: cover;
-    }
-  }
 }
 
 .button--color-reverse {
@@ -67,13 +36,11 @@
   }
 }
 
-.button-reservation--icon-path {
-  .button-reservation:hover & {
+.button--icon-path {
+  .button--reservation:hover & {
     fill: map.get($color, main);
   }
-}
-.button-contact--icon-path {
-  .button-contact:hover & {
+  .button--contact:hover & {
     stroke: #fff;
   }
 }
