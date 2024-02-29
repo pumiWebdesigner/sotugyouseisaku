@@ -9,7 +9,7 @@
 }
 // ドロワーメニューに関する設定を行う。
 // spのみで表示される設定
-@include mq(sp) {
+@media screen and (max-width: 1023px) {
   .header__hamburger--button {
     width: 32px;
     height: 32px;

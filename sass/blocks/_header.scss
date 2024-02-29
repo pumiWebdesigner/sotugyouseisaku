@@ -5,7 +5,6 @@
   position: fixed;
   z-index: map.get($layer, header);
   top: 0;
-  height: map.get($header, sp-height);
   left: 0;
   width: 100%;
   opacity: 0.85;
@@ -18,6 +17,7 @@
   @include mq(pc) {
     height: map.get($header, pc-height);
   }
+  height: map.get($header, sp-height);
 }
 
 .header__inner {
@@ -25,14 +25,14 @@
   justify-content: space-between;
   align-items: center;
   height: inherit;
-  padding-inline: 20px 16px;
   max-width: 1280px;
   margin-inline: auto;
-  @include mq(pc) {
-    padding-inline: 20px;
-  }
+  padding-inline: 20px;
   @media (min-width: 1200px) {
     padding-inline: 40px;
+  }
+  @include mq(sp) {
+    padding-inline: 20px 16px;
   }
 }
 .header__logo {
@@ -59,9 +59,10 @@
 // ---------------------
 
 // アクセス情報はspで非表示
-@include mq(sp) {
-  .header__access {
-    display: none;
+.header__access {
+  display: none;
+  @include mq(pc) {
+    display: block;
   }
 }
 // ヘッダーメニューに関する設定を行う。
