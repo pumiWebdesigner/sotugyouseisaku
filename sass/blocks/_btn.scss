@@ -13,6 +13,27 @@
   }
 }
 
+.button--arrow-right {
+  position: relative;
+  border-radius: 1.5em;
+  padding: 0.8em 2.8em 0.7em 2.8em;
+  position: relative;
+  border-radius: 1.5em;
+  @include mq(sp) {
+    padding: 0.8em 2.7em 0.7em 2.7em;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0.83em;
+    width: 12px;
+    height: 12px;
+    background: url(../../img/concept/arrow-right.svg) no-repeat center/cover;
+  }
+}
+
 .button--label {
   display: flex;
   justify-content: center;

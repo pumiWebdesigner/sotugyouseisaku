@@ -285,11 +285,9 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid map.get($color, font);
-  padding-right: 8px;
-  padding-left: 12px;
+  padding: 5px 8px 6px 12px;
   @include mq(sp) {
-    padding-right: 5px;
-    padding-left: 6px;
+    padding: 7px 5px 7px 6px;
   }
   @media screen and (max-width: 360px) {
     margin-left: 0;

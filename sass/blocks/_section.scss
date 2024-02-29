@@ -2,20 +2,11 @@
 @use "../global" as *;
 
 .section {
-  margin-top: 60px;
-  padding-block: 48px;
-  background-color: #fff;
-  &:nth-of-type(2n) {
-    background-color: map.get($color, section-sub);
-  }
 }
 .section__inner {
-  padding: 0 32px;
-  max-width: 500px;
+  padding-inline: 140px;
+  max-width: 1280px;
   margin-inline: auto;
-  @include mq(pc) {
-    max-width: calc(880px + 32px * 2);
-  }
 }
 .section__head {
   display: flex;
