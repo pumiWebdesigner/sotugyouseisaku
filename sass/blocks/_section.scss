@@ -3,40 +3,43 @@
 
 .section {
 }
+
 .section__inner {
-  padding-inline: 140px;
   max-width: 1280px;
   margin-inline: auto;
-}
-.section__head {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 32px;
-  @include mq(pc) {
-    margin-bottom: 24px;
-  }
-}
-.section__head-main {
-  font-size: 40px;
-  letter-spacing: 0.1em;
-  @include mq(pc) {
-    font-size: 60px;
-  }
-}
-.section__head-sub {
-}
-
-//contact,twitter用に追記
-.section__head-center {
   text-align: center;
 }
-.section__lead-text {
-  font-size: 16px;
-  line-height: 1.6;
-}
-.section__contents {
-  margin-top: 40px;
-}
-.section__foot {
-  margin-top: 16px;
+
+.section__title {
+  display: inline-block;
+  position: relative;
+  padding-inline: 95px;
+  @include font(28, 700, null, 2.24);
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 67px;
+    height: 20px;
+    background: url(../../img/section-bar.svg);
+  }
+  &::before {
+    left: 0;
+  }
+  &::after {
+    right: 0;
+  }
+  @include mq(sp) {
+    @include font(20, 700, null, 1.6);
+    padding-inline: 65px;
+
+    &::before,
+    &::after {
+      width: 49px;
+      height: 13px;
+      background: url(../../img/section-bar-sp.svg);
+    }
+  }
 }
