@@ -443,13 +443,13 @@ th {
 .button--arrow-right {
   position: relative;
   border-radius: 1.5em;
-  padding: 0.8em 2.8em 0.7em 2.8em;
+  padding: 0.9em 3.2em;
   position: relative;
   border-radius: 1.5em;
 }
 @media (width <= 767px) {
   .button--arrow-right {
-    padding: 0.8em 2.7em 0.7em 2.7em;
+    padding: 0.8em 2.7em;
   }
 }
 .button--arrow-right::after {
@@ -1495,7 +1495,7 @@ th {
   position: absolute;
   bottom: -25%;
   z-index: 1;
-  right: 8%;
+  right: 7.8%;
   text-align: center;
   width: 37.265625%;
 }
@@ -1753,7 +1753,7 @@ th {
   .concept__contents {
     width: 50%;
     margin-top: 37px;
-    margin-left: 7.421875%;
+    padding-left: 7.421875%;
   }
 }
 
@@ -1803,7 +1803,7 @@ th {
 }
 
 .cencept__button {
-  margin-top: 37px;
+  margin-top: 36px;
   text-align: center;
   padding-left: 1px;
   font-size: 0.875rem;

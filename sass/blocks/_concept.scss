@@ -33,7 +33,7 @@
   @include mq(pc) {
     width: calc((95 + 407 + 138) / 1280 * 100%);
     margin-top: 37px;
-    margin-left: calc(95 / 1280 * 100%);
+    padding-left: calc(95 / 1280 * 100%);
     // padding-right: calc(138 / 1280 * 100%);
   }
   // @media screen and (max-width: 1200px) {
@@ -67,7 +67,7 @@
 }
 
 .cencept__button {
-  margin-top: 37px;
+  margin-top: 36px;
   text-align: center;
   padding-left: 1px;
   @include font(14, 500, null, null);

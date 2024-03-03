@@ -16,11 +16,11 @@
 .button--arrow-right {
   position: relative;
   border-radius: 1.5em;
-  padding: 0.8em 2.8em 0.7em 2.8em;
+  padding: 0.9em 3.2em;
   position: relative;
   border-radius: 1.5em;
   @include mq(sp) {
-    padding: 0.8em 2.7em 0.7em 2.7em;
+    padding: 0.8em 2.7em;
   }
   &::after {
     content: "";
