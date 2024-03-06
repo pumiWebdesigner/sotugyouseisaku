@@ -941,13 +941,14 @@ th {
 }
 
 .footer__logo img {
-  width: 404px;
+  width: 100%;
+  max-width: 404px;
   height: auto;
   aspect-ratio: 404/41;
 }
 @media (width <= 767px) {
   .footer__logo img {
-    width: 309px;
+    max-width: 309px;
     aspect-ratio: 309/33;
   }
 }
@@ -1067,6 +1068,12 @@ th {
     font-weight: 400;
   }
 }
+@media screen and (width <= 767px) and (max-width: 340px) {
+  .button--reservation,
+  .button--contact {
+    width: 135px;
+  }
+}
 .footer__nav .button--reservation,
 .footer__nav .button--contact {
   border-radius: 8px;
@@ -1114,7 +1121,7 @@ th {
 }
 @media (width <= 767px) {
   .footer__time-schedule {
-    width: 335px;
+    max-width: 335px;
   }
 }
 .footer__time-schedule img {
@@ -1128,12 +1135,14 @@ th {
 }
 @media (1024px <= width) {
   .footer__map {
-    width: 385px;
+    width: 100%;
+    max-width: 385px;
   }
 }
 @media (width <= 767px) {
   .footer__map {
-    width: 315px;
+    width: 100%;
+    max-width: 315px;
     margin-top: 20px;
   }
 }
@@ -2125,13 +2134,20 @@ th {
 
 .medical__item {
   position: relative;
-  width: 460px;
+  width: 100%;
+  max-width: 460px;
   height: 290px;
 }
 @media (width <= 767px) {
   .medical__item {
-    width: 335px;
+    max-width: 335px;
     height: 210px;
+  }
+}
+@media screen and (max-width: 340px) {
+  .medical__item {
+    max-width: 300px;
+    height: 188px;
   }
 }
 
@@ -2250,10 +2266,22 @@ th {
   margin-top: 260px;
   padding-bottom: 193px;
 }
+@media (width <= 767px) {
+  .blog {
+    margin-top: 132px;
+    padding-bottom: 130px;
+  }
+}
 
 .blog__wrapper {
   margin-top: 85px;
   padding-inline: 140px;
+}
+@media (width <= 767px) {
+  .blog__wrapper {
+    margin-top: 50px;
+    padding-inline: 20px;
+  }
 }
 
 .blog__list {
@@ -2266,6 +2294,15 @@ th {
   gap: 60px 50px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+@media (width <= 767px) {
+  .blog__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 20px;
+  }
 }
 
 .blog__item {
@@ -2290,6 +2327,29 @@ th {
   z-index: 1;
   line-height: 60px;
 }
+@media (width <= 767px) {
+  .blog__item.is-new::before {
+    top: -8px;
+    left: -8px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 10px;
+  }
+}
+@media (width <= 767px) {
+  .blog__item {
+    width: 100%;
+  }
+}
+
+@media (width <= 767px) {
+  .blog__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
 
 .blog__img {
   position: relative;
@@ -2313,6 +2373,15 @@ th {
   border-radius: 20px 20px 0px 0px;
   z-index: -1;
 }
+@media (width <= 767px) {
+  .blog__img {
+    width: 39.7014925373%;
+  }
+  .blog__img img {
+    aspect-ratio: 1.3168316832;
+    border-radius: 0px;
+  }
+}
 
 .blog__text {
   border-radius: 0px 0px 20px 20px;
@@ -2323,8 +2392,19 @@ th {
   text-align: left;
   position: relative;
 }
-
-.blog__category {
+@media (width <= 767px) {
+  .blog__text {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    border-radius: 0px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    padding: 30px 10px 8px;
+  }
+}
+.blog__text.is-other::before {
+  content: "その他";
   position: absolute;
   top: -14px;
   left: 24px;
@@ -2336,11 +2416,32 @@ th {
   background: #1391e6;
   color: #fff;
 }
+@media (width <= 767px) {
+  .blog__text.is-other::before {
+    content: "お知らせ";
+    top: 5px;
+    left: 11px;
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 10px;
+  }
+}
 
 .blog__title {
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.5;
+}
+@media (width <= 767px) {
+  .blog__title {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.4285714286;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
 }
 
 .blog__data {
@@ -2350,11 +2451,24 @@ th {
   font-size: 0.6875rem;
   font-weight: 500;
 }
+@media (width <= 767px) {
+  .blog__data {
+    margin-top: 8px;
+  }
+}
 
 .blog__button {
   margin-top: 60px;
   font-size: 0.875rem;
   font-weight: 500;
+}
+@media (width <= 767px) {
+  .blog__button {
+    margin-top: 40px;
+  }
+  .blog__button .button--arrow-right {
+    padding: 0.75em 2.75em;
+  }
 }
 
 body {

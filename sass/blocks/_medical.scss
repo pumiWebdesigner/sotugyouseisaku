@@ -118,11 +118,17 @@
 
 .medical__item {
   position: relative;
-  width: 460px;
+  width: 100%;
+  max-width: 460px;
   height: 290px;
+
   @include mq(sp) {
-    width: 335px;
+    max-width: 335px;
     height: 210px;
+  }
+  @media screen and (max-width: 340px) {
+    max-width: 300px;
+    height: 188px;
   }
 }
 

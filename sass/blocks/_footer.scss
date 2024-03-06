@@ -52,11 +52,12 @@
 
 .footer__logo {
   img {
-    width: 404px;
+    width: 100%;
+    max-width: 404px;
     height: auto;
     aspect-ratio: 404/41;
     @include mq(sp) {
-      width: 309px;
+      max-width: 309px;
       aspect-ratio: 309/33;
     }
   }
@@ -146,6 +147,9 @@
     height: 38px;
     line-height: 38px;
     @include font(14, 400);
+    @media screen and (max-width: 340px) {
+      width: 135px;
+    }
   }
   .footer__nav & {
     border-radius: 8px;
@@ -192,7 +196,8 @@
     // height: 166px;
   }
   @include mq(sp) {
-    width: 335px;
+    // widthは320pxまでがチェック対象なのでmax-width指定
+    max-width: 335px;
     // height: 117px;
   }
   img {
@@ -205,10 +210,12 @@
 .footer__map {
   margin-inline: auto;
   @include mq(pc) {
-    width: 385px;
+    width: 100%;
+    max-width: 385px;
   }
   @include mq(sp) {
-    width: 315px;
+    width: 100%;
+    max-width: 315px;
     margin-top: 20px;
   }
   iframe {
