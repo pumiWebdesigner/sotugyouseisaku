@@ -142,24 +142,6 @@
   }
 }
 
-// .blog__category {
-//   position: absolute;
-//   top: -14px;
-//   left: 24px;
-//   display: inline-block;
-//   @include font(11, 500, null, null);
-//   padding: 8px 12px 7px;
-//   border-radius: 14px;
-//   background: #1391e6;
-//   color: #fff;
-//   @include mq(sp) {
-//     top: 10px;
-//     font-size: 10px;
-//     padding: 2px 6px 1px;
-//     border-radius: 10px;
-//   }
-// }
-
 .blog__title {
   @include font(16, 500, 24, null);
   @include mq(sp) {
