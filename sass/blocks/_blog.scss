@@ -11,8 +11,8 @@
 }
 
 .blog__wrapper {
-  margin-top: 85px;
-  padding-inline: 140px;
+  margin-top: 84px;
+  padding-inline: 40px;
   @include mq(sp) {
     margin-top: 50px;
     padding-inline: 20px;
@@ -31,7 +31,8 @@
 }
 
 .blog__item {
-  width: calc(300 / 1000 * 100%);
+  max-width: 300px;
+  // width: calc(300 / 1000 * 100%);
   position: relative;
   &.is-new {
     &::before {
@@ -61,6 +62,7 @@
   }
   @include mq(sp) {
     width: 100%;
+    max-width: none;
   }
 }
 
@@ -79,9 +81,10 @@
     border-radius: 20px 20px 0px 0px;
     aspect-ratio: 300/188;
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
   }
+
   &::after {
     content: "";
     position: absolute;
@@ -104,7 +107,7 @@
 
 .blog__text {
   border-radius: 0px 0px 20px 20px;
-  padding: 23px 24px 12px;
+  padding: 23px 24px 14px;
   background: #fff;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
   text-align: left;

@@ -2159,7 +2159,7 @@ th {
 .medical__img img {
   aspect-ratio: 460/290;
   width: 100%;
-  height: auto;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px;
@@ -2274,8 +2274,8 @@ th {
 }
 
 .blog__wrapper {
-  margin-top: 85px;
-  padding-inline: 140px;
+  margin-top: 84px;
+  padding-inline: 40px;
 }
 @media (width <= 767px) {
   .blog__wrapper {
@@ -2306,7 +2306,7 @@ th {
 }
 
 .blog__item {
-  width: 30%;
+  max-width: 300px;
   position: relative;
 }
 .blog__item.is-new::before {
@@ -2340,6 +2340,7 @@ th {
 @media (width <= 767px) {
   .blog__item {
     width: 100%;
+    max-width: none;
   }
 }
 
@@ -2358,7 +2359,7 @@ th {
   border-radius: 20px 20px 0px 0px;
   aspect-ratio: 300/188;
   width: 100%;
-  height: auto;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -2385,7 +2386,7 @@ th {
 
 .blog__text {
   border-radius: 0px 0px 20px 20px;
-  padding: 23px 24px 12px;
+  padding: 23px 24px 14px;
   background: #fff;
   -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
