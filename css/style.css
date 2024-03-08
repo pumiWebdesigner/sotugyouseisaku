@@ -462,6 +462,15 @@ th {
   width: 12px;
   height: 12px;
   background: url(../../img/concept/arrow-right.svg) no-repeat center/cover;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+@media (hover: hover) {
+  .button--arrow-right:hover::after {
+    background: url(../../img/concept/arrow-right-white.svg) no-repeat center/cover;
+    -webkit-transform: translate(4px, -50%);
+            transform: translate(4px, -50%);
+  }
 }
 
 .button--label {
@@ -1649,6 +1658,18 @@ th {
   border-bottom: 1px solid #393939;
   padding: 5px 8px 6px 12px;
 }
+@media (hover: hover) {
+  .mv__news-body:hover {
+    color: #1391e6;
+  }
+  .mv__news-body:hover .mv__news-body--arrow svg {
+    -webkit-transform: translate(4px, 0);
+            transform: translate(4px, 0);
+  }
+  .mv__news-body:hover .mv__news-body--arrow svg path {
+    stroke: #1391e6;
+  }
+}
 @media (width <= 767px) {
   .mv__news-body {
     padding: 7px 5px 7px 6px;
@@ -1708,12 +1729,14 @@ th {
   display: grid;
   place-items: center;
 }
-.mv__news-body--arrow img {
+.mv__news-body--arrow svg {
   aspect-ratio: 1;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .concept {
@@ -2150,6 +2173,14 @@ th {
     height: 188px;
   }
 }
+@media (hover: hover) {
+  .medical__item:hover .medical__img::before {
+    background: rgba(0, 0, 0, 0.4);
+  }
+  .medical__item:hover .medical__img::after {
+    opacity: 1;
+  }
+}
 
 .medical__img {
   width: inherit;
@@ -2169,15 +2200,28 @@ th {
     aspect-ratio: 335/210;
   }
 }
-.medical__img::before {
+.medical__img::before, .medical__img::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border-radius: 20px;
+  aspect-ratio: 460/290;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.medical__img::before {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
+}
+.medical__img::after {
+  width: 95.4545454545%;
+  height: 93.75%;
+  border: 2px solid #fff;
+  opacity: 0;
 }
 
 .medical__text {
@@ -2351,8 +2395,18 @@ th {
     display: flex;
   }
 }
+@media (hover: hover) {
+  .blog__link:hover .blog__img img {
+    scale: 1.1;
+  }
+  .blog__link:hover .blog__title {
+    color: #1391e6;
+  }
+}
 
 .blog__img {
+  overflow: hidden;
+  border-radius: 20px 20px 0px 0px;
   position: relative;
 }
 .blog__img img {
@@ -2362,6 +2416,8 @@ th {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .blog__img::after {
   content: "";
@@ -2432,6 +2488,8 @@ th {
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.5;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 @media (width <= 767px) {
   .blog__title {

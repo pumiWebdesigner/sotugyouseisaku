@@ -70,11 +70,25 @@
   @include mq(sp) {
     display: flex;
   }
+  @media (hover: hover) {
+    &:hover {
+      .blog__img {
+        img {
+          scale: 1.1;
+        }
+      }
+      .blog__title {
+        color: map.get($color, main);
+      }
+    }
+  }
 }
 
 .blog__img {
   // width: 100%;
   // height: 188px;
+  overflow: hidden;
+  border-radius: 20px 20px 0px 0px;
 
   position: relative;
   img {
@@ -83,6 +97,8 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: all 0.3s ease;
+    // hover時アクションは、.blog__linkに記述
   }
 
   &::after {
@@ -144,6 +160,9 @@
 
 .blog__title {
   @include font(16, 500, 24, null);
+  transition: all 0.3s ease;
+  // hover時アクションは、.blog__linkに記述
+
   @include mq(sp) {
     @include font(14, 500, 20, null);
     display: -webkit-box;
