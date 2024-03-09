@@ -7,6 +7,7 @@
   border: 1px solid map.get($color, main);
   background: #fff;
   color: map.get($color, main);
+  transition: all 0.3s ease;
   &:hover {
     background: map.get($color, main);
     color: #fff;
@@ -42,35 +43,11 @@
     }
   }
 }
-
-.button--label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
-  @include mq(sp) {
-    gap: 8px;
-  }
-}
-.button--icon {
-  display: grid;
-  place-items: center;
-}
-
 .button--color-reverse {
   background: map.get($color, main);
   color: #fff;
   &:hover {
     background: #fff;
     color: map.get($color, main);
-  }
-}
-
-.button--icon-path {
-  .button--reservation:hover & {
-    fill: map.get($color, main);
-  }
-  .button--contact:hover & {
-    stroke: #fff;
   }
 }

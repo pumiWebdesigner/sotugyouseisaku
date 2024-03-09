@@ -162,13 +162,37 @@
     line-height: normal;
   }
 }
+
 .button--label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  @include mq(sp) {
+    gap: 8px;
+  }
   .button--reservation & {
     padding-right: 3px;
     height: inherit;
   }
 }
+
+.button--icon-path {
+  .button--reservation &,
+  .button--contact & {
+    transition: all 0.3s ease;
+  }
+  .button--reservation:hover & {
+    fill: map.get($color, main);
+  }
+  .button--contact:hover & {
+    stroke: #fff;
+  }
+}
+
 .button--icon {
+  display: grid;
+  place-items: center;
   .button--contact svg {
     @include mq(sp) {
       width: 17px;

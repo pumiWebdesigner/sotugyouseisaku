@@ -434,6 +434,8 @@ th {
   border: 1px solid #1391e6;
   background: #fff;
   color: #1391e6;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .button:hover {
   background: #1391e6;
@@ -473,29 +475,6 @@ th {
   }
 }
 
-.button--label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 6px;
-}
-@media (width <= 767px) {
-  .button--label {
-    gap: 8px;
-  }
-}
-
-.button--icon {
-  display: grid;
-  place-items: center;
-}
-
 .button--color-reverse {
   background: #1391e6;
   color: #fff;
@@ -503,13 +482,6 @@ th {
 .button--color-reverse:hover {
   background: #fff;
   color: #1391e6;
-}
-
-.button--reservation:hover .button--icon-path {
-  fill: #1391e6;
-}
-.button--contact:hover .button--icon-path {
-  stroke: #fff;
 }
 
 .header {
@@ -1094,11 +1066,43 @@ th {
   line-height: normal;
 }
 
+.button--label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 6px;
+}
+@media (width <= 767px) {
+  .button--label {
+    gap: 8px;
+  }
+}
 .button--reservation .button--label {
   padding-right: 3px;
   height: inherit;
 }
 
+.button--reservation .button--icon-path, .button--contact .button--icon-path {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.button--reservation:hover .button--icon-path {
+  fill: #1391e6;
+}
+.button--contact:hover .button--icon-path {
+  stroke: #fff;
+}
+
+.button--icon {
+  display: grid;
+  place-items: center;
+}
 @media (width <= 767px) {
   .button--icon .button--contact svg {
     width: 17px;
