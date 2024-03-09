@@ -1,0 +1,29 @@
+@use "sass:map";
+@use "../global" as *;
+
+.aside__button {
+  @include mq(sp) {
+    display: none;
+  }
+  position: fixed;
+  right: 0;
+  top: 176px;
+  width: 92px;
+  // height: 120px;
+  z-index: map.get($layer, aside);
+  background: map.get($color, main);
+  color: #fff;
+  border-radius: 20px 0px 0px 20px;
+  padding: 20px 16px 21px;
+  @include font(14, 700, 18.2, null);
+  &:hover {
+    background: #0060a0;
+  }
+}
+
+.aside__button--label {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  align-content: center;
+}

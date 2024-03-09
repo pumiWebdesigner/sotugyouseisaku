@@ -256,19 +256,24 @@
     justify-content: center;
     gap: 40px;
   }
-  @include mq(sp) {
+  @media screen and (max-width: 1024px) {
+    // @include mq(sp) {
     display: block;
     margin-top: 62px;
     padding-inline: 10px;
     max-width: 355px;
     margin-inline: auto;
+    // }
   }
+
   text-align: left;
   @include font(16, 700);
 }
 .footer__link--container {
-  @include mq(sp) {
+  @media screen and (max-width: 1024px) {
+    // @include mq(sp) {
     margin-top: 43px;
+    // }
   }
 }
 .footer__link--head {
