@@ -2720,6 +2720,9 @@ th {
      object-fit: cover;
   border-radius: 0px 20px 20px 0px;
 }
+.policy-feature__img.feature__img {
+  margin-left: auto;
+}
 .policy-feature__img.feature__img img {
   border-radius: 20px 0px 0px 20px;
 }
