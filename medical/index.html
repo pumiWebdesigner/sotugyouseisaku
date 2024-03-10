@@ -50,7 +50,7 @@
           <nav class="header__nav drawer__nav">
             <ul class="header__nav--list drawer__nav--list">
               <li class="header__nav--item drawer__nav--item">
-                <a href="../index.html" class="header__nav--link drawer__nav--link js-drawer__nav--link">
+                <a href="./index.html" class="header__nav--link drawer__nav--link js-drawer__nav--link">
                   <div class="header__nav--icon drawer__nav--icon">
                     <svg width="19" height="20" viewBox="0 0 19 20" fill="none">
                       <path
@@ -65,8 +65,8 @@
                 </a>
               </li>
               <!-- policy -->
-              <li class="header__nav--item drawer__nav--item is-active">
-                <a href="../concept/index.html" class="header__nav--link drawer__nav--link js-drawer__nav--link">
+              <li class="header__nav--item drawer__nav--item">
+                <a href="#" class="header__nav--link drawer__nav--link js-drawer__nav--link">
                   <div class="header__nav--icon drawer__nav--icon">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                       <path
@@ -81,7 +81,7 @@
                 </a>
               </li>
               <!-- policy -->
-              <li class="header__nav--item drawer__nav--item">
+              <li class="header__nav--item drawer__nav--item is-active">
                 <a href="#" class="header__nav--link drawer__nav--link js-drawer__nav--link">
                   <div class="header__nav--icon drawer__nav--icon">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -195,81 +195,63 @@
     <div class="page-title">
       <div class="page-title__img">
         <picture>
-          <source srcset="./img/page-about_top-sp.png" media="(max-width: 767px)" type="image/png" />
-          <img src="./img/page-about_top.png" alt="診療室の画像" width="2320" height="680" />
+          <source srcset="./img/page-medical_top-sp.pngpage-about_top-sp.png" media="(max-width: 767px)" type="image/png" />
+          <img src="./img/page-medical_top.png" alt="診療室の画像" width="2320" height="680" />
         </picture>
       </div>
       <div class="page-title__text">
-        <div class="page-title__text--main">当院について</div>
-        <div class="page-title__text--sub">ABOUT OUR CLINIC</div>
+        <div class="page-title__text--main">診療案内</div>
+        <div class="page-title__text--sub">MEDICAL</div>
       </div>
     </div>
 
     <div class="bread-crumb">
       <div class="bread-cumb__link--home">ホーム</div>
-      <div class="bread-cumb__link--second">当院について</div>
+      <div class="bread-cumb__link--second">診療案内</div>
     </div>
 
-    <section class="policy-feature" id="policy-feature">
-      <div class="poiicy-feature__inner">
-        <div class="section__title">ポリシーと特徴</div>
-
-        <div class="policy__container">
-          <div class="policy-feature__contents">
-            <div class="policy-feature__title">POLICY</div>
-            <div class="policy-feature__message--main">コミュニケーションから始まる最適な医療提供</div>
-            <div class="policy-feature__message--sub">
-              当院ではまず患者様から詳しくお話を伺います。
-              <br />難しい言葉は使わず、実際に感じている小さな違和感からあらゆる可能性を考え、最適な治療方法をご提案いたします。 <br /><br />
-              「どこよりも本音で話せる歯医者さん」を目指し、スタッフ一同、「人間力の向上」にも勤めております。
-            </div>
-          </div>
-          <div class="policy-feature__img">
-            <img src="./img/policy.png" alt="レントゲンを見ながら丁寧な説明" loading="lazy" width="1280" height="876" />
-          </div>
-        </div>
-
-        <div class="feature__container">
-          <div class="policy-feature__contents feature__contents">
-            <div class="policy-feature__title">FEATURE</div>
-            <div class="policy-feature__message--main">
-              「医療技術の追求」と<br />
-              「通いやすさ」
-            </div>
-            <div class="policy-feature__message--sub">
-              歯の治療において、小さな違和感は大きなストレスにつながります。私たちは常に快適な歯科医療技術の研究を行っております。
-              <br />また、「通いやすさ」も医院選びの重要なポイントと考え、2019年のリニューアルを期に更に駅の近くへ場所を移しました。 <br /><br />
-              朝から夜までお仕事をされている方のために診療時間を見直し、平日でもご利用いただけるようにいたしました。
-            </div>
-          </div>
-          <div class="policy-feature__img feature__img">
-            <img src="./img/feature.png" alt="清潔で綺麗なフロント" loading="lazy" width="1280" height="876" />
-          </div>
-        </div>
+    <div class="practice-nav">
+      <a href="general-practice" class="practice-nav__title">
+        <div class="practice-nav__title--text">一般診療</div>
+        <div class="practice-nav__title--label general--label">保険対象</div>
+      </a>
+      <div class="practice-nav__menu">
+        <a href="general-dental" class="practice-nav__menu--item">一般歯科</a>
+        <a href="children-dental" class="practice-nav__menu--item">小児歯科</a>
+        <a href="preventive-dental" class="practice-nav__menu--item">予防歯科</a>
       </div>
-    </section>
+    </div>
+    <div class="practice-nav">
+      <div class="practice-nav__title">
+        <div class="practice-nav__title--text">一般診療</div>
+        <div class="practice-nav__title--label special--label">保険対象</div>
+      </div>
+      <div class="practice-nav__menu">
+        <a href="dentures" class="practice-nav__menu--item">入れ歯</a>
+        <a href="orthodontics" class="practice-nav__menu--item">矯正歯科</a>
+        <a href="teeth-whitening" class="practice-nav__menu--item">ホワイトニング</a>
+        <a href="oral-surgery" class="practice-nav__menu--item">口腔外科</a>
+        <a href="laser-treatment" class="practice-nav__menu--item">レーザー治療</a>
+      </div>
+    </div>
 
-    <section class="inside" id="inside">
-      <div class="section__inner">
-        <div class="section__title">院内の様子</div>
-        <div class="inside__container">
-          <div class="inside__img">
-            <img src="./img/inside-photo1.png" alt="治療室風景１" loading="lazy" width="634" height="634" />
-          </div>
-          <div class="inside__img">
-            <img src="./img/inside-photo2.png" alt="治療中の女医" loading="lazy" width="634" height="634" />
-          </div>
-          <div class="inside__img">
-            <img src="./img/inside-photo3.png" alt="治療室風景２" loading="lazy" width="634" height="634" />
-          </div>
-          <div class="inside__img">
-            <img src="./img/inside-photo4.png" alt="治療室風景３" loading="lazy" width="634" height="634" />
-          </div>
-          <div class="inside__img">
-            <img src="./img/inside-photo5.png" alt="治療室風景４" loading="lazy" width="634" height="634" />
-          </div>
-          <div class="inside__img">
-            <img src="./img/inside-photo6.png" alt="治療器具" loading="lazy" width="634" height="634" />
+    <article id="children-dental" class="children-dental"></article>
+    <article id="preventive-dental" class="preventive-dental"></article>
+
+    <article id="dentures" class="dentures"></article>
+    <article id="orthodontics" class="orthodontics"></article>
+    <article id="teeth-whitening" class="teeth-whitening"></article>
+    <article id="oral-surgery" class="oral-surgery"></article>
+    <article id="laser-treatment" class="laser-treatment"></article>
+
+    <section class="general-practice medical" id="general-practice">
+      <div class="medical__body">
+        <div class="section__inner">
+          <div class="section__title medical__title">診療案内</div>
+          <div class="medical__inner">
+            <div class="medical__wrapper">
+              <article id="general-dental" class="general-dental">.</article>
+            </div>
           </div>
         </div>
       </div>

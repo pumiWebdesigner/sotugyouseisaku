@@ -55,3 +55,8 @@
     left: -2px;
   }
 }
+body {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 500;
+  color: map.get($color, font);
+}
