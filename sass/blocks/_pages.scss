@@ -94,7 +94,7 @@
 }
 
 .bread-cumb__link--second {
-  color: map.get($color, font);
+  color: var(--font);
   padding-left: 28px;
   position: relative;
   &::before {

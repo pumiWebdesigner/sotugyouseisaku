@@ -67,7 +67,7 @@
   padding-top: 11px;
   padding-bottom: 10px;
   border-radius: 22px;
-  background: map.get($color, main);
+  background: var(--main);
   color: #fff;
   @include font(20, 700, null, 1.6);
   position: relative;
@@ -107,5 +107,5 @@
   @include font(14, 500, 24, null);
 }
 .text-accent {
-  color: map.get($color, accent);
+  color: var(--accent);
 }

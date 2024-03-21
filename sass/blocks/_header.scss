@@ -3,7 +3,7 @@
 
 .header {
   position: fixed;
-  z-index: map.get($layer, header);
+  z-index: var(--layer-header);
   top: 0;
   left: 0;
   width: 100%;
@@ -15,9 +15,9 @@
   }
 
   @include mq(pc) {
-    height: map.get($header, pc-height);
+    height: var(--pc-height);
   }
-  height: map.get($header, sp-height);
+  height: var(--sp-height);
 }
 
 .header__inner {
@@ -82,7 +82,7 @@
   }
 
   .header__access--tel-number {
-    color: map.get($color, main);
+    color: var(--main);
     display: inline-block;
     @include font(32, 700, null, -0.64);
     padding-left: 32px;
@@ -124,7 +124,7 @@
       position: absolute;
       width: 0px;
       height: 2px;
-      background: map.get($color, main);
+      background: var(--main);
       bottom: 0;
       left: 50%;
       transform: translateX(-50%);
@@ -153,7 +153,7 @@
     transition: fill 0.3s;
     .header__nav--item.is-active &,
     .header__nav--item:hover & {
-      fill: map.get($color, main);
+      fill: var(--main);
     }
   }
 
@@ -164,7 +164,7 @@
     transition: color 0.3s;
     .header__nav--item.is-active &,
     .header__nav--item:hover & {
-      color: map.get($color, main);
+      color: var(--main);
     }
   }
 }

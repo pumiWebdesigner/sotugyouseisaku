@@ -23,7 +23,7 @@
     transform: translateX(-50%);
     width: 27px;
     height: 2px;
-    background: map.get($color, main);
+    background: var(--main);
     border-radius: 1px;
     transition: 0.5s;
     @for $i from 1 through 3 {
@@ -48,10 +48,10 @@
     background-color: #0060a0;
     position: fixed;
     width: 100%;
-    height: calc(100vh - map.get($header, sp-height));
-    top: map.get($header, sp-height);
+    height: calc(100vh - var(--height-pc-header));
+    top: var(--height-sp-header);
     right: -100%;
-    z-index: map.get($layer, drawer);
+    z-index: var(--layer-drawer);
     transition: 0.5s;
     .drawer-open & {
       right: 0;

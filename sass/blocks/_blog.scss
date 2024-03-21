@@ -78,7 +78,7 @@
         }
       }
       .blog__title {
-        color: map.get($color, main);
+        color: var(--main);
       }
     }
   }

@@ -87,7 +87,7 @@
 
 .footer__info--tel-number,
 .footer__info--tel-text {
-  color: map.get($color, main);
+  color: var(--main);
   text-align: center;
 }
 .footer__info--tel-number {
@@ -122,7 +122,7 @@
     margin-top: 5px;
   }
   .footer__nav & {
-    color: map.get($color, font);
+    color: var(--font);
     @include font(10, 500);
   }
 }
@@ -183,7 +183,7 @@
     transition: all 0.3s ease;
   }
   .button--reservation:hover & {
-    fill: map.get($color, main);
+    fill: var(--main);
   }
   .button--contact:hover & {
     stroke: #fff;
@@ -329,7 +329,7 @@
   width: 100%;
   background: rgba(255, 255, 255, 0.85);
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
-  z-index: map.get($layer, footer);
+  z-index: var(--layer-footer);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -352,7 +352,7 @@
   width: 52px;
   height: 52px;
 
-  z-index: map.get($layer, totop);
+  z-index: var(--layer-totop);
   @include mq(sp) {
     right: 12px;
     bottom: 80px;

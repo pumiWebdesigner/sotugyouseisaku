@@ -4,12 +4,12 @@
 .button {
   display: inline-block;
   text-align: center;
-  border: 1px solid map.get($color, main);
+  border: 1px solid var(--main);
   background: #fff;
-  color: map.get($color, main);
+  color: var(--main);
   transition: all 0.3s ease;
   &:hover {
-    background: map.get($color, main);
+    background: var(--main);
     color: #fff;
   }
 }
@@ -44,10 +44,10 @@
   }
 }
 .button--color-reverse {
-  background: map.get($color, main);
+  background: var(--main);
   color: #fff;
   &:hover {
     background: #fff;
-    color: map.get($color, main);
+    color: var(--main);
   }
 }
