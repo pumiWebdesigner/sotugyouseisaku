@@ -533,14 +533,14 @@ body {
   background: #fff;
   -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
-  height: var(--sp-height);
+  height: var(--height-sp-header);
 }
 .drawer-open .header {
   background-color: #0060a0;
 }
 @media (1024px <= width) {
   .header {
-    height: var(--pc-height);
+    height: var(--height-pc-header);
   }
 }
 

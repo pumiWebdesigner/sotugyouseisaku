@@ -15,9 +15,9 @@
   }
 
   @include mq(pc) {
-    height: var(--pc-height);
+    height: var(--height-pc-header);
   }
-  height: var(--sp-height);
+  height: var(--height-sp-header);
 }
 
 .header__inner {
