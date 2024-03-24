@@ -26,11 +26,11 @@
     <!-- swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
-    <script src="../js/slider.js" defer></script>
-    <!-- css読み込み -->
-    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/slider.js" defer></script>
     <!-- JavaScript読み込み -->
     <script src="../js/script.js" defer></script>
+    <!-- css読み込み -->
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
 
   <body>
@@ -81,7 +81,7 @@
                 </a>
               </li>
               <!-- policy -->
-              <li class="header__nav--item drawer__nav--item is-active">
+              <li class="header__nav--item drawer__nav--item">
                 <a href="#" class="header__nav--link drawer__nav--link js-drawer__nav--link">
                   <div class="header__nav--icon drawer__nav--icon">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -106,7 +106,7 @@
                   <div class="drawer__nav--arrow-right"></div>
                 </a>
               </li>
-              <li class="header__nav--item drawer__nav--item">
+              <li class="header__nav--item drawer__nav--item is-active">
                 <a href="./index.html" class="header__nav--link drawer__nav--link js-drawer__nav--link">
                   <div class="header__nav--icon drawer__nav--icon">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -195,246 +195,288 @@
     <div class="page-title">
       <div class="page-title__img">
         <picture>
-          <source srcset="./img/page-medical_top-sp.png" media="(max-width: 767px)" type="image/png" />
-          <img loading="lazy" decoding="async" src="./img/page-medical_top.png" alt="診療室の画像" width="1160" height="340" />
+          <source srcset="./img/page-staff_top-sp.png" media="(max-width: 767px)" type="image/png" />
+          <img loading="lazy" decoding="async" src="./img/page-staff_top.png" alt="診療室の画像" width="1160" height="340" />
         </picture>
       </div>
       <div class="page-title__text">
-        <div class="page-title__text--main">診療案内</div>
-        <div class="page-title__text--sub">MEDICAL</div>
+        <div class="page-title__text--main">スタッフ紹介</div>
+        <div class="page-title__text--sub">STAFF</div>
       </div>
     </div>
 
     <div class="bread-crumb">
       <div class="bread-cumb__link--home">ホーム</div>
-      <div class="bread-cumb__link--second">診療案内</div>
+      <div class="bread-cumb__link--second">スタッフ紹介</div>
     </div>
 
-    <div class="practice-nav">
-      <div class="practice-nav__inner">
-        <div class="practice-nav--items">
-          <div class="practice-nav--item">
-            <a href="general-practice" class="practice-nav__title">
-              <div class="practice-nav__title--text">一般診療</div>
-              <div class="practice-nav__title--label general--label">保険対象</div>
-            </a>
-            <div class="practice-nav__menu">
-              <a href="general-dental" class="practice-nav__menu--item">一般歯科</a>
-              <a href="children-dental" class="practice-nav__menu--item">小児歯科</a>
-              <a href="preventive-dental" class="practice-nav__menu--item">予防歯科</a>
+    <section class="section greeting">
+      <div class="section__inner">
+        <div class="section__title">院長のあいさつ</div>
+        <div class="greeting__container">
+          <!-- メッセージ -->
+          <div class="greeting__message">
+            <div class="greeting__message--main">
+              気軽に相談できる<br />
+              街の歯医者さんでありたい。
+            </div>
+            <div class="greeting__message--sub">
+              当院は治療はもちろん、予防歯科にも力を入れておりますので、お口に関する相談だけでもお越しいただきたいと考えております。<br />
+              <br />
+              「患部を直すこと」より「未然に防ぐこと」が最も良い歯科医療と言えますので、些細なことでも気軽に話せる街の歯医者さんとして、明るい街づくりに貢献していきたいと考えております。
+            </div>
+            <div class="greeting__name">
+              みなみ歯科クリニック<br />
+              院長　南 俊雄
             </div>
           </div>
-          <div class="practice-nav--item">
-            <a href="general-practice" class="practice-nav__title">
-              <div class="practice-nav__title--text">特殊診療</div>
-              <div class="practice-nav__title--label special--label">実費</div>
-            </a>
-            <div class="practice-nav__menu">
-              <a href="dentures" class="practice-nav__menu--item">入れ歯</a>
-              <a href="orthodontics" class="practice-nav__menu--item">矯正歯科</a>
-              <a href="teeth-whitening" class="practice-nav__menu--item">ホワイトニング</a>
-              <a href="oral-surgery" class="practice-nav__menu--item">口腔外科</a>
-              <a href="laser-treatment" class="practice-nav__menu--item">レーザー治療</a>
-            </div>
+          <!-- 院長画像 -->
+          <div class="greeting__img">
+            <img src="./img/staff1.png" alt="院長画像" />
           </div>
-        </div>
-      </div>
-    </div>
-
-    <section class="general-practice medical" id="general-practice">
-      <div class="medical-u__body">
-        <div class="section__inner">
-          <div class="section__title">一般診療</div>
-          <div class="medical-u__inner">
-            <div class="medical-u__items">
-              <article id="general-dental" class="medical-u__item">
-                <div class="medical-u__item--inner">
-                  <div class="medical-u__label">保険対象</div>
-                  <div class="medical-u__title">
-                    <div class="medical-u__title--main">一般歯科</div>
-                    <div class="medical-u__title--sub">虫歯治療、歯茎がしみるなど</div>
-                  </div>
-                  <div class="medical-u__contents">
-                    <div class="medical-u__contents--texts">
-                      <div class="medical-u__contents--text">
-                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                      </div>
-                      <div class="medical-u__contents--text">
-                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                      </div>
-                    </div>
-                    <div class="medical-u__contents--img">
-                      <img loading="lazy" decoding="async" src="./img/medical_general1.png" alt="きれいな歯の女性" width="420" height="315" />
-                    </div>
-                  </div>
+          <!-- 経歴・資格 -->
+          <div class="greeting__profile">
+            <!-- 経歴 -->
+            <div class="greeting__brief-history">
+              <div class="greeting__brief-history--title">経歴</div>
+              <div class="greeting__brief-history--texts">
+                <div class="greeting__brief-history--year">2004年</div>
+                <div class="greeting__brief-history--text">東京医科歯科大学歯学部 卒業</div>
+              </div>
+              <div class="greeting__brief-history--texts">
+                <div class="greeting__brief-history--year">2008年</div>
+                <div class="greeting__brief-history--text">
+                  東京歯科大学歯学研究科大学院修了<br />
+                  博士(歯学)取得
                 </div>
-              </article>
-              <article id="children-dental" class="medical-u__item">
-                <div class="medical-u__item--inner">
-                  <div class="medical-u__label">保険対象</div>
-                  <div class="medical-u__title">
-                    <div class="medical-u__title--main">小児歯科</div>
-                    <div class="medical-u__title--sub">小さいお子様の歯の治療</div>
-                  </div>
-                  <div class="medical-u__contents">
-                    <div class="medical-u__contents--texts">
-                      <div class="medical-u__contents--text">
-                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                      </div>
-                      <div class="medical-u__contents--text">
-                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                      </div>
-                    </div>
-                    <div class="medical-u__contents--img">
-                      <img loading="lazy" decoding="async" src="./img/medical_general2.png" alt="子どもの歯磨き" width="420" height="315" />
-                    </div>
-                  </div>
-                </div>
-              </article>
-              <article id="preventive-dental" class="medical-u__item">
-                <div class="medical-u__item--inner">
-                  <div class="medical-u__label">保険対象</div>
-                  <div class="medical-u__title">
-                    <div class="medical-u__title--main">予防歯科</div>
-                    <div class="medical-u__title--sub">口腔内のケア全般</div>
-                  </div>
-                  <div class="medical-u__contents">
-                    <div class="medical-u__contents--texts">
-                      <div class="medical-u__contents--text">
-                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                      </div>
-                      <div class="medical-u__contents--text">
-                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                      </div>
-                    </div>
-                    <div class="medical-u__contents--img">
-                      <img loading="lazy" decoding="async" src="./img/medical_general3.png" alt="レントゲンを見ながら治療" width="420" height="315" />
-                    </div>
-                  </div>
-                </div>
-              </article>
+              </div>
+              <div class="greeting__brief-history--texts">
+                <div class="greeting__brief-history--year">2012年</div>
+                <div class="greeting__brief-history--text">みなみ歯科クリニック 開院</div>
+              </div>
+            </div>
+            <!-- 資格 -->
+            <div class="greeting__qualification">
+              <div class="greeting__title">資格</div>
+              <div class="greeting__text">歯科医師臨床研修指導歯科医</div>
+              <div class="greeting__text">博士(歯学)</div>
+              <div class="greeting__text">衛生検査技師</div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="special-practice medical" id="special-practice">
-      <div class="medical-u__body">
-        <div class="section__inner">
-          <div class="section__title">特殊診療</div>
-          <div class="medical-u__inner">
-            <div class="medical-u__items">
-              <article id="dentures" class="medical-u__item">
-                <div class="medical-u__item--inner">
-                  <div class="medical-u__label">実費</div>
-                  <div class="medical-u__title">
-                    <div class="medical-u__title--main">入れ歯</div>
-                    <div class="medical-u__title--sub">入れ歯を作りたい、調整したい</div>
-                  </div>
-                  <div class="medical-u__contents">
-                    <div class="medical-u__contents--texts">
-                      <div class="medical-u__contents--text">
-                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                      </div>
-                      <div class="medical-u__contents--text">
-                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                      </div>
-                    </div>
-                    <div class="medical-u__contents--img">
-                      <img loading="lazy" decoding="async" src="./img/medical_special1.png" alt="きれいな入れ歯" width="420" height="316" />
-                    </div>
-                  </div>
-                </div>
-              </article>
-              <article id="orthodontics" class="medical-u__item">
-                <div class="medical-u__item--inner">
-                  <div class="medical-u__label">実費</div>
-                  <div class="medical-u__title">
-                    <div class="medical-u__title--main">矯正歯科</div>
-                    <div class="medical-u__title--sub">歯並びが気になる</div>
-                  </div>
-                  <div class="medical-u__contents">
-                    <div class="medical-u__contents--texts">
-                      <div class="medical-u__contents--text">
-                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                      </div>
-                      <div class="medical-u__contents--text">
-                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                      </div>
-                    </div>
-                    <div class="medical-u__contents--img">
-                      <img loading="lazy" decoding="async" src="./img/medical_special2.png" alt="歯の矯正器具" width="420" height="315" />
-                    </div>
-                  </div>
-                </div>
-              </article>
-              <article id="teeth-whitening" class="medical-u__item">
-                <div class="medical-u__item--inner">
-                  <div class="medical-u__label">実費</div>
-                  <div class="medical-u__title">
-                    <div class="medical-u__title--main">ホワイトニング</div>
-                    <div class="medical-u__title--sub">歯を白くしたい</div>
-                  </div>
-                  <div class="medical-u__contents">
-                    <div class="medical-u__contents--texts">
-                      <div class="medical-u__contents--text">
-                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                      </div>
-                      <div class="medical-u__contents--text">
-                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                      </div>
-                    </div>
-                    <div class="medical-u__contents--img">
-                      <img loading="lazy" decoding="async" src="./img/medical_special3.png" alt="歯の白い女性" width="420" height="315" />
-                    </div>
-                  </div>
-                </div>
-              </article>
-              <article id="oral-surgery" class="medical-u__item">
-                <div class="medical-u__item--inner">
-                  <div class="medical-u__label">実費</div>
-                  <div class="medical-u__title">
-                    <div class="medical-u__title--main">口腔外科</div>
-                    <div class="medical-u__title--sub">インプラント、親知らずの抜歯</div>
-                  </div>
-                  <div class="medical-u__contents">
-                    <div class="medical-u__contents--texts">
-                      <div class="medical-u__contents--text">
-                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                      </div>
-                      <div class="medical-u__contents--text">
-                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                      </div>
-                    </div>
-                    <div class="medical-u__contents--img">
-                      <img loading="lazy" decoding="async" src="./img/medical_special4.png" alt="インプラントのイメージ図" width="420" height="315" />
-                    </div>
-                  </div>
-                </div>
-              </article>
-              <article id="laser-treatment" class="medical-u__item">
-                <div class="medical-u__item--inner">
-                  <div class="medical-u__label">実費</div>
-                  <div class="medical-u__title">
-                    <div class="medical-u__title--main">レーザー治療</div>
-                    <div class="medical-u__title--sub">口内炎を治したい</div>
-                  </div>
-                  <div class="medical-u__contents">
-                    <div class="medical-u__contents--texts">
-                      <div class="medical-u__contents--text">
-                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                      </div>
-                      <div class="medical-u__contents--text">
-                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                      </div>
-                    </div>
-                    <div class="medical-u__contents--img">
-                      <img loading="lazy" decoding="async" src="./img/medical_special5.png" alt="レーザー治療のイメージ図" width="420" height="315" />
-                    </div>
-                  </div>
-                </div>
-              </article>
+    <div class="greeting__slider">
+      <!-- <div class="swiper-container"> -->
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./img/staff-slide-1.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/staff-slide-2.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/staff-slide-3.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/staff-slide-4.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/staff-slide-5.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/staff-slide-1.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/staff-slide-2.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/staff-slide-3.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/staff-slide-4.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/staff-slide-5.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
+
+    <section class="section introduction">
+      <div class="section__inner">
+        <div class="section__title">スタッフ紹介</div>
+        <div class="introduction__container is-hygienist">
+          <div class="introduction__title">歯科衛生士</div>
+          <div class="introduction__wrapper">
+            <div class="introduction__item">
+              <div class="introduction__img">
+                <img src="./img/staff2.png" alt="" />
+              </div>
+              <div class="introduction__name">
+                <div class="introduction__name--position">歯科衛生士</div>
+                <div class="introduction__name--full-name">鈴木 太郎</div>
+              </div>
+              <div class="introduction__profile">
+                <dl>
+                  <dt>出身地</dt>
+                  <dd>北海道</dd>
+                </dl>
+                <dl>
+                  <dt>趣味</dt>
+                  <dd>スキー、料理</dd>
+                </dl>
+                <dl>
+                  <dt>好きな食べ物</dt>
+                  <dd>お寿司、うなぎ</dd>
+                </dl>
+              </div>
+            </div>
+            <div class="introduction__item">
+              <div class="introduction__img">
+                <img src="./img/staff3.png" alt="" />
+              </div>
+              <div class="introduction__name">
+                <div class="introduction__name--position">歯科衛生士</div>
+                <div class="introduction__name--full-name">山田 花子</div>
+              </div>
+              <div class="introduction__profile">
+                <dl>
+                  <dt>出身地</dt>
+                  <dd>北海道</dd>
+                </dl>
+                <dl>
+                  <dt>趣味</dt>
+                  <dd>スキー、料理</dd>
+                </dl>
+                <dl>
+                  <dt>好きな食べ物</dt>
+                  <dd>お寿司、うなぎ</dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="introduction__container is-assistant">
+          <div class="introduction__title">歯科助手</div>
+          <div class="introduction__wrapper">
+            <div class="introduction__item">
+              <div class="introduction__img">
+                <img src="./img/staff4.png" alt="" />
+              </div>
+              <div class="introduction__name">
+                <div class="introduction__name--position">歯科衛生士</div>
+                <div class="introduction__name--full-name">山田 花子</div>
+              </div>
+              <div class="introduction__profile">
+                <dl>
+                  <dt>出身地</dt>
+                  <dd>北海道</dd>
+                </dl>
+                <dl>
+                  <dt>趣味</dt>
+                  <dd>スキー、料理</dd>
+                </dl>
+                <dl>
+                  <dt>好きな食べ物</dt>
+                  <dd>お寿司、うなぎ</dd>
+                </dl>
+              </div>
+            </div>
+            <div class="introduction__item">
+              <div class="introduction__img">
+                <img src="./img/staff5.png" alt="" />
+              </div>
+              <div class="introduction__name">
+                <div class="introduction__name--position">歯科衛生士</div>
+                <div class="introduction__name--full-name">山田 花子</div>
+              </div>
+              <div class="introduction__profile">
+                <dl>
+                  <dt>出身地</dt>
+                  <dd>北海道</dd>
+                </dl>
+                <dl>
+                  <dt>趣味</dt>
+                  <dd>スキー、料理</dd>
+                </dl>
+                <dl>
+                  <dt>好きな食べ物</dt>
+                  <dd>お寿司、うなぎ</dd>
+                </dl>
+              </div>
+            </div>
+            <div class="introduction__item">
+              <div class="introduction__img">
+                <img src="./img/staff6.png" alt="" />
+              </div>
+              <div class="introduction__name">
+                <div class="introduction__name--position">歯科衛生士</div>
+                <div class="introduction__name--full-name">山田 花子</div>
+              </div>
+              <div class="introduction__profile">
+                <dl>
+                  <dt>出身地</dt>
+                  <dd>北海道</dd>
+                </dl>
+                <dl>
+                  <dt>趣味</dt>
+                  <dd>スキー、料理</dd>
+                </dl>
+                <dl>
+                  <dt>好きな食べ物</dt>
+                  <dd>お寿司、うなぎ</dd>
+                </dl>
+              </div>
+            </div>
+            <div class="introduction__item">
+              <div class="introduction__img">
+                <img src="./img/staff7.png" alt="" />
+              </div>
+              <div class="introduction__name">
+                <div class="introduction__name--position">歯科衛生士</div>
+                <div class="introduction__name--full-name">山田 花子</div>
+              </div>
+              <div class="introduction__profile">
+                <dl>
+                  <dt>出身地</dt>
+                  <dd>北海道</dd>
+                </dl>
+                <dl>
+                  <dt>趣味</dt>
+                  <dd>スキー、料理</dd>
+                </dl>
+                <dl>
+                  <dt>好きな食べ物</dt>
+                  <dd>お寿司、うなぎ</dd>
+                </dl>
+              </div>
+            </div>
+            <div class="introduction__item">
+              <div class="introduction__img">
+                <img src="./img/staff8.png" alt="" />
+              </div>
+              <div class="introduction__name">
+                <div class="introduction__name--position">歯科衛生士</div>
+                <div class="introduction__name--full-name">山田 花子</div>
+              </div>
+              <div class="introduction__profile">
+                <dl>
+                  <dt>出身地</dt>
+                  <dd>北海道</dd>
+                </dl>
+                <dl>
+                  <dt>趣味</dt>
+                  <dd>スキー、料理</dd>
+                </dl>
+                <dl>
+                  <dt>好きな食べ物</dt>
+                  <dd>お寿司、うなぎ</dd>
+                </dl>
+              </div>
             </div>
           </div>
         </div>
