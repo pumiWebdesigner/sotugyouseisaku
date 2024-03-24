@@ -26,7 +26,8 @@
   max-width: 1000px;
   margin-inline: auto;
   @include mq(sp) {
-    padding-inline: 10px;
+    max-width: 355px;
+    margin-inline: auto;
   }
 }
 .footer__contents {

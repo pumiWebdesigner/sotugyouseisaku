@@ -58,7 +58,7 @@
   }
 }
 .policy-feature__title {
-  color: map.get($color, main);
+  color: var(--main);
   @include font(11, 700, null, 1.1);
   @include mq(pc) {
     @include font(14, 700, null, 1.4);

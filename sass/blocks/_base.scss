@@ -60,3 +60,9 @@ body {
   font-weight: 500;
   color: var(--font);
 }
+.mask {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: gray;
+}
