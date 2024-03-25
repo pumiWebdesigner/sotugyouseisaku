@@ -8,9 +8,17 @@
   max-width: 1280px;
   margin-inline: auto;
   text-align: center;
+  padding-inline: size-calc(20, 140, 768, 1280);
+  @include mq(sp) {
+    padding-inline: revert;
+  }
 }
 
 .section__title {
+  .special-practice &,
+  .introduction & {
+    transform: translate(2px, 4px);
+  }
   display: inline-block;
   position: relative;
   padding-inline: 95px;

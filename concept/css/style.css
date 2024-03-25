@@ -862,6 +862,12 @@ body {
   max-width: 1280px;
   margin-inline: auto;
   text-align: center;
+  padding-inline: clamp(20px, 20px + 120 * (100vw - 768px) / 512, 140px);
+}
+@media (width <= 767px) {
+  .section__inner {
+    padding-inline: revert;
+  }
 }
 
 .section__title {
@@ -871,6 +877,10 @@ body {
   font-size: 1.75rem;
   font-weight: 700;
   letter-spacing: 0.08em;
+}
+.special-practice .section__title, .introduction .section__title {
+  -webkit-transform: translate(2px, 4px);
+          transform: translate(2px, 4px);
 }
 .section__title::before, .section__title::after {
   content: "";

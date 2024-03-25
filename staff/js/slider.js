@@ -8,7 +8,40 @@ const swiper = new Swiper(".swiper", {
   allowTouchMove: false, // スワイプ無効
   centeredSlides: true,
   preventInteractionOnTransition: true,
-  slidesPerView: 3.9, // 一度に表示する枚数
+
+  breakpoints: {
+    //画面幅による表示枚数と余白の指定
+    0: {
+      slidesPerView: 1.775, //200+20+155 = 375 355/200 = 1.775
+      // spaceBetween: 10,
+    },
+    500: {
+      slidesPerView: 2.3,
+    },
+    700: {
+      slidesPerView: 3.3,
+    },
+    900: {
+      slidesPerView: 4.3,
+    },
+    1025: {
+      slidesPerView: 3,
+    },
+
+    1100: {
+      slidesPerView: 3.5,
+    },
+    1250: {
+      slidesPerView: 3.97, //305*3+20*4 = 985 1280-985 = 295 295/305 = 0.967 3+0.97 = 3.97
+      // spaceBetween: 20,
+    },
+    1600: {
+      slidesPerView: 4.97,
+    },
+    1900: {
+      slidesPerView: 5.97,
+    },
+  },
 });
 
 // const mySwiper = new Swiper(".swiper", {
