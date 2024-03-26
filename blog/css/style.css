@@ -2780,6 +2780,9 @@ body {
   display: -ms-flexbox;
   display: flex;
   padding-inline: 134px 140px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 @media (width <= 767px) {
   .staff-blog__wrapper {
@@ -2973,4 +2976,8 @@ body {
   width: 16px;
   height: 16px;
   background: url(../img/arrow-right.svg) no-repeat;
+}
+
+.staff-blog__archive-container {
+  max-width: 300px;
 }
