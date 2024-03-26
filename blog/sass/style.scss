@@ -2,341 +2,188 @@
 @use "../../sass/global/" as *;
 @use "../../sass/blocks/" as *;
 
-.medical-u {
-  margin-top: 338px;
-  padding-bottom: 82px;
-  background-color: var(--sub2);
-  position: relative;
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: auto;
-    z-index: 1;
-  }
-  &::before {
-    aspect-ratio: calc(1280 / 203);
-    bottom: 100%;
-    background: url(../../img/medical-u/medical-u__bg--top-pc.png) no-repeat top center/cover;
-    @include mq(sp) {
-      aspect-ratio: calc(375 / 88);
-      background: url(../../img/medical-u/medical-u__bg--top-sp.png) no-repeat top center/cover;
-    }
-  }
-
-  &::after {
-    aspect-ratio: calc(1280 / 97);
-    top: 100%;
-    background: url(../../img/medical-u/medical-u__bg--bottom-pc.png) no-repeat bottom center/cover;
-    @include mq(sp) {
-      aspect-ratio: calc(375 / 28);
-      background: url(../../img/medical-u/medical-u__bg--bottom-sp.png) no-repeat bottom center/cover;
-    }
-  }
-  @include mq(sp) {
-    margin-top: 186px;
-    padding-bottom: 62px;
+.staff-blog {
+  margin-top: 80px;
+  margin-bottom: 280px;
+  .section__inner {
+    padding-inline: revert;
   }
 }
 
-.practice-nav {
-  margin-top: size-calc(65, 87, 375, 1280);
-}
-.practice-nav__inner {
-  padding-inline: size-calc(20, 62, 375, 1280);
-  // padding-left: 62px;
-
-  // @include mq(sp) {
-  //   padding-inline: 20px;
-  // }
-}
-.practice-nav--items {
+.staff-blog__wrapper {
   display: flex;
-  flex-direction: column;
-  gap: 85px;
-  @include mq(sp) {
-    gap: 83px;
-    max-width: 335px;
-    margin-inline: auto;
-  }
-}
-
-// .practice-nav--item {
-// }
-
-.practice-nav__title {
-  display: flex;
-  gap: 22px;
-  @include mq(sp) {
-    align-items: center;
-  }
-}
-
-.practice-nav__title--text {
-  // width: 119px;
-  // height: 44px;
-  text-align: center;
-  // size,weight,height,spacing
-  @include font(28, 700, null, 2.24);
-  @include mq(sp) {
-    @include font(20, 700, null, 1.6);
-  }
-}
-
-.practice-nav__title--label {
-  display: grid;
-  place-items: center;
-  color: #fff;
-  text-align: center;
-  @include font(14, 700, null, 1.12);
-  border-radius: 24px;
-  padding: 10px 12px 8px;
-  margin-top: -3px;
-  // @include mq(sp) {
-  // padding: 9px 12px;
-  // }
-}
-
-.general--label {
-  background: var(--main);
-}
-.special--label {
-  background: var(--accent);
-}
-.practice-nav__menu {
-  display: flex;
-  gap: 16px;
-  margin-top: 35px;
-  flex-wrap: wrap;
-  @include mq(sp) {
-    flex-direction: column;
-    margin-top: 32px;
-    gap: 15px;
-  }
-}
-
-.practice-nav__menu--item {
-  color: var(--main);
-  @include font(24, 700, null, 1.92);
-  border-radius: 12px;
-  border: 2px solid var(--main);
-  background: #fff;
-  // padding: 18px 32px 18px 26px;
-  // padding: 21px 30px 18px 28px;
-  padding: 21px 28px 19px 30px;
-  @include mq(sp) {
-    text-align: center;
-    @include font(20, 700, null, 1.6);
-    padding: 17px;
-    // width: 335px;
-  }
-}
-
-.general-practice {
-  margin-top: 363px;
-  @include mq(sp) {
-    margin-top: 188px;
-  }
-}
-.medical-u__body {
-  @include mq(sp) {
-    padding-top: 31px;
-  }
-  position: relative;
-  .special-practice & {
-    @include mq(sp) {
-      padding-top: 25px;
-    }
-  }
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    height: auto;
-    z-index: 10;
-  }
-  &::before {
-    left: 40px;
-    bottom: -81px;
-    aspect-ratio: 57/56;
-    width: calc(57 / 1280 * 100%);
-    background: url(../../img/medical/deco-kirakira-single.png) no-repeat center/cover;
-  }
-  &::after {
-    right: 21px;
-    bottom: -103px;
-    aspect-ratio: calc(125 / 138);
-    width: calc(125 / 1280 * 100%);
-    background: url(../../img/medical/deco-kirakira-double.png) no-repeat center/cover;
-  }
-  @include mq(sp) {
-    &::before {
-      left: 12px;
-      bottom: -63px;
-      aspect-ratio: calc(24 / 25);
-      width: calc(24 / 375 * 100%);
-      .special-practice & {
-        bottom: -70px;
-      }
-    }
-    &::after {
-      right: 7px;
-      bottom: -81px;
-      aspect-ratio: calc(56 / 60);
-      width: calc(56 / 375 * 100%);
-      .special-practice & {
-        bottom: -88px;
-      }
-    }
-  }
-}
-.medical-u__inner {
-  padding-inline: size-calc(20, 140, 375, 1280);
-  // padding-inline: 140px;
-  // @include mq(sp) {
-  //   padding-inline: 20px;
-  // }
-}
-
-.medical-u__items {
-  margin-top: size-calc(43, 64, 375, 1280);
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  .special-practice & {
-    margin-top: size-calc(50, 67, 375, 1280);
-  }
-}
-
-.medical-u__item {
-  border-radius: 20px;
-  background: #fff;
-  position: relative;
-}
-.medical-u__item--inner {
-  padding-top: size-calc(21, 66, 375, 1280);
-  padding-inline: size-calc(20, 60, 375, 1280);
-  padding-bottom: size-calc(20, 60, 375, 1280);
-}
-.medical-u__label {
-  position: absolute;
-  top: 0;
-  right: 60px;
-  color: #fff;
-  text-align: center;
-  width: 100px;
-  height: 80px;
-  padding-top: 27px;
-  @include font(16, 700, null, 1.28);
-  background: url(../img/medical_label.svg) no-repeat center/cover;
-  @include mq(sp) {
-    right: 20px;
-    width: 80px;
-    height: 60px;
-    padding-top: 17px;
-    @include font(14, 700, null, 1.12);
-    background: url(../img/medical_label-sp.svg) no-repeat center/cover;
-  }
-  .special-practice & {
-    padding-top: 25px;
-    padding-left: 8px;
-    @include font(16, 700, null, 7.2);
-    background: url(../img/medical_special_label.svg) no-repeat center/cover;
-    @include mq(sp) {
-      padding-top: 17px;
-      padding-left: 4px;
-      @include font(14, 700, null, 3.5);
-      background: url(../img/medical_special_label-sp.svg) no-repeat center/cover;
-    }
-  }
-}
-
-.medical-u__title {
-  display: flex;
-  align-items: center;
-  gap: size-calc(23, 38, 375, 1280);
-  padding-bottom: 77px;
-  position: relative;
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 36px;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background: #c2c2c2;
-  }
-  @include mq(sp) {
-    flex-direction: column;
-    padding-bottom: 39px;
-    align-items: revert;
-    text-align: left;
-
-    &::after {
-      bottom: 16px;
-    }
-  }
-}
-
-.medical-u__title--main {
-  @include font(28, 700, null, 2.24);
-  @include mq(sp) {
-    @include font(20, 700, 28, 1.6);
-  }
-}
-
-.medical-u__title--sub {
-  color: var(--main);
-  @include font(14, 700, null, 1.12);
-}
-
-.medical-u__contents {
-  display: flex;
+  padding-inline: 134px 140px;
   @include mq(sp) {
     flex-direction: column;
   }
-  gap: size-calc(16, 41, 768, 1280);
 }
 
-.medical-u__contents--texts {
-  // size,weight,height,spacing
-  @include font(14, 500, 24, null);
-  text-align: left;
-  flex: 1;
+.staff-blog__blog-container {
+  padding: 11px 7px;
+  max-width: 679px;
 }
-.medical-u__contents--text {
+
+.staff-blog__blog-item {
   & + & {
-    margin-top: 24px;
+    margin-top: 20px;
   }
+  display: flex;
+  gap: 20px;
 }
-.medical-u__contents--img {
-  width: calc(420 / 880 * 100%);
-  @include mq(sp) {
-    width: 100%;
+
+.staff-blog__blog-img {
+  width: 244px;
+  position: relative;
+  // size,weight,height,spacing
+  @include font(10, 700, null, null);
+  color: #fff;
+  text-align: center;
+
+  .is-new &::before {
+    content: "NEW";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    top: -10px;
+    left: -10px;
+    background: #ee5a6d;
   }
   img {
-    border-radius: 20px;
-    aspect-ratio: 420/315;
+    aspect-ratio: 244/153;
     width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 }
-.special-practice {
-  margin-top: size-calc(216, 461, 375, 1280);
-  margin-bottom: size-calc(163, 290, 375, 1280);
-  // margin-top: 461px;
-  // margin-bottom: 290px;
-  // .section__title {
-  //   transform: translate(2px, 4px);
-  // }
-  // @include mq(sp) {
-  // margin-top: 216px;
-  // margin-bottom: 163px;
-  // }
+
+.staff-blog__blog-text {
+  flex: 1;
+  text-align: left;
+  padding-top: 40px;
+  .is-new & {
+    padding-top: 46px;
+  }
+  position: relative;
+  &::before {
+    content: "カテゴリ1";
+    position: absolute;
+    top: 13px;
+    left: 0;
+    width: 75px;
+    height: 27.834px;
+    border-radius: 12px;
+    background: #1391e6;
+    padding: 8px 12px;
+    // display: inline-block;
+    color: #fff;
+    @include font(11, 500, null, null);
+  }
+  .is-new & {
+    &::before {
+      top: 19px;
+    }
+  }
 }
-.footer__copy {
-  margin-top: 63px;
-  padding-top: 20px;
+
+.staff-blog__blog-text--label {
+  border-radius: 12px;
+  background: #1391e6;
+  padding: 8px 12px;
+  display: inline-block;
+  color: #fff;
+  @include font(11, 500, null, null);
+  margin-top: 14px;
+  .is-new & {
+    margin-top: 19px;
+  }
+}
+
+.staff-blog__blog-text--title {
+  @include font(16, 500, 24, null);
+  margin-top: 15px;
+  .is-new & {
+    margin-top: 13px;
+  }
+}
+
+.staff-blog__blog-text--data {
+  color: #888;
+  @include font(12, 500, null, null);
+  display: inline-block;
+  margin-top: 17px;
+}
+
+.staff-blog__blog-pagenation {
+  margin-top: 100px;
+  padding-left: 2px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  @include mq(sp) {
+    gap: 7px;
+  }
+}
+
+.staff-blog__blog-pagenation--prev,
+.staff-blog__blog-pagenation--page,
+.staff-blog__blog-pagenation--next {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #1391e6;
+  @include font(14, 500, null, null);
+}
+.staff-blog__blog-pagenation--prev,
+.staff-blog__blog-pagenation--page.is-active,
+.staff-blog__blog-pagenation--next {
+  background: #1391e6;
+  color: #fff;
+}
+
+.staff-blog__blog-pagenation--prev {
+  width: 82px;
+  height: 35.787px;
+  padding-top: 9px;
+  padding-left: 24px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 16px;
+    width: 16px;
+    height: 16px;
+    background: url(../img/arrow-left.svg) no-repeat;
+  }
+}
+.staff-blog__blog-pagenation--page {
+  width: 34px;
+  height: 35.787px;
+  display: grid;
+  place-items: center;
+  // padding: 7px 13px 8px 12px;
+  color: #1391e6;
+  background: #fff;
+}
+
+.staff-blog__blog-pagenation--next {
+  width: 82px;
+  height: 35.787px;
+  padding-top: 9px;
+  // padding-left: 16px;
+  padding-right: 23px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    width: 16px;
+    height: 16px;
+    background: url(../img/arrow-right.svg) no-repeat;
+  }
 }
