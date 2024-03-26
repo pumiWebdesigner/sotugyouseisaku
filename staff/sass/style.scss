@@ -72,6 +72,7 @@
   img {
     aspect-ratio: 460/613;
     width: 100%;
+    height: auto;
     // height: 100%;
     object-fit: cover;
     border-radius: 20px;
@@ -170,6 +171,9 @@
 
 .swiper-slide {
   width: 305px;
+  @media screen and (max-width: 1024px) {
+    width: 200px;
+  }
   img {
     aspect-ratio: 305/229;
     // width: 100%;
