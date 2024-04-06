@@ -196,11 +196,6 @@
     // size,weight,height,spacing
     @include font(14, 5, 20, null);
   }
-  .is-new & {
-    // @include mq(sp-tab) {
-    //   margin-top: 6px;
-    // }
-  }
   .new-post & {
     @include font(14, 500, 20, null);
   }
