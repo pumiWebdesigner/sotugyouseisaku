@@ -25,9 +25,11 @@
 .footer__inner {
   max-width: 1000px;
   margin-inline: auto;
+  padding-inline: 10px;
   @include mq(sp) {
-    max-width: 355px;
+    // max-width: 355px;
     margin-inline: auto;
+    padding-inline: size-calc(10, 40, 375, 767);
   }
 }
 .footer__contents {
@@ -40,8 +42,12 @@
   gap: 40px;
   @include mq(sp) {
     display: block;
-    padding: 32px 10px 20px;
+    padding-top: 32px;
+    padding-bottom: 20px;
+    padding-inline: size-calc(10, 20, 375, 767);
+    // padding: 32px 10px 20px;
     text-align: center;
+    border-radius: 8px;
   }
 }
 
@@ -135,6 +141,9 @@
   @include mq(sp) {
     gap: 15px;
   }
+  @media screen and (max-width: 340px) {
+    flex-direction: column;
+  }
 }
 .button--reservation,
 .button--contact {
@@ -148,9 +157,9 @@
     height: 38px;
     line-height: 38px;
     @include font(14, 400);
-    @media screen and (max-width: 340px) {
-      width: 135px;
-    }
+    // @media screen and (max-width: 340px) {
+    //   width: 135px;
+    // }
   }
   .footer__nav & {
     border-radius: 8px;
@@ -194,14 +203,20 @@
 .button--icon {
   display: grid;
   place-items: center;
-  .button--contact svg {
-    @include mq(sp) {
+  .button--contact & {
+    width: 17px;
+    height: 17px;
+    svg {
+      aspect-ratio: 1/1;
       width: 17px;
       height: 17px;
+      // width: 100%;
+      // height: 100%;
       object-fit: cover;
     }
   }
 }
+
 .button--text {
   .footer__nav & {
     line-height: 1;
@@ -338,6 +353,9 @@
   padding-top: 6px;
   padding-bottom: 6px;
   padding-right: 4px;
+  @media screen and (max-width: 350px) {
+    flex-direction: column;
+  }
 }
 
 // .footer__nav-info--tel {
@@ -352,16 +370,21 @@
   right: 20px;
   width: 52px;
   height: 52px;
-
   z-index: var(--layer-totop);
-  @include mq(sp) {
-    right: 12px;
-    bottom: 80px;
+
+  svg {
+    aspect-ratio: 1/1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
-  // @include mq(sp) {
-  //   right: 12px;
-  //   bottom: 98px;
-  // }
+  @include mq(sp) {
+    right: 16px;
+    bottom: 97px;
+  }
+  @media screen and (max-width: 350px) {
+    bottom: 30px;
+  }
   .is-scroll & {
     pointer-events: auto;
     opacity: 1;

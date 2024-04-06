@@ -9,13 +9,13 @@
 
 .hidden-pc {
   @media screen and (min-width: #{map.get($size,"sp-max") + 1}) {
-    display: none;
+    display: none !important;
   }
 }
 
 .hidden-sp {
   @media screen and (max-width: #{map.get($size,"sp-max")}) {
-    display: none;
+    display: none !important;
   }
 }
 // 視覚的に認知できないユーザへの考慮。視覚的には要素を非表示にするが、スクリーンリーダーには読み上げられるようにする。

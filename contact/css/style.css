@@ -16,7 +16,7 @@
   --clip-triangle-upper-right: polygon(0 0, 100% 0, 100% 100%);
   --layer-hamburger: 150;
   --layer-drawer: 40;
-  --layer-totop: 30;
+  --layer-totop: 100;
   --layer-aside: 30;
   --layer-header: 20;
   --layer-footer: 50;
@@ -412,13 +412,13 @@ th {
 
 @media screen and (min-width: 768px) {
   .hidden-pc {
-    display: none;
+    display: none !important;
   }
 }
 
 @media screen and (max-width: 767px) {
   .hidden-sp {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -941,11 +941,12 @@ body {
 .footer__inner {
   max-width: 1000px;
   margin-inline: auto;
+  padding-inline: 10px;
 }
 @media (width <= 767px) {
   .footer__inner {
-    max-width: 355px;
     margin-inline: auto;
+    padding-inline: clamp(10px, 10px + 30 * (100vw - 375px) / 392, 40px);
   }
 }
 
@@ -967,8 +968,11 @@ body {
 @media (width <= 767px) {
   .footer__contents {
     display: block;
-    padding: 32px 10px 20px;
+    padding-top: 32px;
+    padding-bottom: 20px;
+    padding-inline: clamp(10px, 10px + 10 * (100vw - 375px) / 392, 20px);
     text-align: center;
+    border-radius: 8px;
   }
 }
 
@@ -1086,6 +1090,14 @@ body {
     gap: 15px;
   }
 }
+@media screen and (max-width: 340px) {
+  .footer__buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 
 .button--reservation,
 .button--contact {
@@ -1104,12 +1116,6 @@ body {
     line-height: 38px;
     font-size: 0.875rem;
     font-weight: 400;
-  }
-}
-@media screen and (width <= 767px) and (max-width: 340px) {
-  .button--reservation,
-  .button--contact {
-    width: 135px;
   }
 }
 .footer__nav .button--reservation,
@@ -1160,13 +1166,16 @@ body {
   display: grid;
   place-items: center;
 }
-@media (width <= 767px) {
-  .button--icon .button--contact svg {
-    width: 17px;
-    height: 17px;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
+.button--contact .button--icon {
+  width: 17px;
+  height: 17px;
+}
+.button--contact .button--icon svg {
+  aspect-ratio: 1/1;
+  width: 17px;
+  height: 17px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .footer__nav .button--text {
@@ -1326,6 +1335,14 @@ body {
     display: none;
   }
 }
+@media screen and (max-width: 350px) {
+  .footer__nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 
 .footer__pagetop {
   pointer-events: none;
@@ -1339,10 +1356,22 @@ body {
   height: 52px;
   z-index: var(--layer-totop);
 }
+.footer__pagetop svg {
+  aspect-ratio: 1/1;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 @media (width <= 767px) {
   .footer__pagetop {
-    right: 12px;
-    bottom: 80px;
+    right: 16px;
+    bottom: 97px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .footer__pagetop {
+    bottom: 30px;
   }
 }
 .is-scroll .footer__pagetop {
