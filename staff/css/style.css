@@ -474,6 +474,10 @@ body {
   background-color: gray;
 }
 
+.accent {
+  color: var(--accent);
+}
+
 .button {
   display: inline-block;
   text-align: center;
