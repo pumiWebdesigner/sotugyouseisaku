@@ -7,6 +7,7 @@
   margin-top: 120px;
   padding-inline: 60px;
   position: relative;
+  width: 100%;
   @include mq(sp) {
     margin-top: 80px;
     padding-inline: 20px;
