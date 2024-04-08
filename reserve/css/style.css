@@ -2819,31 +2819,32 @@ body {
   color: #c2c2c2;
 }
 
-.contact {
+.reserve {
   margin-top: 80px;
   margin-bottom: 192px;
 }
 @media (width <= 767px) {
-  .contact {
+  .reserve {
     margin-top: 61px;
     margin-bottom: 132px;
   }
 }
 
-.contact__inner {
+.reserve__inner {
   max-width: 728px;
   width: 100%;
-  padding-inline: 20px;
+  padding-inline: revert;
+  margin-inline: auto;
 }
-.is-success .contact__inner {
+.is-success .reserve__inner {
   max-width: 768px;
 }
 
-.is-success .contact__wrapper {
+.is-success .reserve__wrapper {
   display: none;
 }
 
-.contact__message {
+.reserve__message {
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 1.7142857143;
@@ -2863,16 +2864,16 @@ body {
   }
 }
 
-.contact__form {
+.reserve__form {
   margin-top: 74px;
 }
 @media (width <= 767px) {
-  .contact__form {
+  .reserve__form {
     margin-top: 70px;
   }
 }
 
-.contact__form--item {
+.reserve__form--item {
   text-align: left;
   padding-top: 28px;
   padding-bottom: 27.5px;
@@ -2885,11 +2886,11 @@ body {
           align-items: center;
   border-bottom: #ddd solid 1px;
 }
-.contact__form--item:first-child {
+.reserve__form--item:first-child {
   border-top: #ddd solid 1px;
 }
 @media (width <= 767px) {
-  .contact__form--item {
+  .reserve__form--item {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2900,14 +2901,14 @@ body {
   }
 }
 @media (width <= 767px) {
-  .contact__form--item {
+  .reserve__form--item {
     padding-top: 25px;
     padding-bottom: 23.5px;
     gap: 12px;
   }
 }
 
-.contact__form--title {
+.reserve__form--title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2915,20 +2916,22 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 180px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 180px;
+          flex: 0 0 180px;
 }
 @media (width <= 767px) {
-  .contact__form--title {
+  .reserve__form--title {
     gap: 12px;
   }
 }
 
-.contact__form--title-text {
+.reserve__form--title-text {
   font-size: 1rem;
   font-weight: 500;
 }
 
-.contact__form--require {
+.reserve__form--require {
   background-color: var(--accent);
   width: 36px;
   height: 23px;
@@ -2940,12 +2943,12 @@ body {
   place-items: center;
 }
 @media (width <= 767px) {
-  .contact__form--require {
+  .reserve__form--require {
     padding-top: 3px;
   }
 }
 
-.contact__form--input {
+.reserve__form--input {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -2954,42 +2957,42 @@ body {
   border-radius: 4px;
   background: #f6f6f6;
 }
-.contact__form--input::-webkit-input-placeholder {
+.reserve__form--input::-webkit-input-placeholder {
   color: #c2c2c2;
   font-size: 1rem;
   font-weight: 500;
 }
-.contact__form--input::-moz-placeholder {
+.reserve__form--input::-moz-placeholder {
   color: #c2c2c2;
   font-size: 1rem;
   font-weight: 500;
 }
-.contact__form--input:-ms-input-placeholder {
+.reserve__form--input:-ms-input-placeholder {
   color: #c2c2c2;
   font-size: 1rem;
   font-weight: 500;
 }
-.contact__form--input::-ms-input-placeholder {
+.reserve__form--input::-ms-input-placeholder {
   color: #c2c2c2;
   font-size: 1rem;
   font-weight: 500;
 }
-.contact__form--input::placeholder {
+.reserve__form--input::placeholder {
   color: #c2c2c2;
   font-size: 1rem;
   font-weight: 500;
 }
 
-.contact__form--textarea {
+.reserve__form--textarea {
   min-height: 200px;
 }
 @media (width <= 767px) {
-  .contact__form--textarea {
+  .reserve__form--textarea {
     min-height: 160px;
   }
 }
 
-.contact__button {
+.reserve__button {
   margin-top: 72px;
   padding-block: 18.5px;
   width: 360px;
@@ -2999,7 +3002,7 @@ body {
   letter-spacing: 0.08em;
 }
 @media (width <= 767px) {
-  .contact__button {
+  .reserve__button {
     padding-block: 9.5px;
     width: 273px;
     font-size: 0.875rem;
@@ -3007,14 +3010,14 @@ body {
     letter-spacing: 0.08em;
   }
 }
-.contact__button:disabled {
+.reserve__button:disabled {
   cursor: not-allowed;
   border-color: transparent;
   background-color: #ccc;
   -webkit-box-shadow: 0px 4px 0px 0px transparent;
           box-shadow: 0px 4px 0px 0px transparent;
 }
-.contact__button:disabled:hover {
+.reserve__button:disabled:hover {
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
   background-color: #ccc;
@@ -3022,7 +3025,7 @@ body {
           box-shadow: 0px 0px 0px 0px transparent;
 }
 
-.contact__message-success {
+.reserve__message-success {
   display: none;
   max-width: 728px;
   width: 100%;
@@ -3032,10 +3035,10 @@ body {
   font-weight: 500;
   line-height: 1.7142857143;
 }
-.is-success .contact__message-success {
+.is-success .reserve__message-success {
   display: revert;
 }
 
-#js-contact-form {
+#js-reserve-form {
   display: none;
 }

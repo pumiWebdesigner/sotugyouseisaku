@@ -2,7 +2,7 @@
 @use "../../sass/global/" as *;
 @use "../../sass/blocks/" as *;
 
-.contact {
+.reserve {
   margin-top: 80px;
   margin-bottom: 192px;
   @include mq(sp) {
@@ -11,21 +11,22 @@
   }
 }
 
-.contact__inner {
+.reserve__inner {
   max-width: 728px;
   width: 100%;
-  padding-inline: 20px;
+  padding-inline: revert;
+  margin-inline: auto;
   .is-success & {
     max-width: 768px;
   }
 }
 
-.contact__wrapper {
+.reserve__wrapper {
   .is-success & {
     display: none;
   }
 }
-.contact__message {
+.reserve__message {
   @include font(14, 500, 24, null);
   text-align: left;
 }
@@ -39,14 +40,14 @@
   }
 }
 
-.contact__form {
+.reserve__form {
   margin-top: 74px;
   @include mq(sp) {
     margin-top: 70px;
   }
 }
 
-.contact__form--item {
+.reserve__form--item {
   text-align: left;
   // padding-block: 28px;
   padding-top: 28px;
@@ -69,21 +70,21 @@
   }
 }
 
-.contact__form--title {
+.reserve__form--title {
   display: flex;
   gap: 16px;
   align-items: center;
-  width: 180px;
+  flex: 0 0 180px;
   @include mq(sp) {
     gap: 12px;
   }
 }
 
-.contact__form--title-text {
+.reserve__form--title-text {
   @include font(16, 500, null, null);
 }
 
-.contact__form--require {
+.reserve__form--require {
   background-color: var(--accent);
   width: 36px;
   height: 23px;
@@ -97,7 +98,7 @@
   }
 }
 
-.contact__form--input {
+.reserve__form--input {
   flex: 1;
   padding-block: 15px;
   padding-left: 16px;
@@ -109,14 +110,14 @@
   }
 }
 
-.contact__form--textarea {
+.reserve__form--textarea {
   min-height: 200px;
   @include mq(sp) {
     min-height: 160px;
   }
 }
 
-.contact__button {
+.reserve__button {
   margin-top: 72px;
   padding-block: 18.5px;
   width: 360px;
@@ -141,21 +142,21 @@
   }
 }
 
-// .contact__button--top {
+// .reserve__button--top {
 //   border: none;
 // }
-// .contact__message--success,
-// .contact__message--error {
+// .reserve__message--success,
+// .reserve__message--error {
 //   text-align: center;
 //   display: none;
 //   background: #fff;
-//   padding: contact 20px;
+//   padding: reserve 20px;
 //   font-size: 24px;
 // }
-// .contact__message--success {
+// .reserve__message--success {
 //   color: #00f;
 // }
-.contact__message-success {
+.reserve__message-success {
   display: none;
   .is-success & {
     display: revert;
@@ -167,6 +168,6 @@
   text-align: left;
   @include font(14, 500, 24, null);
 }
-#js-contact-form {
+#js-reserve-form {
   display: none;
 }
