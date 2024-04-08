@@ -12,7 +12,10 @@
 }
 
 .contact__inner {
-  padding-inline: size-calc(20, 275, 375, 1280);
+  max-width: 728px;
+  width: 100%;
+  padding-inline: 20px;
+  // padding-inline: size-calc(20, 275, 375, 1280);
 }
 
 .contact__message {

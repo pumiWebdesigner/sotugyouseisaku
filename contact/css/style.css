@@ -2824,7 +2824,9 @@ body {
 }
 
 .contact__inner {
-  padding-inline: clamp(20px, 20px + 255 * (100vw - 375px) / 905, 275px);
+  max-width: 728px;
+  width: 100%;
+  padding-inline: 20px;
 }
 
 .contact__message {
