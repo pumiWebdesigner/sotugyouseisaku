@@ -2738,8 +2738,8 @@ body {
 @media (width <= 767px) {
   .page-title__text {
     gap: 22px;
-    top: 51%;
-    left: 51%;
+    -webkit-transform: translate(-49%, -49%);
+            transform: translate(-49%, -49%);
   }
 }
 
@@ -2794,22 +2794,29 @@ body {
   color: #c2c2c2;
 }
 
-.bread-cumb__link--second {
+.bread-cumb__link--second,
+.bread-cumb__link--third {
   color: var(--font);
   padding-left: 28px;
   position: relative;
 }
-.bread-cumb__link--second::before {
+.bread-cumb__link--second::before,
+.bread-cumb__link--third::before {
   content: "＞";
   position: absolute;
   left: 8px;
-  top: 60%;
+  top: 63%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   width: 12px;
   height: 18px;
   font-size: 0.75rem;
   font-weight: 500;
+  color: var(--font);
+}
+
+.is-third .bread-cumb__link--second {
+  color: #c2c2c2;
 }
 
 .medical-u {

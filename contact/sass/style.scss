@@ -15,9 +15,16 @@
   max-width: 728px;
   width: 100%;
   padding-inline: 20px;
-  // padding-inline: size-calc(20, 275, 375, 1280);
+  .is-success & {
+    max-width: 768px;
+  }
 }
 
+.contact__wrapper {
+  .is-success & {
+    display: none;
+  }
+}
 .contact__message {
   @include font(14, 500, 24, null);
   text-align: left;
@@ -148,6 +155,18 @@
 // .contact__message--success {
 //   color: #00f;
 // }
-// .contact__messag---error {
-//   color: #f00;
-// }
+.contact__message-success {
+  display: none;
+  .is-success & {
+    display: revert;
+  }
+  max-width: 728px;
+  width: 100%;
+  margin-inline: auto;
+  // padding-inline: 20px;
+  text-align: left;
+  @include font(14, 500, 24, null);
+}
+#js-contact-form {
+  display: none;
+}

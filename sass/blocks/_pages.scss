@@ -87,8 +87,7 @@
   color: #fff;
   @include mq(sp) {
     gap: 22px;
-    top: 51%;
-    left: 51%;
+    transform: translate(-49%, -49%);
   }
 }
 
@@ -123,7 +122,8 @@
   color: #c2c2c2;
 }
 
-.bread-cumb__link--second {
+.bread-cumb__link--second,
+.bread-cumb__link--third {
   color: var(--font);
   padding-left: 28px;
   position: relative;
@@ -131,10 +131,16 @@
     content: "＞";
     position: absolute;
     left: 8px;
-    top: 60%;
+    top: 63%;
     transform: translateY(-50%);
     width: 12px;
     height: 18px;
     @include font(12, 500, null, null);
+    color: var(--font);
+  }
+}
+.bread-cumb__link--second {
+  .is-third & {
+    color: #c2c2c2;
   }
 }
