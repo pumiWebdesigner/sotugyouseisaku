@@ -222,29 +222,42 @@
         <div class="section__title">お問い合わせ<br class="hidden-pc" />フォーム</div>
         <form action="#" method="post" class="contact__form">
           <div class="contact__form--item">
-            <label for="name" class="contact__form--label is-required">お名前</label>
-            <input type="text" id="name" name="name" class="contact__form--input" />
+            <div class="contact__form--title">
+              <label for="name" class="contact__form--label">お名前</label>
+              <span class="contact__form--require">必須</span>
+            </div>
+            <input type="text" id="name" name="name" class="contact__form--input" aria-label="お名前（漢字）" placeholder="山田　太郎" />
           </div>
           <div class="contact__form--item">
-            <label for="name2" class="contact__form--label is-required">フリガナ</label>
-            <input type="text" id="name-input" name="name2" class="contact__form--input" aria-label="お名前" />
+            <div class="contact__form--title">
+              <label for="name-input" class="contact__form--label">フリガナ</label>
+              <span class="contact__form--require">必須</span>
+            </div>
+            <input type="text" id="name-input" name="name-input" class="contact__form--input" aria-label="お名前（フリガナ）" placeholder="ヤマダ　タロウ" />
           </div>
           <div class="contact__form--item">
-            <label for="tel" class="contact__form--label is-required">電話番号</label>
-            <input type="tel" id="tel" name="tel" class="contact__form--input" />
+            <div class="contact__form--title">
+              <label for="tel" class="contact__form--label">電話番号</label>
+              <span class="contact__form--require">必須</span>
+            </div>
+            <input type="tel" id="tel" name="tel" class="contact__form--input" placeholder="000-0000-0000" />
           </div>
           <div class="contact__form--item">
-            <label for="email" class="contact__form--label is-required">メールアドレス</label>
-            <input type="email" id="email" name="email" class="contact__form--input" />
+            <div class="contact__form--title">
+              <label for="email" class="contact__form--label">メールアドレス</label>
+              <span class="contact__form--require">必須</span>
+            </div>
+            <input type="email" id="email" name="email" class="contact__form--input" placeholder="xxx@example.com" />
           </div>
           <div class="contact__form--item">
-            <label for="message" class="contact__form--label is-required">お問い合わせ内容</label>
-            <textarea id="message" name="message" class="contact__form--textarea"></textarea>
+            <div class="contact__form--title">
+              <label for="message" class="contact__form--label">お問い合わせ内容</label>
+              <span class="contact__form--require">必須</span>
+            </div>
+            <textarea id="message" name="message" class="contact__form--input contact__form--textarea" placeholder="ご自由にご記入ください。"></textarea>
           </div>
-          <button type="submit" class="button">送　信</button>
+          <button type="submit" class="button contact__button">送　信</button>
         </form>
-
-        <a href="./concept/index.html" class="button">送　信</a>
       </div>
     </section>
 
