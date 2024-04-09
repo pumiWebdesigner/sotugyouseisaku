@@ -5,6 +5,7 @@
 input[type="text"],
 input[type="email"],
 input[type="tel"],
+input[type="date"],
 select,
 textarea {
   // 入力場所
@@ -22,10 +23,9 @@ textarea {
   }
   &:hover,
   &:focus {
-    // border-radius: 4px;
-    border: 1px solid var(--main);
+    border-color: var(--main);
     background: #e9f6f8;
-    outline: none;
+    // outline: none;
   }
 }
 // textareaは高さ方向の設定も必要
@@ -38,7 +38,7 @@ textarea {
   // 高さは可変、横幅は固定
   resize: vertical;
 }
-
+// input[type="date"],
 input[type="radio"],
 input[type="checkbox"] {
   // 標準のラジオボタンを以下５行で非表示
@@ -152,6 +152,22 @@ input[type="checkbox"] {
         height: 4px;
       }
     }
+  }
+}
+
+select {
+  background: #f6f6f6 url(../../reserve/img/select-arrow.svg) no-repeat right 12px center;
+}
+input[type="date"] {
+  background: #f6f6f6 url(../../reserve/img/icon-calender.svg) no-repeat right 12px center;
+  position: relative;
+  &::-webkit-calendar-picker-indicator {
+    // デフォルトのカレンダーを非表示にする
+    opacity: 0;
+    // 入力欄クリック時にカレンダーウィンドウを表示する（デフォルトはカレンダーアイコンクリック時）
+    position: absolute;
+    width: 100%;
+    height: 100%;
   }
 }
 

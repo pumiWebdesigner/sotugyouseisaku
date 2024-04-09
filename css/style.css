@@ -2826,6 +2826,7 @@ body {
 input[type=text],
 input[type=email],
 input[type=tel],
+input[type=date],
 select,
 textarea {
   overflow: hidden;
@@ -2837,22 +2838,22 @@ textarea {
   font-family: inherit;
   color: var(--font);
 }
-input[type=text]::-webkit-input-placeholder, input[type=email]::-webkit-input-placeholder, input[type=tel]::-webkit-input-placeholder, select::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+input[type=text]::-webkit-input-placeholder, input[type=email]::-webkit-input-placeholder, input[type=tel]::-webkit-input-placeholder, input[type=date]::-webkit-input-placeholder, select::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   color: #c2c2c2;
   font-size: 1rem;
   font-weight: 500;
 }
-input[type=text]::-moz-placeholder, input[type=email]::-moz-placeholder, input[type=tel]::-moz-placeholder, select::-moz-placeholder, textarea::-moz-placeholder {
+input[type=text]::-moz-placeholder, input[type=email]::-moz-placeholder, input[type=tel]::-moz-placeholder, input[type=date]::-moz-placeholder, select::-moz-placeholder, textarea::-moz-placeholder {
   color: #c2c2c2;
   font-size: 1rem;
   font-weight: 500;
 }
-input[type=text]:-ms-input-placeholder, input[type=email]:-ms-input-placeholder, input[type=tel]:-ms-input-placeholder, select:-ms-input-placeholder, textarea:-ms-input-placeholder {
+input[type=text]:-ms-input-placeholder, input[type=email]:-ms-input-placeholder, input[type=tel]:-ms-input-placeholder, input[type=date]:-ms-input-placeholder, select:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: #c2c2c2;
   font-size: 1rem;
   font-weight: 500;
 }
-input[type=text]::-ms-input-placeholder, input[type=email]::-ms-input-placeholder, input[type=tel]::-ms-input-placeholder, select::-ms-input-placeholder, textarea::-ms-input-placeholder {
+input[type=text]::-ms-input-placeholder, input[type=email]::-ms-input-placeholder, input[type=tel]::-ms-input-placeholder, input[type=date]::-ms-input-placeholder, select::-ms-input-placeholder, textarea::-ms-input-placeholder {
   color: #c2c2c2;
   font-size: 1rem;
   font-weight: 500;
@@ -2860,6 +2861,7 @@ input[type=text]::-ms-input-placeholder, input[type=email]::-ms-input-placeholde
 input[type=text]::placeholder,
 input[type=email]::placeholder,
 input[type=tel]::placeholder,
+input[type=date]::placeholder,
 select::placeholder,
 textarea::placeholder {
   color: #c2c2c2;
@@ -2871,13 +2873,14 @@ input[type=email]:hover,
 input[type=email]:focus,
 input[type=tel]:hover,
 input[type=tel]:focus,
+input[type=date]:hover,
+input[type=date]:focus,
 select:hover,
 select:focus,
 textarea:hover,
 textarea:focus {
-  border: 1px solid var(--main);
+  border-color: var(--main);
   background: #e9f6f8;
-  outline: none;
 }
 
 textarea {
@@ -3003,4 +3006,19 @@ input[type=checkbox] + label::after {
     width: 8px;
     height: 4px;
   }
+}
+
+select {
+  background: #f6f6f6 url(../../reserve/img/select-arrow.svg) no-repeat right 12px center;
+}
+
+input[type=date] {
+  background: #f6f6f6 url(../../reserve/img/icon-calender.svg) no-repeat right 12px center;
+  position: relative;
+}
+input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }

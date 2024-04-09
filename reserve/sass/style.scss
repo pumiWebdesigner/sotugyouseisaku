@@ -193,35 +193,37 @@
 }
 .reserve__form--selectbox-wrapper {
   width: 100%;
-  position: relative;
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 12px;
-    width: 20px;
-    height: 20px;
-    background: url(../img/select-arrow.svg) no-repeat center center / cover;
-  }
+  // position: relative;
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   top: 50%;
+  //   transform: translateY(-50%);
+  //   right: 12px;
+  //   width: 20px;
+  //   height: 20px;
+  //   background: url(../img/select-arrow.svg) no-repeat center center / cover;
+  // }
 }
 
 .reserve__form--input-date {
   & + & {
     margin-top: 20px;
   }
-  width: 100%;
-  position: relative;
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 12px;
-    width: 20px;
-    height: 20px;
-    background: url(../img/icon-calender.svg) no-repeat center center / cover;
-  }
+  // height: 100px;
+  // width: 100%;
+  // position: relative;
+
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   top: 50%;
+  //   transform: translateY(-50%);
+  //   right: 12px;
+  //   width: 20px;
+  //   height: 20px;
+  //   background: url(../img/icon-calender.svg) no-repeat center center / cover;
+  // }
 }
 .reserve__button {
   margin-top: 72px;
