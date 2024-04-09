@@ -99,22 +99,23 @@
 
 .contact__form--input {
   flex: 1;
-  padding-block: 15px;
-  padding-left: 16px;
-  border-radius: 4px;
-  background: #f6f6f6;
-  &::placeholder {
-    color: #c2c2c2;
-    @include font(16, 500, null, null);
-  }
+  // padding-block: 15px;
+  // padding-left: 16px;
+  // border-radius: 4px;
+  // background: #f6f6f6;
+  // &::placeholder {
+  //   color: #c2c2c2;
+  //   @include font(16, 500, null, null);
+  // }
 }
 
-.contact__form--textarea {
-  min-height: 200px;
-  @include mq(sp) {
-    min-height: 160px;
-  }
-}
+// .contact__form--textarea {
+//   min-height: 200px;
+//   @include mq(sp) {
+//     min-height: 160px;
+//     resize: vertical;
+//   }
+// }
 
 .contact__button {
   margin-top: 72px;

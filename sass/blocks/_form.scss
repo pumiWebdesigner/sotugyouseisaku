@@ -1,0 +1,190 @@
+@use "sass:map";
+@use "../global" as *;
+
+// お名前、メールアドレス、電話、お問い合わせ内容の入力フォーム
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  // 入力場所
+  overflow: hidden; // 長文のはみ出し対策
+  border: 1px solid transparent; // ガタツキ防止
+  border-radius: 4px;
+  background: #f6f6f6;
+  width: 100%;
+  padding: 14px 15px;
+  font-family: inherit;
+  color: var(--font);
+  &::placeholder {
+    color: #c2c2c2;
+    @include font(16, 500, null, null);
+  }
+  &:hover,
+  &:focus {
+    // border-radius: 4px;
+    border: 1px solid var(--main);
+    background: #e9f6f8;
+    outline: none;
+  }
+}
+// textareaは高さ方向の設定も必要
+textarea {
+  // 高さの初期値
+  min-height: 200px;
+  @include mq(sp) {
+    min-height: 160px;
+  }
+  // 高さは可変、横幅は固定
+  resize: vertical;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  // 標準のラジオボタンを以下５行で非表示
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+  & + label {
+    // ボタン横の文字
+    // size,weight,height,spacing
+    @include font(14, 500, null, null);
+
+    // ボタンの場所
+    padding-left: calc(24px + 8px);
+    @include mq(sp) {
+      padding-left: calc(16px + 6px);
+    }
+    position: relative;
+    display: flex;
+    align-items: center;
+    // ボタン枠
+    &::before {
+      // ボタン枠の配置場所
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      border: 1px solid var(--main);
+      // ボタン枠のレイアウトは別途下に記載
+    }
+    // チェックマーク（ポチ丸・✓）
+    &::after {
+      // チェックマークの配置
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 6px;
+      @include mq(sp) {
+        left: 4px;
+      }
+      opacity: 0; // 非チェック時はポチ丸が透明
+      // チェック時マークは別途下に記載
+    }
+  }
+  // ホバー時、フォーカス時、チェック時にボーダー表示
+  &:hover,
+  &:focus,
+  &:checked {
+    & + label::before {
+      border: 1px solid var(--main);
+    }
+  }
+  // チェック時にチェック時マークを表示
+  &:checked + label::after {
+    opacity: 1;
+  }
+}
+
+// ボタン枠のレイアウト
+input[type="radio"] {
+  & + label {
+    &::before {
+      // ラジオボタン枠のレイアウト
+      width: 24px;
+      height: 24px;
+      background: white;
+      border-radius: 50%;
+      @include mq(sp) {
+        width: 16px;
+        height: 16px;
+      }
+    }
+    // チェック時マーク（ポチ丸）
+    &::after {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--main);
+      @include mq(sp) {
+        width: 8px;
+        height: 8px;
+      }
+    }
+  }
+}
+
+input[type="checkbox"] {
+  & + label {
+    &::before {
+      // チェックボックス枠のレイアウト
+      width: 24px;
+      height: 24px;
+      background: white;
+      @include mq(sp) {
+        width: 16px;
+        height: 16px;
+      }
+    }
+    // チェック時マーク（✓）
+    &::after {
+      width: 13px;
+      height: 8px;
+      border-bottom: solid 2px var(--main);
+      border-left: solid 2px var(--main);
+      transform: translateY(-70%) rotate(-45deg);
+      @include mq(sp) {
+        width: 8px;
+        height: 4px;
+      }
+    }
+  }
+}
+
+// select {
+//   // 標準のセレクト矢印を非表示
+//   appearance: none;
+//   outline: none;
+//   // select要素は疑似要素を直接設定不可。親要素で設定する。border-radiusも親要素で設定する。
+//   border: none;
+//   background: #f5f5f5;
+//   width: 100%;
+//   height: 56px;
+//   padding: 16px;
+//   color: black;
+//   font-size: 14px;
+//   font-weight: 400;
+//   line-height: 160%;
+//   font-family: inherit;
+//   letter-spacing: 0;
+//   &.error {
+//     border-radius: 8px;
+//     border: 1px solid red;
+//     background: #fff0f7;
+//     outline: none;
+//   }
+//   &:hover,
+//   &:focus {
+//     border-radius: 8px;
+//     border: 1px solid var(--main);
+//     background: #e9f6f8;
+//     outline: none;
+//   }
+//   @include mq(pc) {
+//     font-size: 16px;
+//   }
+// }
