@@ -19,6 +19,9 @@
   .is-success & {
     max-width: 768px;
   }
+  @include mq(sp) {
+    padding-inline: 20px;
+  }
 }
 
 .reserve__wrapper {
@@ -29,6 +32,9 @@
 .reserve__message {
   margin-top: 86px;
   text-align: left;
+  @include mq(sp) {
+    margin-top: 65px;
+  }
 }
 
 .reserve__message--tel {
@@ -36,11 +42,18 @@
 
 .reserve__message--tel-title {
   @include font(28, 700, null, 2.24);
+  @include mq(sp) {
+    // size,weight,height,spacing
+    @include font(20, 700, null, 1.6);
+  }
 }
 
 .reserve__info--tel {
   margin-top: 34px;
   color: var(--main);
+  @include mq(sp) {
+    margin-top: 29px;
+  }
 }
 
 .reserve__info--tel-number {
@@ -68,26 +81,37 @@
 .reserve__message--tel-text {
   @include font(14, 500, 24, null);
   margin-top: 25px;
+  @include mq(sp) {
+    margin-top: 21px;
+  }
 }
 
 .reserve__message--email {
   margin-top: 46px;
+  @include mq(sp) {
+    margin-top: 44px;
+  }
 }
 
 .reserve__message--email-title {
   @include font(28, 700, null, 2.24);
+  @include mq(sp) {
+    @include font(20, 700, null, 1.6);
+  }
 }
 
 .reserve__message--email-text {
   margin-top: 28px;
-  // size,weight,height,spacing
   @include font(14, 500, 24, null);
+  @include mq(sp) {
+    margin-top: 23px;
+  }
 }
 
 .section__title {
   margin-top: 157px;
   @include mq(sp) {
-    margin-top: 100px;
+    margin-top: 95px;
     @include font(20, 700, 28, 1.6);
   }
 }
@@ -128,6 +152,7 @@
   flex: 0 0 180px;
   @include mq(sp) {
     gap: 12px;
+    flex: revert;
   }
 }
 
