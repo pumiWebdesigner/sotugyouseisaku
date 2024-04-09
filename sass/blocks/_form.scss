@@ -24,7 +24,7 @@ textarea {
   &:hover,
   &:focus {
     border-color: var(--main);
-    background: #e9f6f8;
+    // background: #e9f6f8;
     // outline: none;
   }
 }
@@ -91,9 +91,18 @@ input[type="checkbox"] {
   &:focus,
   &:checked {
     & + label::before {
-      border: 1px solid var(--main);
+      // border: 1px solid var(--main);
+      // background: red;
     }
   }
+  &:hover,
+  &:focus {
+    & + label::before {
+      border: 2px solid var(--main);
+      // f6f6f6;
+    }
+  }
+
   // チェック時にチェック時マークを表示
   &:checked + label::after {
     opacity: 1;
@@ -159,6 +168,8 @@ select {
   background: #f6f6f6 url(../../reserve/img/select-arrow.svg) no-repeat right 12px center;
 }
 input[type="date"] {
+  padding: 13px 10px;
+
   background: #f6f6f6 url(../../reserve/img/icon-calender.svg) no-repeat right 12px center;
   position: relative;
   &::-webkit-calendar-picker-indicator {

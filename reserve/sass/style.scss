@@ -149,7 +149,9 @@
   }
 }
 
-.reserve__form--input {
+.reserve__form--input,
+.reserve__form--selectbox-wrapper,
+.reserve__form--date-wrapper {
   flex: 1;
 }
 
@@ -192,7 +194,7 @@
   flex-wrap: wrap;
 }
 .reserve__form--selectbox-wrapper {
-  width: 100%;
+  // width: 100%;
   // position: relative;
   // &::after {
   //   content: "";

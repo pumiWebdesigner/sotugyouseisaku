@@ -2880,7 +2880,6 @@ select:focus,
 textarea:hover,
 textarea:focus {
   border-color: var(--main);
-  background: #e9f6f8;
 }
 
 textarea {
@@ -2946,11 +2945,10 @@ input[type=checkbox] + label::after {
     left: 4px;
   }
 }
-input[type=radio]:hover + label::before, input[type=radio]:focus + label::before, input[type=radio]:checked + label::before,
+input[type=radio]:hover + label::before, input[type=radio]:focus + label::before,
 input[type=checkbox]:hover + label::before,
-input[type=checkbox]:focus + label::before,
-input[type=checkbox]:checked + label::before {
-  border: 1px solid var(--main);
+input[type=checkbox]:focus + label::before {
+  border: 2px solid var(--main);
 }
 input[type=radio]:checked + label::after,
 input[type=checkbox]:checked + label::after {
@@ -3013,6 +3011,7 @@ select {
 }
 
 input[type=date] {
+  padding: 13px 10px;
   background: #f6f6f6 url(../../reserve/img/icon-calender.svg) no-repeat right 12px center;
   position: relative;
 }
@@ -3211,7 +3210,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
   }
 }
 
-.reserve__form--input {
+.reserve__form--input,
+.reserve__form--selectbox-wrapper,
+.reserve__form--date-wrapper {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -3262,10 +3263,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-.reserve__form--selectbox-wrapper {
-  width: 100%;
 }
 
 .reserve__form--input-date + .reserve__form--input-date {
