@@ -1798,6 +1798,7 @@ body {
           align-items: center;
   padding-top: 6px;
   padding-bottom: 5px;
+  width: 100%;
 }
 @media (width <= 767px) {
   .mv__news-body--text {
@@ -2653,7 +2654,7 @@ body {
   -webkit-transition: background 0.3s;
   transition: background 0.3s;
 }
-@media (width <= 767px) {
+@media screen and (max-width: 1023px) {
   .aside__button {
     display: none;
   }
@@ -2823,6 +2824,13 @@ body {
   color: #c2c2c2;
 }
 
+.bread-cumb__link--third {
+  display: none;
+}
+.is-third .bread-cumb__link--third {
+  display: revert;
+}
+
 input[type=text],
 input[type=email],
 input[type=tel],
@@ -2913,12 +2921,6 @@ input[type=checkbox] + label {
       -ms-flex-align: center;
           align-items: center;
 }
-@media (width <= 767px) {
-  input[type=radio] + label,
-  input[type=checkbox] + label {
-    padding-left: 22px;
-  }
-}
 input[type=radio] + label::before,
 input[type=checkbox] + label::before {
   content: "";
@@ -2939,12 +2941,6 @@ input[type=checkbox] + label::after {
   left: 6px;
   opacity: 0;
 }
-@media (width <= 767px) {
-  input[type=radio] + label::after,
-  input[type=checkbox] + label::after {
-    left: 4px;
-  }
-}
 input[type=radio]:hover + label::before, input[type=radio]:focus + label::before,
 input[type=checkbox]:hover + label::before,
 input[type=checkbox]:focus + label::before {
@@ -2961,35 +2957,17 @@ input[type=radio] + label::before {
   background: white;
   border-radius: 50%;
 }
-@media (width <= 767px) {
-  input[type=radio] + label::before {
-    width: 16px;
-    height: 16px;
-  }
-}
 input[type=radio] + label::after {
   width: 12px;
   height: 12px;
   border-radius: 50%;
   background: var(--main);
 }
-@media (width <= 767px) {
-  input[type=radio] + label::after {
-    width: 8px;
-    height: 8px;
-  }
-}
 
 input[type=checkbox] + label::before {
   width: 24px;
   height: 24px;
   background: white;
-}
-@media (width <= 767px) {
-  input[type=checkbox] + label::before {
-    width: 16px;
-    height: 16px;
-  }
 }
 input[type=checkbox] + label::after {
   width: 13px;
@@ -2999,15 +2977,14 @@ input[type=checkbox] + label::after {
   -webkit-transform: translateY(-70%) rotate(-45deg);
           transform: translateY(-70%) rotate(-45deg);
 }
-@media (width <= 767px) {
-  input[type=checkbox] + label::after {
-    width: 8px;
-    height: 4px;
-  }
-}
 
 select {
   background: #f6f6f6 url(../../reserve/img/select-arrow.svg) no-repeat right 12px center;
+}
+@media (width <= 767px) {
+  select {
+    background-position: right 9px center;
+  }
 }
 
 input[type=date] {
@@ -3020,6 +2997,18 @@ input[type=date]::-webkit-calendar-picker-indicator {
   position: absolute;
   width: 100%;
   height: 100%;
+}
+@media (width <= 767px) {
+  input[type=date] {
+    background-position: right 9px center;
+  }
+}
+
+input[type=date]::-webkit-datetime-edit-text,
+input[type=date]::-webkit-datetime-edit-month-field,
+input[type=date]::-webkit-datetime-edit-day-field,
+input[type=date]::-webkit-datetime-edit-year-field {
+  color: #c2c2c2; /* 灰色のプレースホルダー */
 }
 
 .contact {

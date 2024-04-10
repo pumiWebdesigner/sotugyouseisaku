@@ -144,3 +144,9 @@
     color: #c2c2c2;
   }
 }
+.bread-cumb__link--third {
+  display: none;
+  .is-third & {
+    display: revert;
+  }
+}

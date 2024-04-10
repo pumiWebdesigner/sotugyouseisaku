@@ -54,9 +54,9 @@ input[type="checkbox"] {
 
     // ボタンの場所
     padding-left: calc(24px + 8px);
-    @include mq(sp) {
-      padding-left: calc(16px + 6px);
-    }
+    // @include mq(sp) {
+    //   padding-left: calc(16px + 6px);
+    // }
     position: relative;
     display: flex;
     align-items: center;
@@ -79,9 +79,9 @@ input[type="checkbox"] {
       top: 50%;
       transform: translateY(-50%);
       left: 6px;
-      @include mq(sp) {
-        left: 4px;
-      }
+      // @include mq(sp) {
+      //   left: 4px;
+      // }
       opacity: 0; // 非チェック時はポチ丸が透明
       // チェック時マークは別途下に記載
     }
@@ -118,10 +118,10 @@ input[type="radio"] {
       height: 24px;
       background: white;
       border-radius: 50%;
-      @include mq(sp) {
-        width: 16px;
-        height: 16px;
-      }
+      // @include mq(sp) {
+      //   width: 16px;
+      //   height: 16px;
+      // }
     }
     // チェック時マーク（ポチ丸）
     &::after {
@@ -129,10 +129,10 @@ input[type="radio"] {
       height: 12px;
       border-radius: 50%;
       background: var(--main);
-      @include mq(sp) {
-        width: 8px;
-        height: 8px;
-      }
+      // @include mq(sp) {
+      //   width: 8px;
+      //   height: 8px;
+      // }
     }
   }
 }
@@ -144,10 +144,10 @@ input[type="checkbox"] {
       width: 24px;
       height: 24px;
       background: white;
-      @include mq(sp) {
-        width: 16px;
-        height: 16px;
-      }
+      // @include mq(sp) {
+      //   width: 16px;
+      //   height: 16px;
+      // }
     }
     // チェック時マーク（✓）
     &::after {
@@ -156,20 +156,22 @@ input[type="checkbox"] {
       border-bottom: solid 2px var(--main);
       border-left: solid 2px var(--main);
       transform: translateY(-70%) rotate(-45deg);
-      @include mq(sp) {
-        width: 8px;
-        height: 4px;
-      }
+      // @include mq(sp) {
+      //   width: 8px;
+      //   height: 4px;
+      // }
     }
   }
 }
 
 select {
   background: #f6f6f6 url(../../reserve/img/select-arrow.svg) no-repeat right 12px center;
+  @include mq(sp) {
+    background-position: right 9px center;
+  }
 }
 input[type="date"] {
   padding: 13px 10px;
-
   background: #f6f6f6 url(../../reserve/img/icon-calender.svg) no-repeat right 12px center;
   position: relative;
   &::-webkit-calendar-picker-indicator {
@@ -180,38 +182,14 @@ input[type="date"] {
     width: 100%;
     height: 100%;
   }
+  @include mq(sp) {
+    background-position: right 9px center;
+  }
 }
-
-// select {
-//   // 標準のセレクト矢印を非表示
-//   appearance: none;
-//   outline: none;
-//   // select要素は疑似要素を直接設定不可。親要素で設定する。border-radiusも親要素で設定する。
-//   border: none;
-//   background: #f5f5f5;
-//   width: 100%;
-//   height: 56px;
-//   padding: 16px;
-//   color: black;
-//   font-size: 14px;
-//   font-weight: 400;
-//   line-height: 160%;
-//   font-family: inherit;
-//   letter-spacing: 0;
-//   &.error {
-//     border-radius: 8px;
-//     border: 1px solid red;
-//     background: #fff0f7;
-//     outline: none;
-//   }
-//   &:hover,
-//   &:focus {
-//     border-radius: 8px;
-//     border: 1px solid var(--main);
-//     background: #e9f6f8;
-//     outline: none;
-//   }
-//   @include mq(pc) {
-//     font-size: 16px;
-//   }
-// }
+// dateタイプはplaceholder設定が効かないため、::webkit-datetime-edit-textなどで設定
+input[type="date"]::-webkit-datetime-edit-text,
+input[type="date"]::-webkit-datetime-edit-month-field,
+input[type="date"]::-webkit-datetime-edit-day-field,
+input[type="date"]::-webkit-datetime-edit-year-field {
+  color: #c2c2c2; /* 灰色のプレースホルダー */
+}

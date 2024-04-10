@@ -207,12 +207,13 @@
     </div>
 
     <div class="bread-crumb is-third">
+      <!-- <div class="bread-crumb"> -->
       <div class="bread-cumb__link--home">ホーム</div>
       <div class="bread-cumb__link--second">WEB予約</div>
       <div class="bread-cumb__link--third">WEB予約完了</div>
     </div>
 
-    <section class="reserve" id="js-reserve">
+    <section class="reserve is-success" id="js-reserve">
       <div class="section__inner reserve__inner">
         <div class="reserve__wrapper">
           <div class="reserve__message">
@@ -294,7 +295,7 @@
               </div>
               <div class="reserve__form--checkbox-wrapper">
                 <div class="reserve__checkbox--item">
-                  <input id="checkbox1" class="reserve__checkbox--input" type="checkbox" name="reserve__checkbox" value="虫歯" />
+                  <input id="checkbox1" class="reserve__checkbox--input" type="checkbox" name="reserve__checkbox" value="虫歯" checked />
                   <label for="checkbox1" class="reserve__checkbox--label">虫歯</label>
                 </div>
                 <div class="reserve__checkbox--item">
@@ -332,7 +333,7 @@
               </div>
             </div>
 
-            <div class="reserve__form--item">
+            <div class="reserve__form--item reserve__form--item-selectbox">
               <div class="reserve__form--title">
                 <div class="reserve__form--title-text">ご連絡方法</div>
                 <span class="reserve__form--require">必須</span>
@@ -346,7 +347,7 @@
               </div>
             </div>
 
-            <div class="reserve__form--item">
+            <div class="reserve__form--item reserve__form--item-date">
               <div class="reserve__form--title">
                 <label for="date1" class="reserve__form--title-text">希望日</label>
               </div>
@@ -357,7 +358,7 @@
               </div>
             </div>
 
-            <div class="reserve__form--item">
+            <div class="reserve__form--item reserve__form--item-textarea">
               <div class="reserve__form--title">
                 <label for="message" class="reserve__form--title-text">お問い合わせ内容</label>
                 <!-- <span class="reserve__form--require">必須</span> -->

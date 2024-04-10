@@ -7,7 +7,7 @@
   margin-bottom: 192px;
   @include mq(sp) {
     margin-top: 61px;
-    margin-bottom: 132px;
+    margin-bottom: 134px;
   }
 }
 
@@ -185,12 +185,23 @@
 .reserve__form--item-radio {
   padding-top: 41px;
   padding-bottom: 40px;
+  @include mq(sp) {
+    padding-top: 25px;
+    padding-bottom: 28px;
+    .reserve__form--require {
+      margin-left: 4px;
+    }
+  }
 }
 
 .reserve__form--radio-wrapper {
   display: flex;
   gap: 32px;
   align-items: center;
+  @include mq(sp) {
+    margin-top: 12px;
+    gap: 40px;
+  }
 }
 
 .reserve__form--item-checkbox {
@@ -198,6 +209,13 @@
   padding-bottom: 23px;
   .reserve__form--require {
     margin-top: -20px;
+  }
+  @include mq(sp) {
+    padding-top: 27px;
+    padding-bottom: 28px;
+    .reserve__form--require {
+      margin-left: 4px;
+    }
   }
 }
 .reserve__form--title-text-checkbox {
@@ -217,7 +235,20 @@
   gap: 24px 32px;
   align-items: center;
   flex-wrap: wrap;
+  @include mq(sp) {
+    margin-top: 14px;
+    gap: 24px;
+  }
 }
+
+.reserve__form--item-selectbox {
+  @include mq(sp) {
+    .reserve__form--require {
+      margin-left: 4px;
+    }
+  }
+}
+
 .reserve__form--selectbox-wrapper {
   // width: 100%;
   // position: relative;
@@ -231,6 +262,12 @@
   //   height: 20px;
   //   background: url(../img/select-arrow.svg) no-repeat center center / cover;
   // }
+}
+.reserve__form--item-date {
+  padding-top: 27px;
+}
+.reserve__form--date-wrapper {
+  margin-top: 2px;
 }
 
 .reserve__form--input-date {
@@ -252,6 +289,13 @@
   //   background: url(../img/icon-calender.svg) no-repeat center center / cover;
   // }
 }
+.reserve__form--item-textarea {
+  @include mq(sp) {
+    padding-top: 27px;
+    padding-bottom: 26px;
+  }
+}
+
 .reserve__button {
   margin-top: 72px;
   padding-block: 18.5px;
@@ -275,22 +319,10 @@
       box-shadow: 0px 0px 0px 0px transparent;
     }
   }
+  @include mq(sp) {
+    margin-top: 70px;
+  }
 }
-
-// .reserve__button--top {
-//   border: none;
-// }
-// .reserve__message--success,
-// .reserve__message--error {
-//   text-align: center;
-//   display: none;
-//   background: #fff;
-//   padding: reserve 20px;
-//   font-size: 24px;
-// }
-// .reserve__message--success {
-//   color: #00f;
-// }
 .reserve__message-success {
   display: none;
   .is-success & {
