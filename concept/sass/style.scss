@@ -15,11 +15,11 @@
 .policy__container {
   margin-top: 64px;
   padding-top: 216px;
-  padding-bottom: 100px;
+  padding-bottom: size-calc2(180, 100, 1024, 1280);
   background: #fff url(../../img/concept/concept-bg.png) no-repeat top left 416px;
   display: flex;
   flex-direction: row-reverse;
-  @include mq(sp) {
+  @media screen and (max-width: 1023px) {
     flex-direction: column;
     margin-top: 40px;
     padding-top: 113px;

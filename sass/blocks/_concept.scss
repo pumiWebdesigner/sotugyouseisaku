@@ -6,7 +6,8 @@
   padding-top: 60px;
   background: #fff url(../../img/concept/concept-bg.png) no-repeat top left 10px;
   background-size: calc(554 / 375 * 100%); /* sizeはショートハンドでかけない */
-  padding-bottom: 120px;
+  padding-bottom: size-calc(150, 120, 1024, 1280);
+
   @include mq(pc) {
     margin-top: 96px;
     padding-top: 180px;

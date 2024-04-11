@@ -1853,7 +1853,7 @@ body {
   padding-top: 60px;
   background: #fff url(../../img/concept/concept-bg.png) no-repeat top left 10px;
   background-size: 147.7333333333%; /* sizeはショートハンドでかけない */
-  padding-bottom: 120px;
+  padding-bottom: clamp(150px, 150px + -30 * (100vw - 1024px) / 256, 120px);
 }
 @media (1024px <= width) {
   .concept {
@@ -3027,7 +3027,7 @@ input[type=date]::-webkit-datetime-edit-year-field {
 .policy__container {
   margin-top: 64px;
   padding-top: 216px;
-  padding-bottom: 100px;
+  padding-bottom: calc(180px + -80 * (100vw - 1024px) / 256);
   background: #fff url(../../img/concept/concept-bg.png) no-repeat top left 416px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3037,7 +3037,7 @@ input[type=date]::-webkit-datetime-edit-year-field {
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
-@media (width <= 767px) {
+@media screen and (max-width: 1023px) {
   .policy__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

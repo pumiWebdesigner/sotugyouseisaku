@@ -1853,7 +1853,7 @@ body {
   padding-top: 60px;
   background: #fff url(../../img/concept/concept-bg.png) no-repeat top left 10px;
   background-size: 147.7333333333%; /* sizeはショートハンドでかけない */
-  padding-bottom: 120px;
+  padding-bottom: clamp(150px, 150px + -30 * (100vw - 1024px) / 256, 120px);
 }
 @media (1024px <= width) {
   .concept {

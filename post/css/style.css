@@ -1853,7 +1853,7 @@ body {
   padding-top: 60px;
   background: #fff url(../../img/concept/concept-bg.png) no-repeat top left 10px;
   background-size: 147.7333333333%; /* sizeはショートハンドでかけない */
-  padding-bottom: 120px;
+  padding-bottom: clamp(150px, 150px + -30 * (100vw - 1024px) / 256, 120px);
 }
 @media (1024px <= width) {
   .concept {
@@ -3635,26 +3635,21 @@ input[type=date]::-webkit-datetime-edit-year-field {
     margin-top: 10px;
   }
 }
+@media (hover: hover) {
+  .staff-blog__blog-item:hover img {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  .staff-blog__blog-item:hover .staff-blog__blog-text--title {
+    color: var(--main);
+  }
+}
 
 .staff-blog__blog-img {
   width: 244px;
   height: auto;
   position: relative;
-  font-size: 0.625rem;
-  font-weight: 700;
-  color: #fff;
-  text-align: center;
-}
-.is-new .staff-blog__blog-img::before {
-  content: "NEW";
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  border-radius: 50%;
-  top: -10px;
-  left: -10px;
-  background: #ee5a6d;
+  overflow: hidden;
 }
 .staff-blog__blog-img img {
   aspect-ratio: 244/153;
@@ -3775,6 +3770,8 @@ input[type=date]::-webkit-datetime-edit-year-field {
 }
 
 .staff-blog__blog-text--title {
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.5;

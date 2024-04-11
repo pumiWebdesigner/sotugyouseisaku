@@ -1,4 +1,17 @@
 {
+  // ページ外からの遷移
+  // ページがロードされた後にhash有無をチェックして処理
+  $(document).ready(function () {
+    if (window.location.hash) {
+      // URLのhashが遷移する先（例：#access）
+      var hash = window.location.hash; // #～を取得
+      // 遷移する先とheaderの高さからスクロールする距離を計算
+      scrollDistance = calcDistance(hash);
+      // スムーズスクロール
+      smoothScroll(scrollDistance, 0);
+    }
+  });
+
   // ページ内の遷移
   // aタグのクリック（ドロワー関連は専用処理あり）
   jQuery('a[href^="#"]').on("click", function (e) {
@@ -17,14 +30,15 @@
   // 遷移する先とheaderの高さからスクロールする距離を計算
   function calcDistance(id) {
     var scrollDistance = 0; // #は初期値0
-    if (id != "#") {
-      // id == "#"の場合、elementDistanceの取得でエラーになるので場合分けする
+    console.log(id);
+    if (id && id !== "#" && $(id).length) {
+      // idが存在しない場合は$(id)がエラーになるので、idが存在する場合のみ処理を行う
+      // id == "#"の場合、elementDistanceの取得でエラーになるので、#の場合はスクロールしない
+      // ページ内にidと同名のDOM要素の数が1つ以上ある場合のみ処理を行う
       var elementDistance = $(id).offset().top; //画面最上部から要素の上端の距離
       var headerHeight = $(".header").outerHeight(); // ヘッダーの高さ（マージン含む）
-      if ($(window).width() >= 1024) {
-        headerHeight = 0; // PCサイズでheaderHeightを0に設定
-      }
       scrollDistance = elementDistance - headerHeight; // ヘッダーの高さを考慮した位置にスクロール
+      scrollDistance -= 20; // 20px余裕を持たせる
     }
     return scrollDistance;
   }
@@ -37,6 +51,7 @@
       speed
     );
   }
+
   //ドロワーボタン（ハンバーガーボタン）
   jQuery("#js-drawer__btn").on("click", function (e) {
     e.preventDefault();
