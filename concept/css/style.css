@@ -529,10 +529,6 @@ body {
   background: var(--main);
   color: #fff;
 }
-.button--color-reverse:hover {
-  background: #fff;
-  color: var(--main);
-}
 
 .button--reservation,
 .button--contact {
@@ -563,6 +559,9 @@ body {
   height: 47px;
   line-height: normal;
 }
+.button--reservation:hover {
+  background: var(--01, #0060a0);
+}
 
 .button--label {
   display: -webkit-box;
@@ -590,11 +589,8 @@ body {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.button--reservation:hover .button--icon-path {
-  fill: var(--main);
-}
 .button--contact:hover .button--icon-path {
-  stroke: #fff;
+  fill: #fff;
 }
 
 .button--icon {
@@ -1275,6 +1271,11 @@ body {
     margin-inline: auto;
   }
 }
+@media (hover: hover) {
+  .footer__links a:hover .footer__link--item {
+    opacity: 0.7;
+  }
+}
 
 @media screen and (max-width: 1024px) {
   .footer__link--container {
@@ -1290,11 +1291,18 @@ body {
 }
 
 .footer__link--item {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.footer__link--item-sub {
   margin-top: 24px;
   padding-left: 12px;
+  font-size: 1rem;
+  font-weight: 500;
   position: relative;
 }
-.footer__link--item::before {
+.footer__link--item-sub::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -2285,9 +2293,14 @@ body {
 @media (hover: hover) {
   .medical__item:hover .medical__img::before {
     background: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
   }
   .medical__item:hover .medical__img::after {
     opacity: 1;
+  }
+  .medical__item:hover .medical__img img {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
 }
 
@@ -2295,6 +2308,8 @@ body {
   width: inherit;
   height: inherit;
   position: relative;
+  border-radius: 20px;
+  overflow: hidden;
 }
 .medical__img img {
   aspect-ratio: 460/290;
@@ -2303,6 +2318,8 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 @media (width <= 767px) {
   .medical__img img {
@@ -2320,6 +2337,8 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  z-index: 1;
+  transition: all 0.3s ease;
 }
 .medical__img::before {
   width: 100%;

@@ -206,6 +206,15 @@
 
   text-align: left;
   @include font(16, 700);
+  a {
+    @media (hover: hover) {
+      &:hover {
+        .footer__link--item {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
 }
 .footer__link--container {
   @media screen and (max-width: 1024px) {
@@ -226,8 +235,15 @@
 // }
 
 .footer__link--item {
+  transition: all 0.3s ease;
+}
+
+.footer__link--item-sub {
   margin-top: 24px;
   padding-left: 12px;
+  // size,weight,height,spacing
+  @include font(16, 500, null, null);
+
   position: relative;
   &::before {
     content: "";

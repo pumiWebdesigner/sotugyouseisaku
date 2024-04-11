@@ -46,10 +46,10 @@
 .button--color-reverse {
   background: var(--main);
   color: #fff;
-  &:hover {
-    background: #fff;
-    color: var(--main);
-  }
+  // &:hover {
+  //   background: #fff;
+  //   color: var(--main);
+  // }
 }
 
 .button--reservation,
@@ -78,6 +78,9 @@
     height: 47px;
     line-height: normal;
   }
+  &:hover {
+    background: var(--01, #0060a0);
+  }
 }
 
 .button--label {
@@ -99,11 +102,12 @@
   .button--contact & {
     transition: all 0.3s ease;
   }
-  .button--reservation:hover & {
-    fill: var(--main);
-  }
+  // .button--reservation:hover & {
+  //   fill: var(--main);
+  // }
   .button--contact:hover & {
-    stroke: #fff;
+    // stroke: #fff;
+    fill: #fff;
   }
 }
 
