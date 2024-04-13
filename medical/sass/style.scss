@@ -25,7 +25,6 @@
       background: url(../../img/medical-u/medical-u__bg--top-sp.png) no-repeat top center/cover;
     }
   }
-
   &::after {
     aspect-ratio: calc(1280 / 97);
     top: 100%;
@@ -40,17 +39,11 @@
     padding-bottom: 62px;
   }
 }
-
 .practice-nav {
   margin-top: size-calc(65, 87, 375, 1280);
 }
 .practice-nav__inner {
   padding-inline: size-calc(20, 62, 375, 1280);
-  // padding-left: 62px;
-
-  // @include mq(sp) {
-  //   padding-inline: 20px;
-  // }
 }
 .practice-nav--items {
   display: flex;
@@ -62,10 +55,6 @@
     margin-inline: auto;
   }
 }
-
-// .practice-nav--item {
-// }
-
 .practice-nav__title {
   display: flex;
   gap: 22px;
@@ -73,18 +62,13 @@
     align-items: center;
   }
 }
-
 .practice-nav__title--text {
-  // width: 119px;
-  // height: 44px;
   text-align: center;
-  // size,weight,height,spacing
   @include font(28, 700, null, 2.24);
   @include mq(sp) {
     @include font(20, 700, null, 1.6);
   }
 }
-
 .practice-nav__title--label {
   display: grid;
   place-items: center;
@@ -94,11 +78,7 @@
   border-radius: 24px;
   padding: 10px 12px 8px;
   margin-top: -3px;
-  // @include mq(sp) {
-  // padding: 9px 12px;
-  // }
 }
-
 .general--label {
   background: var(--main);
 }
@@ -116,24 +96,19 @@
     gap: 15px;
   }
 }
-
 .practice-nav__menu--item {
   color: var(--main);
   @include font(24, 700, null, 1.92);
   border-radius: 12px;
   border: 2px solid var(--main);
   background: #fff;
-  // padding: 18px 32px 18px 26px;
-  // padding: 21px 30px 18px 28px;
   padding: 21px 28px 19px 30px;
   @include mq(sp) {
     text-align: center;
     @include font(20, 700, null, 1.6);
     padding: 17px;
-    // width: 335px;
   }
 }
-
 .general-practice {
   margin-top: 363px;
   @include mq(sp) {
@@ -194,12 +169,7 @@
 }
 .medical-u__inner {
   padding-inline: size-calc(20, 140, 375, 1280);
-  // padding-inline: 140px;
-  // @include mq(sp) {
-  //   padding-inline: 20px;
-  // }
 }
-
 .medical-u__items {
   margin-top: size-calc(43, 64, 375, 1280);
   display: flex;
@@ -252,7 +222,6 @@
     }
   }
 }
-
 .medical-u__title {
   display: flex;
   align-items: center;
@@ -273,13 +242,11 @@
     padding-bottom: 39px;
     align-items: revert;
     text-align: left;
-
     &::after {
       bottom: 16px;
     }
   }
 }
-
 .medical-u__title--main {
   @include font(28, 700, null, 2.24);
   @include mq(sp) {
@@ -301,7 +268,6 @@
 }
 
 .medical-u__contents--texts {
-  // size,weight,height,spacing
   @include font(14, 500, 24, null);
   text-align: left;
   flex: 1;
@@ -326,15 +292,6 @@
 .special-practice {
   margin-top: size-calc(216, 461, 375, 1280);
   margin-bottom: size-calc(163, 290, 375, 1280);
-  // margin-top: 461px;
-  // margin-bottom: 290px;
-  // .section__title {
-  //   transform: translate(2px, 4px);
-  // }
-  // @include mq(sp) {
-  // margin-top: 216px;
-  // margin-bottom: 163px;
-  // }
 }
 .footer__copy {
   margin-top: 63px;

@@ -2375,6 +2375,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   gap: 19px;
+  z-index: 1;
 }
 
 .medical__text--title {
@@ -3153,6 +3154,9 @@ input[type=date]::-webkit-datetime-edit-year-field {
     margin-top: 36px;
     width: 407px;
   }
+}
+.policy-feature__message--sub p + p {
+  margin-top: 32px;
 }
 
 .cencept__button {

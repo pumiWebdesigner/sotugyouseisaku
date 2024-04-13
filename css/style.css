@@ -2375,6 +2375,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   gap: 19px;
+  z-index: 1;
 }
 
 .medical__text--title {

@@ -47,11 +47,9 @@
   text-align: left;
   @include mq(pc) {
     width: calc((95 + 407 + 138) / 1280 * 100%);
-    // margin-top: 37px;
     padding-left: calc(95 / 1280 * 100%);
     padding-right: calc(138 / 1280 * 100%);
     &.feature__contents {
-      // margin-top: 0;
       padding-right: calc(95 / 1280 * 100%);
       padding-left: calc(138 / 1280 * 100%);
     }
@@ -80,6 +78,9 @@
     margin-top: 36px;
     width: 407px;
   }
+  p + p {
+    margin-top: 32px;
+  }
 }
 
 .cencept__button {
@@ -94,7 +95,6 @@
 }
 
 .policy-feature__img {
-  // margin-top: 40px;
   width: calc(334 / 375 * 100%);
   img {
     aspect-ratio: 334/230;
@@ -110,7 +110,6 @@
     }
   }
   @include mq(pc) {
-    // margin-top: 35px;
     width: calc(640 / 1280 * 100%);
     img {
       aspect-ratio: 640/438;

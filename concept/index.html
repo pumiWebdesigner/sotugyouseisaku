@@ -13,31 +13,31 @@
     <meta name="twitter:site" content="@pumiWebcoder" />
     <meta property="og:url" content="http://pumiwebcoder.xsrv.jp/" />
     <meta property="og:title" content="みなみ歯科クリニック" />
-    <meta property="og:description" content="みなみ歯科クリニックです。" />
-    <meta property="og:image" content="../../img/favicon.png" />
-    <link rel="icon" href="../../img/favicon.png" type="image/png" />
+    <meta property="og:description" content="みなみ歯科クリニックです。街の皆さまの笑顔を守るアットホームな歯医者さんです。" />
+    <meta property="og:image" content="./img/favicon.png" />
+    <link rel="icon" href="../img/favicon.png" type="image/png" />
     <!-- GoogleFonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700&display=swap" rel="stylesheet" />
-
     <!-- jQuery読み込み -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js" defer></script>
     <!-- swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="../js/slider.js" defer></script>
     <!-- css読み込み -->
     <link rel="stylesheet" href="./css/style.css" />
     <!-- JavaScript読み込み -->
     <script src="../js/script.js" defer></script>
   </head>
 
-  <body class="is-scroll">
+  <body>
     <header class="header">
       <div class="header__inner">
         <h1 class="header__logo">
           <a href="../index.html">
-            <img loading="lazy" decoding="async" src="./img/header-footer/logo.png" alt="みなみ歯科クリニック" width="808" height="82" />
+            <img loading="lazy" decoding="async" src="../img/header-footer/logo.png" alt="みなみ歯科クリニック" width="808" height="82" />
           </a>
         </h1>
         <div class="header__nav--contents">
@@ -48,7 +48,8 @@
           </button>
           <nav class="header__nav drawer__nav">
             <ul class="header__nav--list drawer__nav--list">
-              <li class="header__nav--item drawer__nav--item is-active">
+              <!-- home -->
+              <li class="header__nav--item drawer__nav--item">
                 <a href="../index.html" class="header__nav--link drawer__nav--link js-drawer__nav--link">
                   <div class="header__nav--icon drawer__nav--icon">
                     <svg width="19" height="20" viewBox="0 0 19 20" fill="none">
@@ -64,7 +65,7 @@
                 </a>
               </li>
               <!-- concept -->
-              <li class="header__nav--item drawer__nav--item">
+              <li class="header__nav--item drawer__nav--item is-active">
                 <a href="../concept/index.html" class="header__nav--link drawer__nav--link js-drawer__nav--link">
                   <div class="header__nav--icon drawer__nav--icon">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -105,6 +106,7 @@
                   <div class="drawer__nav--arrow-right"></div>
                 </a>
               </li>
+              <!-- staff -->
               <li class="header__nav--item drawer__nav--item">
                 <a href="../staff/index.html" class="header__nav--link drawer__nav--link js-drawer__nav--link">
                   <div class="header__nav--icon drawer__nav--icon">
@@ -131,6 +133,7 @@
                   <div class="drawer__nav--arrow-right"></div>
                 </a>
               </li>
+              <!-- blog -->
               <li class="header__nav--item drawer__nav--item">
                 <a href="../blog/index.html" class="header__nav--link drawer__nav--link js-drawer__nav--link">
                   <div class="header__nav--icon drawer__nav--icon">
@@ -146,6 +149,7 @@
                   <div class="drawer__nav--arrow-right"></div>
                 </a>
               </li>
+              <!-- contact -->
               <li class="header__nav--item drawer__nav--item">
                 <a href="../contact/index.html" class="header__nav--link drawer__nav--link js-drawer__nav--link">
                   <div class="header__nav--icon drawer__nav--icon">
@@ -216,11 +220,12 @@
         <div class="policy__container">
           <div class="policy-feature__contents">
             <div class="policy-feature__title">POLICY</div>
-            <div class="policy-feature__message--main">コミュニケーションから始まる最適な医療提供</div>
+            <div class="policy-feature__message--main">
+              <p>コミュニケーションから始まる最適な医療提供</p>
+            </div>
             <div class="policy-feature__message--sub">
-              当院ではまず患者様から詳しくお話を伺います。
-              <br />難しい言葉は使わず、実際に感じている小さな違和感からあらゆる可能性を考え、最適な治療方法をご提案いたします。 <br /><br />
-              「どこよりも本音で話せる歯医者さん」を目指し、スタッフ一同、「人間力の向上」にも勤めております。
+              <p>当院ではまず患者様から詳しくお話を伺います。 <br />難しい言葉は使わず、実際に感じている小さな違和感からあらゆる可能性を考え、最適な治療方法をご提案いたします。</p>
+              <p>「どこよりも本音で話せる歯医者さん」を目指し、スタッフ一同、「人間力の向上」にも勤めております。</p>
             </div>
           </div>
           <div class="policy-feature__img">
@@ -232,13 +237,17 @@
           <div class="policy-feature__contents feature__contents">
             <div class="policy-feature__title">FEATURE</div>
             <div class="policy-feature__message--main">
-              「医療技術の追求」と<br />
-              「通いやすさ」
+              <p>
+                「医療技術の追求」と<br />
+                「通いやすさ」
+              </p>
             </div>
             <div class="policy-feature__message--sub">
-              歯の治療において、小さな違和感は大きなストレスにつながります。私たちは常に快適な歯科医療技術の研究を行っております。
-              <br />また、「通いやすさ」も医院選びの重要なポイントと考え、2019年のリニューアルを期に更に駅の近くへ場所を移しました。 <br /><br />
-              朝から夜までお仕事をされている方のために診療時間を見直し、平日でもご利用いただけるようにいたしました。
+              <p>
+                歯の治療において、小さな違和感は大きなストレスにつながります。私たちは常に快適な歯科医療技術の研究を行っております。
+                <br />また、「通いやすさ」も医院選びの重要なポイントと考え、2019年のリニューアルを期に更に駅の近くへ場所を移しました。
+              </p>
+              <p>朝から夜までお仕事をされている方のために診療時間を見直し、平日でもご利用いただけるようにいたしました。</p>
             </div>
           </div>
           <div class="policy-feature__img feature__img">
@@ -363,7 +372,7 @@
         <div class="footer__links">
           <div class="footer__link--container">
             <div class="footer__link--head">
-              <a href="#"><div class="footer__link--item">TOP</div></a>
+              <a href="../index.html"><div class="footer__link--item">TOP</div></a>
             </div>
           </div>
           <div class="footer__link--container">

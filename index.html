@@ -13,14 +13,13 @@
     <meta name="twitter:site" content="@pumiWebcoder" />
     <meta property="og:url" content="http://pumiwebcoder.xsrv.jp/" />
     <meta property="og:title" content="みなみ歯科クリニック" />
-    <meta property="og:description" content="みなみ歯科クリニックです。" />
+    <meta property="og:description" content="みなみ歯科クリニックです。街の皆さまの笑顔を守るアットホームな歯医者さんです。" />
     <meta property="og:image" content="./img/favicon.png" />
     <link rel="icon" href="./img/favicon.png" type="image/png" />
     <!-- GoogleFonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700&display=swap" rel="stylesheet" />
-
     <!-- jQuery読み込み -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js" defer></script>
     <!-- swiper -->
@@ -33,7 +32,8 @@
     <script src="./js/script.js" defer></script>
   </head>
 
-  <body class="is-scroll">
+  <body>
+    <!-- header -->
     <header class="header">
       <div class="header__inner">
         <h1 class="header__logo">
@@ -49,6 +49,7 @@
           </button>
           <nav class="header__nav drawer__nav">
             <ul class="header__nav--list drawer__nav--list">
+              <!-- home -->
               <li class="header__nav--item drawer__nav--item is-active">
                 <a href="./index.html" class="header__nav--link drawer__nav--link js-drawer__nav--link">
                   <div class="header__nav--icon drawer__nav--icon">
@@ -106,6 +107,7 @@
                   <div class="drawer__nav--arrow-right"></div>
                 </a>
               </li>
+              <!-- staff -->
               <li class="header__nav--item drawer__nav--item">
                 <a href="./staff/index.html" class="header__nav--link drawer__nav--link js-drawer__nav--link">
                   <div class="header__nav--icon drawer__nav--icon">
@@ -132,6 +134,7 @@
                   <div class="drawer__nav--arrow-right"></div>
                 </a>
               </li>
+              <!-- blog -->
               <li class="header__nav--item drawer__nav--item">
                 <a href="./blog/index.html" class="header__nav--link drawer__nav--link js-drawer__nav--link">
                   <div class="header__nav--icon drawer__nav--icon">
@@ -147,6 +150,7 @@
                   <div class="drawer__nav--arrow-right"></div>
                 </a>
               </li>
+              <!-- contact -->
               <li class="header__nav--item drawer__nav--item">
                 <a href="./contact/index.html" class="header__nav--link drawer__nav--link js-drawer__nav--link">
                   <div class="header__nav--icon drawer__nav--icon">
@@ -174,6 +178,7 @@
       </div>
     </header>
 
+    <!-- 画面横のWEB予約ボタン -->
     <a href="./reserve/index.html" class="aside__button">
       <div class="aside__button--label">
         <div class="button--icon">
@@ -192,6 +197,7 @@
       </div>
     </a>
 
+    <!-- main visual -->
     <div class="mv">
       <div class="mv__inner">
         <div class="mv__swiper--container">
@@ -266,7 +272,8 @@
       </div>
     </div>
 
-    <section class="concept" id="concept">
+    <!-- concept -->
+    <section class="concept">
       <!-- <div class="section__inner"> -->
       <div class="concept__container">
         <div class="concept__contents">
@@ -287,7 +294,8 @@
       <!-- </div> -->
     </section>
 
-    <section class="recommend" id="recommend">
+    <!-- recommend -->
+    <section class="recommend">
       <div class="section__inner">
         <div class="section__title">当院の3つのおすすめ</div>
         <div class="recommend__wrapper">
@@ -320,20 +328,21 @@
       </div>
     </section>
 
-    <section class="medical" id="medical">
+    <!-- medical -->
+    <section class="medical">
       <div class="medical__body">
         <div class="section__inner">
           <div class="section__title medical__title">診療案内</div>
           <div class="medical__inner">
             <div class="medical__wrapper">
-              <a href="#" class="medical__item">
+              <a href="./medical/index.html#general-practice" class="medical__item">
                 <div class="medical__img"><img loading="lazy" decoding="async" src="./img/medical/medical-img-1.png" alt="" width="460" height="290" /></div>
                 <div class="medical__text">
                   <div class="medical__text--title">一般診療</div>
                   <div class="medical__text--text">虫歯・入れ歯・小児歯科</div>
                 </div>
               </a>
-              <a href="#" class="medical__item">
+              <a href="./medical/index.html#special-practice" class="medical__item">
                 <div class="medical__img"><img loading="lazy" decoding="async" src="./img/medical/medical-img-2.png" alt="" width="460" height="290" /></div>
                 <div class="medical__text">
                   <div class="medical__text--title">特殊診療</div>
@@ -354,13 +363,14 @@
       </div>
     </section>
 
-    <section class="blog" id="blog">
+    <!-- blog -->
+    <section class="blog">
       <div class="section__inner">
         <div class="section__title">スタッフブログ</div>
         <div class="blog__wrapper">
           <ul class="blog__list">
             <li class="blog__item is-new">
-              <a href="#" class="blog__link">
+              <a href="./post/index.html" class="blog__link">
                 <div class="blog__img"><img loading="lazy" decoding="async" src="./img/blog/blog-img.png" alt="" width="300" height="188" /></div>
                 <div class="blog__text is-other">
                   <div class="blog__title">記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。</div>
@@ -369,7 +379,7 @@
               </a>
             </li>
             <li class="blog__item is-new">
-              <a href="#" class="blog__link is-new">
+              <a href="./post/index.html" class="blog__link is-new">
                 <div class="blog__img"><img loading="lazy" decoding="async" src="./img/blog/blog-img.png" alt="" width="300" height="188" /></div>
                 <div class="blog__text is-other">
                   <div class="blog__title">記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。</div>
@@ -378,7 +388,7 @@
               </a>
             </li>
             <li class="blog__item">
-              <a href="#" class="blog__link is-new">
+              <a href="./post/index.html" class="blog__link is-new">
                 <div class="blog__img"><img loading="lazy" decoding="async" src="./img/blog/blog-img.png" alt="" width="300" height="188" /></div>
                 <div class="blog__text is-other">
                   <div class="blog__title">記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。</div>
@@ -387,7 +397,7 @@
               </a>
             </li>
             <li class="blog__item">
-              <a href="#" class="blog__link is-new">
+              <a href="./post/index.html" class="blog__link is-new">
                 <div class="blog__img"><img loading="lazy" decoding="async" src="./img/blog/blog-img.png" alt="" width="300" height="188" /></div>
                 <div class="blog__text is-other">
                   <div class="blog__title">記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。</div>
@@ -396,7 +406,7 @@
               </a>
             </li>
             <li class="blog__item">
-              <a href="#" class="blog__link is-new">
+              <a href="./post/index.html" class="blog__link is-new">
                 <div class="blog__img"><img loading="lazy" decoding="async" src="./img/blog/blog-img.png" alt="" width="300" height="188" /></div>
                 <div class="blog__text is-other">
                   <div class="blog__title">記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。</div>
@@ -405,7 +415,7 @@
               </a>
             </li>
             <li class="blog__item">
-              <a href="#" class="blog__link is-new">
+              <a href="./post/index.html" class="blog__link is-new">
                 <div class="blog__img"><img loading="lazy" decoding="async" src="./img/blog/blog-img.png" alt="" width="300" height="188" /></div>
                 <div class="blog__text is-other">
                   <div class="blog__title">記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。</div>
@@ -415,12 +425,13 @@
             </li>
           </ul>
           <div class="blog__button">
-            <a href="#" class="button button--arrow-right">スタッフブログ一覧はこちら</a>
+            <a href="./blog/index.html" class="button button--arrow-right">スタッフブログ一覧はこちら</a>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- footer -->
     <footer class="footer">
       <div class="footer__inner">
         <div class="footer__contents">
@@ -517,7 +528,7 @@
             <div class="footer__link--head">当院について</div>
             <div class="footer__link--body">
               <div class="footer__link--items">
-                <a href="./concept/index.html"><div class="footer__link--item footer__link--item-sub">ポリシーと特徴</div></a>
+                <a href="./concept/index.html#policy-feature"><div class="footer__link--item footer__link--item-sub">ポリシーと特徴</div></a>
                 <a href="./concept/index.html#inside"><div class="footer__link--item footer__link--item-sub">当院の様子</div></a>
               </div>
             </div>
@@ -560,9 +571,9 @@
           </div>
         </div>
       </div>
-
       <small class="footer__copy">&copy;2020-2021 みなみ歯科クリニック</small>
 
+      <!-- footer nav -->
       <div class="footer__nav">
         <div class="footer__info--tel">
           <div class="footer__info--tel-number footer__nav-info--tel-number">03-1234-5678</div>
@@ -590,6 +601,7 @@
         </a>
       </div>
 
+      <!-- totop -->
       <div class="footer__pagetop">
         <a href="#" aria-label="Go to top">
           <img loading="lazy" decoding="async" src="./img/footer/totop.png" alt="topへ戻るボタン" width="56" height="56" />
