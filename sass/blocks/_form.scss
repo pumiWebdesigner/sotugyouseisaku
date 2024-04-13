@@ -144,17 +144,6 @@ input[type="date"] {
     background-position: right 9px center;
   }
 }
-// dateタイプはplaceholder設定が効かないため、::webkit-datetime-edit-textなどで設定
-// input[type="date"]::-webkit-datetime-edit-text,
-// input[type="date"]::-webkit-datetime-edit-month-field,
-// input[type="date"]::-webkit-datetime-edit-day-field,
-// input[type="date"]::-webkit-datetime-edit-year-field {
-//   color: #c2c2c2; /* 灰色のプレースホルダー */
-//   &::before {
-//     content: attr(placeholder);
-//     width: 100%;
-//   }
-// }
 input[type="date"] {
   // 標準設定を削除
   &::-webkit-datetime-edit-fields-wrapper {
@@ -166,4 +155,10 @@ input[type="date"] {
     width: 100%;
     color: #c2c2c2;
   }
+}
+.error-message {
+  display: none;
+  color: var(--accent);
+  @include font(14, 500, null, null);
+  margin-top: 8px;
 }

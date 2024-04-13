@@ -3033,6 +3033,14 @@ input[type=date]::before {
   color: #c2c2c2;
 }
 
+.error-message {
+  display: none;
+  color: var(--accent);
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
 .medical-u {
   margin-top: 338px;
   padding-bottom: 82px;
