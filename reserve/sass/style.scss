@@ -10,7 +10,6 @@
     margin-bottom: 134px;
   }
 }
-
 .reserve__inner {
   max-width: 728px;
   width: 100%;
@@ -23,7 +22,6 @@
     padding-inline: 20px;
   }
 }
-
 .reserve__wrapper {
   .is-success & {
     display: none;
@@ -36,18 +34,12 @@
     margin-top: 65px;
   }
 }
-
-.reserve__message--tel {
-}
-
 .reserve__message--tel-title {
   @include font(28, 700, null, 2.24);
   @include mq(sp) {
-    // size,weight,height,spacing
     @include font(20, 700, null, 1.6);
   }
 }
-
 .reserve__info--tel {
   margin-top: 34px;
   color: var(--main);
@@ -55,7 +47,6 @@
     margin-top: 29px;
   }
 }
-
 .reserve__info--tel-number {
   @include font(32, 700, null, -0.64);
   padding-left: 32px;
@@ -71,7 +62,6 @@
     background: url(../img/phone.png) no-repeat center center / cover;
   }
 }
-
 .reserve__info--tel-text {
   @include font(12, 500, null, null);
   margin-top: 4px;
@@ -85,21 +75,18 @@
     margin-top: 21px;
   }
 }
-
 .reserve__message--email {
   margin-top: 46px;
   @include mq(sp) {
     margin-top: 44px;
   }
 }
-
 .reserve__message--email-title {
   @include font(28, 700, null, 2.24);
   @include mq(sp) {
     @include font(20, 700, null, 1.6);
   }
 }
-
 .reserve__message--email-text {
   margin-top: 28px;
   @include font(14, 500, 24, null);
@@ -107,7 +94,6 @@
     margin-top: 23px;
   }
 }
-
 .section__title {
   margin-top: 157px;
   @include mq(sp) {
@@ -115,14 +101,12 @@
     @include font(20, 700, 28, 1.6);
   }
 }
-
 .reserve__form {
   margin-top: 74px;
   @include mq(sp) {
     margin-top: 70px;
   }
 }
-
 .reserve__form--item {
   text-align: left;
   padding-top: 28px;
@@ -144,7 +128,6 @@
     gap: 12px;
   }
 }
-
 .reserve__form--title {
   display: flex;
   gap: 16px;
@@ -155,11 +138,9 @@
     flex: revert;
   }
 }
-
 .reserve__form--title-text {
   @include font(16, 500, null, null);
 }
-
 .reserve__form--require {
   background-color: var(--accent);
   width: 36px;
@@ -173,15 +154,11 @@
     padding-top: 3px;
   }
 }
-
 .reserve__form--input,
 .reserve__form--selectbox-wrapper,
 .reserve__form--date-wrapper {
   flex: 1;
 }
-
-// .reserve__form--textarea {
-// }
 .reserve__form--item-radio {
   padding-top: 41px;
   padding-bottom: 40px;
@@ -193,7 +170,6 @@
     }
   }
 }
-
 .reserve__form--radio-wrapper {
   display: flex;
   gap: 32px;
@@ -203,7 +179,6 @@
     gap: 40px;
   }
 }
-
 .reserve__form--item-checkbox {
   padding-top: 31px;
   padding-bottom: 23px;
@@ -218,18 +193,14 @@
     }
   }
 }
-.reserve__form--title-text-checkbox {
-}
 .reserve__form--title-text-top {
   @include font(16, 500, null, null);
 }
-
 .reserve__form--title-text-bottom {
   margin-top: 6px;
   @include font(11, 500, null, null);
   color: #888;
 }
-
 .reserve__form--checkbox-wrapper {
   display: flex;
   gap: 24px 32px;
@@ -240,7 +211,6 @@
     gap: 24px;
   }
 }
-
 .reserve__form--item-selectbox {
   @include mq(sp) {
     .reserve__form--require {
@@ -248,46 +218,16 @@
     }
   }
 }
-
-.reserve__form--selectbox-wrapper {
-  // width: 100%;
-  // position: relative;
-  // &::after {
-  //   content: "";
-  //   position: absolute;
-  //   top: 50%;
-  //   transform: translateY(-50%);
-  //   right: 12px;
-  //   width: 20px;
-  //   height: 20px;
-  //   background: url(../img/select-arrow.svg) no-repeat center center / cover;
-  // }
-}
 .reserve__form--item-date {
   padding-top: 27px;
 }
 .reserve__form--date-wrapper {
   margin-top: 2px;
 }
-
 .reserve__form--input-date {
   & + & {
     margin-top: 20px;
   }
-  // height: 100px;
-  // width: 100%;
-  // position: relative;
-
-  // &::after {
-  //   content: "";
-  //   position: absolute;
-  //   top: 50%;
-  //   transform: translateY(-50%);
-  //   right: 12px;
-  //   width: 20px;
-  //   height: 20px;
-  //   background: url(../img/icon-calender.svg) no-repeat center center / cover;
-  // }
 }
 .reserve__form--item-textarea {
   @include mq(sp) {
@@ -295,13 +235,11 @@
     padding-bottom: 26px;
   }
 }
-
 .reserve__button {
   margin-top: 72px;
   padding-block: 18.5px;
   width: 360px;
   border-radius: 28px;
-  // size,weight,height,spacing
   @include font(16, 500, null, 1.28);
   @include mq(sp) {
     padding-block: 9.5px;
@@ -331,10 +269,6 @@
   max-width: 728px;
   width: 100%;
   margin-inline: auto;
-  // padding-inline: 20px;
   text-align: left;
   @include font(14, 500, 24, null);
-}
-#js-reserve-form {
-  display: none;
 }

@@ -35,6 +35,9 @@
     padding-bottom: 40px;
     margin-inline: auto;
   }
+  p + p {
+    margin-top: 1em;
+  }
 }
 .greeting__message--main {
   @include font(28, 700, 44, 2.24);

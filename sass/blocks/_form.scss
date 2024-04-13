@@ -24,8 +24,6 @@ textarea {
   &:hover,
   &:focus {
     border-color: var(--main);
-    // background: #e9f6f8;
-    // outline: none;
   }
 }
 // textareaは高さ方向の設定も必要
@@ -38,7 +36,6 @@ textarea {
   // 高さは可変、横幅は固定
   resize: vertical;
 }
-// input[type="date"],
 input[type="radio"],
 input[type="checkbox"] {
   // 標準のラジオボタンを以下５行で非表示
@@ -49,14 +46,9 @@ input[type="checkbox"] {
   overflow: hidden;
   & + label {
     // ボタン横の文字
-    // size,weight,height,spacing
     @include font(14, 500, null, null);
-
     // ボタンの場所
     padding-left: calc(24px + 8px);
-    // @include mq(sp) {
-    //   padding-left: calc(16px + 6px);
-    // }
     position: relative;
     display: flex;
     align-items: center;
@@ -79,36 +71,20 @@ input[type="checkbox"] {
       top: 50%;
       transform: translateY(-50%);
       left: 6px;
-      // @include mq(sp) {
-      //   left: 4px;
-      // }
       opacity: 0; // 非チェック時はポチ丸が透明
-      // チェック時マークは別途下に記載
-    }
-  }
-  // ホバー時、フォーカス時、チェック時にボーダー表示
-  &:hover,
-  &:focus,
-  &:checked {
-    & + label::before {
-      // border: 1px solid var(--main);
-      // background: red;
     }
   }
   &:hover,
   &:focus {
     & + label::before {
       border: 2px solid var(--main);
-      // f6f6f6;
     }
   }
-
   // チェック時にチェック時マークを表示
   &:checked + label::after {
     opacity: 1;
   }
 }
-
 // ボタン枠のレイアウト
 input[type="radio"] {
   & + label {
@@ -118,10 +94,6 @@ input[type="radio"] {
       height: 24px;
       background: white;
       border-radius: 50%;
-      // @include mq(sp) {
-      //   width: 16px;
-      //   height: 16px;
-      // }
     }
     // チェック時マーク（ポチ丸）
     &::after {
@@ -129,14 +101,9 @@ input[type="radio"] {
       height: 12px;
       border-radius: 50%;
       background: var(--main);
-      // @include mq(sp) {
-      //   width: 8px;
-      //   height: 8px;
-      // }
     }
   }
 }
-
 input[type="checkbox"] {
   & + label {
     &::before {
@@ -144,10 +111,6 @@ input[type="checkbox"] {
       width: 24px;
       height: 24px;
       background: white;
-      // @include mq(sp) {
-      //   width: 16px;
-      //   height: 16px;
-      // }
     }
     // チェック時マーク（✓）
     &::after {
@@ -156,14 +119,9 @@ input[type="checkbox"] {
       border-bottom: solid 2px var(--main);
       border-left: solid 2px var(--main);
       transform: translateY(-70%) rotate(-45deg);
-      // @include mq(sp) {
-      //   width: 8px;
-      //   height: 4px;
-      // }
     }
   }
 }
-
 select {
   background: #f6f6f6 url(../../reserve/img/select-arrow.svg) no-repeat right 12px center;
   @include mq(sp) {
@@ -187,9 +145,25 @@ input[type="date"] {
   }
 }
 // dateタイプはplaceholder設定が効かないため、::webkit-datetime-edit-textなどで設定
-input[type="date"]::-webkit-datetime-edit-text,
-input[type="date"]::-webkit-datetime-edit-month-field,
-input[type="date"]::-webkit-datetime-edit-day-field,
-input[type="date"]::-webkit-datetime-edit-year-field {
-  color: #c2c2c2; /* 灰色のプレースホルダー */
+// input[type="date"]::-webkit-datetime-edit-text,
+// input[type="date"]::-webkit-datetime-edit-month-field,
+// input[type="date"]::-webkit-datetime-edit-day-field,
+// input[type="date"]::-webkit-datetime-edit-year-field {
+//   color: #c2c2c2; /* 灰色のプレースホルダー */
+//   &::before {
+//     content: attr(placeholder);
+//     width: 100%;
+//   }
+// }
+input[type="date"] {
+  // 標準設定を削除
+  &::-webkit-datetime-edit-fields-wrapper {
+    display: none;
+  }
+  // placeholderに設定した文字列を表示
+  &::before {
+    content: attr(placeholder);
+    width: 100%;
+    color: #c2c2c2;
+  }
 }

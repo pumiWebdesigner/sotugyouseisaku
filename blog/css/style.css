@@ -3024,11 +3024,13 @@ input[type=date]::-webkit-calendar-picker-indicator {
   }
 }
 
-input[type=date]::-webkit-datetime-edit-text,
-input[type=date]::-webkit-datetime-edit-month-field,
-input[type=date]::-webkit-datetime-edit-day-field,
-input[type=date]::-webkit-datetime-edit-year-field {
-  color: #c2c2c2; /* 灰色のプレースホルダー */
+input[type=date]::-webkit-datetime-edit-fields-wrapper {
+  display: none;
+}
+input[type=date]::before {
+  content: attr(placeholder);
+  width: 100%;
+  color: #c2c2c2;
 }
 
 .staff-blog {
@@ -3078,10 +3080,6 @@ input[type=date]::-webkit-datetime-edit-year-field {
 }
 
 .staff-blog__blog-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 20px;
   position: relative;
 }
 .staff-blog__blog-item + .staff-blog__blog-item {
@@ -3127,6 +3125,14 @@ input[type=date]::-webkit-datetime-edit-year-field {
   left: -10px;
   background: #ee5a6d;
   z-index: 1;
+}
+
+.staff-blog__blog-link {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
 }
 
 .staff-blog__blog-img {
@@ -3382,7 +3388,7 @@ input[type=date]::-webkit-datetime-edit-year-field {
   height: 35.787px;
   display: grid;
   place-items: center;
-  color: #1391e6;
+  color: var(--main);
   background: #fff;
 }
 @media (width <= 1023px) {
@@ -3560,6 +3566,8 @@ input[type=date]::-webkit-datetime-edit-year-field {
   font-size: 1rem;
   font-weight: 500;
   position: relative;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .category__item--text::before {
   content: "";
@@ -3571,4 +3579,9 @@ input[type=date]::-webkit-datetime-edit-year-field {
   width: 6px;
   height: 12px;
   background: url(../img/category-arrow.svg) no-repeat;
+}
+@media (hover: hover) {
+  .category__item--text:hover {
+    opacity: 0.7;
+  }
 }
