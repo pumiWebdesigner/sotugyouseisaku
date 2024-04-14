@@ -26,6 +26,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <script src="./js/slider.js" defer></script>
+    <script src="../js/swiper.js" defer></script>
+    <!-- wow -->
+    <link rel="stylesheet" href="./css/animate.css" />
     <!-- css読み込み -->
     <link rel="stylesheet" href="./css/style.css" />
     <!-- JavaScript読み込み -->
@@ -198,7 +201,7 @@
     </a>
 
     <!-- main visual -->
-    <div class="mv">
+    <div class="mv wow fadeInUp">
       <div class="mv__inner">
         <div class="mv__swiper--container">
           <div class="swiper mv__swiper">
@@ -273,7 +276,7 @@
     </div>
 
     <!-- concept -->
-    <section class="concept">
+    <section class="concept wow fadeInUp">
       <!-- <div class="section__inner"> -->
       <div class="concept__container">
         <div class="concept__contents">
@@ -295,7 +298,7 @@
     </section>
 
     <!-- recommend -->
-    <section class="recommend">
+    <section class="recommend wow fadeInUp">
       <div class="section__inner">
         <div class="section__title">当院の3つのおすすめ</div>
         <div class="recommend__wrapper">
@@ -329,7 +332,7 @@
     </section>
 
     <!-- medical -->
-    <section class="medical">
+    <section class="medical wow fadeInUp">
       <div class="medical__body">
         <div class="section__inner">
           <div class="section__title medical__title">診療案内</div>
@@ -364,7 +367,7 @@
     </section>
 
     <!-- blog -->
-    <section class="blog">
+    <section class="blog wow fadeInUp">
       <div class="section__inner">
         <div class="section__title">スタッフブログ</div>
         <div class="blog__wrapper">
@@ -608,5 +611,10 @@
         </a>
       </div>
     </footer>
+
+    <script src="./js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
   </body>
 </html>
