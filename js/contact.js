@@ -33,16 +33,20 @@
   form.on("change", function () {
     // jQueryは直接chedkValidity()をformに対して使用できない
     // 対象のDOM要素を取得（.get(0)や[0]を使用してから）checkValidityを行う
-
+    // checkboxはrequired設定されているcheckboxのみをチェック対象としてしまうので、
+    // 全てのcheckboxをチェックさせるよう個別にチェックを行う
     if (form.get(0).checkValidity()) {
-      submit.prop("disabled", false);
-    } else {
-      submit.prop("disabled", true);
+      if ($('input[name="checkbox"]:checked').length > 0) {
+        submit.prop("disabled", false);
+      } else {
+        submit.prop("disabled", true);
+      }
     }
   });
 
+  // チェックボックスのみ一つだけ選択したらバリデーションチェックエラーの解除ができなかった
   $(document).ready(function () {
-    var $require = $("#js-form [required]"); // radio, checkboxを含むrequired属性の要素
+    var $require = $("#js-form [required]");
 
     // blur: フォーカスが外れた時
     $require.on("blur", function () {
@@ -53,7 +57,8 @@
       // text, kana, tel, mail
       var $errorContainerInputNext = $this.next(".error-message"); //thisに対するエラーメッセージの要素
       // input要素が複数：input要素の親要素のjs-form-wrapperのnextにエラーメッセージ
-      // radio, checkbox
+      // radio, select
+      // checkboxは別途処理
       var $errorMessageWrapperNext = $this.closest(".js-form--wrapper").next(".error-message");
 
       // お名前、お問い合わせ内容のバリデーション
@@ -102,17 +107,7 @@
       // ラジオボタンのバリデーション
       if ($this.hasClass("js-radio")) {
         if ($('input[name="radio"]:checked').length === 0) {
-          // $this.next(".error-message");
           $errorMessageWrapperNext.text("初診・再診どちらか選んでください。").show();
-        } else {
-          $errorMessageWrapperNext.hide(); // 条件を満たす場合はエラーメッセージを隠す
-        }
-      }
-
-      // チェックボックスのバリデーション
-      if ($this.hasClass("js-checkbox")) {
-        if ($('input[name="checkbox"]:checked').length === 0) {
-          $errorMessageWrapperNext.text("一つ以上の診療内容を選んでください。").show();
         } else {
           $errorMessageWrapperNext.hide(); // 条件を満たす場合はエラーメッセージを隠す
         }
@@ -122,6 +117,27 @@
       if ($this.hasClass("js-select")) {
         if ($this.val() === "") {
           $errorMessageWrapperNext.text("プルダウンよりご連絡方法を選んでください。").show();
+        } else {
+          $errorMessageWrapperNext.hide(); // 条件を満たす場合はエラーメッセージを隠す
+        }
+      }
+    });
+  });
+
+  $(document).ready(function () {
+    var $checkbox = $(".js-checkbox");
+
+    // blur: フォーカスが外れた時
+    $checkbox.on("blur", function () {
+      // this=requreied属性を持つ要素のうち、フォーカスが外れた要素
+      var $this = $(this); // 毎回$(this)を実行するのは無駄なので変数に格納
+      var $errorMessageWrapperNext = $this.closest(".js-form--wrapper").next(".error-message");
+
+      // input要素が複数：input要素の親要素のjs-form-wrapperのnextにエラーメッセージ
+      // チェックボックスのバリデーション
+      if ($this.hasClass("js-checkbox")) {
+        if ($('input[name="checkbox"]:checked').length === 0) {
+          $errorMessageWrapperNext.text("一つ以上の診療内容を選んでください。").show();
         } else {
           $errorMessageWrapperNext.hide(); // 条件を満たす場合はエラーメッセージを隠す
         }
