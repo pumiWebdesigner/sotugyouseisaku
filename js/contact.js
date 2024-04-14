@@ -36,11 +36,17 @@
     // checkboxはrequired設定されているcheckboxのみをチェック対象としてしまうので、
     // 全てのcheckboxをチェックさせるよう個別にチェックを行う
     if (form.get(0).checkValidity()) {
-      if ($('input[name="checkbox"]:checked').length > 0) {
-        submit.prop("disabled", false);
+      if ($('input[name="checkbox"]').length > 0) {
+        if ($('input[name="checkbox"]:checked').length > 0) {
+          submit.prop("disabled", false);
+        } else {
+          submit.prop("disabled", true);
+        }
       } else {
-        submit.prop("disabled", true);
+        submit.prop("disabled", false);
       }
+    } else {
+      submit.prop("disabled", true);
     }
   });
 
