@@ -41,8 +41,8 @@
 
   // var $require; // バリデータ対象を抽出
   $(document).ready(function () {
-    var $require = $(".contact__form [required]"); // 必須フィールドを選択
-
+    var $require = $("#js-form [required]"); // 必須フィールドを選択
+    console.log($require);
     // blur: フォーカスが外れた時
     $require.on("blur", function () {
       var $this = $(this); // 毎回$(this)を実行するのは無駄なので変数に格納
@@ -51,6 +51,7 @@
 
       // お名前、お問い合わせ内容のバリデーション
       if ($this.hasClass("js-text")) {
+        console.log("text");
         // お名前、お問い合わせ内容のパターン(入力必須ですが、特にフォーマットは強制しない)
         if ($this.val().trim() === "") {
           $errorContainer.text("このフィールドは必須です。").show();
