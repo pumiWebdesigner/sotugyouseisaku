@@ -3408,15 +3408,7 @@ input[type=date]::before {
   cursor: not-allowed;
   border-color: transparent;
   background-color: #ccc;
-  -webkit-box-shadow: 0px 4px 0px 0px transparent;
-          box-shadow: 0px 4px 0px 0px transparent;
-}
-.reserve__button:disabled:hover {
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
-  background-color: #ccc;
-  -webkit-box-shadow: 0px 0px 0px 0px transparent;
-          box-shadow: 0px 0px 0px 0px transparent;
+  color: black;
 }
 @media (width <= 767px) {
   .reserve__button {

@@ -5,6 +5,7 @@
   const submit = jQuery("#js-submit");
   // 送信ボタンは初期値disabled
   submit.prop("disabled", true);
+
   // const email = jQuery(".input-email");
   // email.prop("invalid", false);
   form.submit(function () {
@@ -32,6 +33,7 @@
   form.on("change", function () {
     // jQueryは直接chedkValidity()をformに対して使用できない
     // 対象のDOM要素を取得（.get(0)や[0]を使用してから）checkValidityを行う
+
     if (form.get(0).checkValidity()) {
       submit.prop("disabled", false);
     } else {
@@ -39,24 +41,29 @@
     }
   });
 
-  // var $require; // バリデータ対象を抽出
   $(document).ready(function () {
-    var $require = $("#js-form [required]"); // 必須フィールドを選択
-    console.log($require);
+    var $require = $("#js-form [required]"); // radio, checkboxを含むrequired属性の要素
+
     // blur: フォーカスが外れた時
     $require.on("blur", function () {
+      // this=requreied属性を持つ要素のうち、フォーカスが外れた要素
       var $this = $(this); // 毎回$(this)を実行するのは無駄なので変数に格納
-      var $errorContainer = $this.next(".error-message");
-      $errorContainer.hide(); // 一旦エラーメッセージを隠す
+
+      // input要素が単体：input要素のnextにエラーメッセージ
+      // text, kana, tel, mail
+      var $errorContainerInputNext = $this.next(".error-message"); //thisに対するエラーメッセージの要素
+      // input要素が複数：input要素の親要素のjs-form-wrapperのnextにエラーメッセージ
+      // radio, checkbox
+      var $errorMessageWrapperNext = $this.closest(".js-form--wrapper").next(".error-message");
 
       // お名前、お問い合わせ内容のバリデーション
       if ($this.hasClass("js-text")) {
-        console.log("text");
-        // お名前、お問い合わせ内容のパターン(入力必須ですが、特にフォーマットは強制しない)
+        // お名前、お問い合わせ内容が入力必須の場合は、空文字か否かのチェックのみ行う
+        // trimで空白を削除し、空白削除後が空文字かチェック
         if ($this.val().trim() === "") {
-          $errorContainer.text("このフィールドは必須です。").show();
+          $errorContainerInputNext.text("このフィールドは必須です。").show();
         } else {
-          $errorContainer.hide(); // 条件を満たす場合はエラーメッセージを隠す
+          $errorContainerInputNext.hide(); // 条件を満たす場合はエラーメッセージを隠す
         }
       }
 
@@ -66,9 +73,9 @@
         var kanaPattern = /^([ァ-ンー\s]+)$/;
         // カタカナ、長音符、空白以外が入っていた際の処理
         if (!$this.val().match(kanaPattern)) {
-          $errorContainer.text("全角カタカナ（スペース含む）で入力してください。").show();
+          $errorContainerInputNext.text("全角カタカナ（スペース含む）で入力してください。").show();
         } else {
-          $errorContainer.hide(); // 条件を満たす場合はエラーメッセージを隠す
+          $errorContainerInputNext.hide(); // 条件を満たす場合はエラーメッセージを隠す
         }
       }
       // 電話番号のバリデーション
@@ -76,9 +83,9 @@
         // 電話番号のパターン
         var telPattern = /^\+?\d{1,4}[-\s]?\d{1,4}[-\s]?\d{1,4}[-\s]?\d{1,4}$/;
         if (!$this.val().match(telPattern)) {
-          $errorContainer.text("有効な電話番号を入力してください。（例: 0123-456-789）").show();
+          $errorContainerInputNext.text("有効な電話番号を入力してください。（例: 0123-456-789）").show();
         } else {
-          $errorContainer.hide(); // 条件を満たす場合はエラーメッセージを隠す
+          $errorContainerInputNext.hide(); // 条件を満たす場合はエラーメッセージを隠す
         }
       }
       // メールアドレスのバリデーション
@@ -86,9 +93,37 @@
         // メールアドレスのパターン
         var mailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!$this.val().match(mailPattern)) {
-          $errorContainer.text("有効なメールアドレスを入力してください。（例: user@example.com）").show();
+          $errorContainerInputNext.text("有効なメールアドレスを入力してください。（例: user@example.com）").show();
         } else {
-          $errorContainer.hide(); // 条件を満たす場合はエラーメッセージを隠す
+          $errorContainerInputNext.hide(); // 条件を満たす場合はエラーメッセージを隠す
+        }
+      }
+
+      // ラジオボタンのバリデーション
+      if ($this.hasClass("js-radio")) {
+        if ($('input[name="radio"]:checked').length === 0) {
+          // $this.next(".error-message");
+          $errorMessageWrapperNext.text("初診・再診どちらか選んでください。").show();
+        } else {
+          $errorMessageWrapperNext.hide(); // 条件を満たす場合はエラーメッセージを隠す
+        }
+      }
+
+      // チェックボックスのバリデーション
+      if ($this.hasClass("js-checkbox")) {
+        if ($('input[name="checkbox"]:checked').length === 0) {
+          $errorMessageWrapperNext.text("一つ以上の診療内容を選んでください。").show();
+        } else {
+          $errorMessageWrapperNext.hide(); // 条件を満たす場合はエラーメッセージを隠す
+        }
+      }
+
+      // セレクトボックスのバリデーション
+      if ($this.hasClass("js-select")) {
+        if ($this.val() === "") {
+          $errorMessageWrapperNext.text("プルダウンよりご連絡方法を選んでください。").show();
+        } else {
+          $errorMessageWrapperNext.hide(); // 条件を満たす場合はエラーメッセージを隠す
         }
       }
     });

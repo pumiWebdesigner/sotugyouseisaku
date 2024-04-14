@@ -245,6 +245,7 @@
           </div>
           <div class="section__title">予約フォーム</div>
           <form action="#" method="post" class="reserve__form" id="js-form">
+            <!-- お名前 -->
             <div class="reserve__form--item">
               <div class="reserve__form--title">
                 <label for="name" class="reserve__form--title-text">お名前</label>
@@ -255,6 +256,7 @@
                 <div class="error-message"></div>
               </div>
             </div>
+            <!-- フリガナ -->
             <div class="reserve__form--item">
               <div class="reserve__form--title">
                 <label for="name-input" class="reserve__form--title-text">フリガナ</label>
@@ -265,37 +267,50 @@
                 <div class="error-message"></div>
               </div>
             </div>
+            <!-- 電話番号 -->
             <div class="reserve__form--item">
               <div class="reserve__form--title">
                 <label for="tel" class="reserve__form--title-text">電話番号</label>
                 <span class="reserve__form--require">必須</span>
               </div>
-              <input type="tel" id="tel" name="tel" class="reserve__form--input" placeholder="000-0000-0000" required />
+              <div class="reserve__form--input">
+                <input type="tel" id="tel" name="tel" class="reserve__form--input js-tel-number" placeholder="000-0000-0000" required />
+                <div class="error-message"></div>
+              </div>
             </div>
+            <!-- メールアドレス -->
             <div class="reserve__form--item">
               <div class="reserve__form--title">
                 <label for="email" class="reserve__form--title-text">メールアドレス</label>
                 <span class="reserve__form--require">必須</span>
               </div>
-              <input type="email" id="email" name="email" class="reserve__form--input" placeholder="xxx@example.com" required />
+              <div class="reserve__form--input">
+                <input type="email" id="email" name="email" class="reserve__form--input js-mail" placeholder="xxx@example.com" required />
+                <div class="error-message"></div>
+              </div>
             </div>
+            <!-- 初診・再診 -->
             <div class="reserve__form--item reserve__form--item-radio">
               <div class="reserve__form--title">
                 <div class="reserve__form--title-text">初診/再診</div>
                 <span class="reserve__form--require">必須</span>
               </div>
-
-              <div class="reserve__form--radio-wrapper">
-                <div class="reserve-radio-item">
-                  <input id="radio-first" type="radio" name="radio" value="初診" checked required />
-                  <label for="radio-first" class="reserve-radio-label">初診</label>
+              <div class="reserve__form--input">
+                <div class="reserve__form--radio-wrapper js-form--wrapper">
+                  <div class="reserve-radio-item">
+                    <input class="js-radio" id="radio-first" type="radio" name="radio" value="初診" aria-label="初診" required />
+                    <!-- <input id="radio-first" type="radio" name="radio" value="初診" aria-label="初診" checked required /> -->
+                    <label for="radio-first" class="reserve-radio-label">初診</label>
+                  </div>
+                  <div class="reserve-radio-item">
+                    <input class="js-radio" id="radio-continue" type="radio" name="radio" value="再診" aria-label="再診" />
+                    <label for="radio-continue" class="reserve-radio-label">再診</label>
+                  </div>
                 </div>
-                <div class="reserve-radio-item">
-                  <input id="radio-continue" type="radio" name="radio" value="再診" required />
-                  <label for="radio-continue" class="reserve-radio-label">再診</label>
-                </div>
+                <div class="error-message"></div>
               </div>
             </div>
+            <!-- 診療内容 -->
             <div class="reserve__form--item reserve__form--item-checkbox">
               <div class="reserve__form--title">
                 <div class="reserve__form--title-text reserve__form--title-text-checkbox">
@@ -304,61 +319,68 @@
                 </div>
                 <span class="reserve__form--require">必須</span>
               </div>
-              <div class="reserve__form--checkbox-wrapper">
-                <div class="reserve__checkbox--item">
-                  <input id="checkbox1" class="reserve__checkbox--input" type="checkbox" name="reserve__checkbox" value="虫歯" checked required />
-                  <label for="checkbox1" class="reserve__checkbox--label">虫歯</label>
+              <div class="reserve__form--input">
+                <div class="reserve__form--checkbox-wrapper js-form--wrapper">
+                  <div class="reserve__checkbox--item">
+                    <!-- <input id="checkbox1" class="reserve__checkbox--input js-checkbox" type="checkbox" name="checkbox" value="虫歯" checked required /> -->
+                    <input id="checkbox1" class="reserve__checkbox--input js-checkbox" type="checkbox" name="checkbox" value="虫歯" required />
+                    <label for="checkbox1" class="reserve__checkbox--label">虫歯</label>
+                  </div>
+                  <div class="reserve__checkbox--item">
+                    <input id="checkbox2" class="reserve__checkbox--input js-checkbox" type="checkbox" name="checkbox" value="被せ物がとれた" required />
+                    <label for="checkbox2" class="reserve__checkbox--label">被せ物がとれた</label>
+                  </div>
+                  <div class="reserve__checkbox--item">
+                    <input id="checkbox3" class="reserve__checkbox--input js-checkbox" type="checkbox" name="checkbox" value="矯正歯科" required />
+                    <label for="checkbox3" class="reserve__checkbox--label">矯正歯科</label>
+                  </div>
+                  <div class="reserve__checkbox--item">
+                    <input id="checkbox4" class="reserve__checkbox--input js-checkbox" type="checkbox" name="checkbox" value="咬み合わせ" required />
+                    <label for="checkbox4" class="reserve__checkbox--label">咬み合わせ</label>
+                  </div>
+                  <div class="reserve__checkbox--item">
+                    <input id="checkbox5" class="reserve__checkbox--input js-checkbox" type="checkbox" name="checkbox" value="歯周病" required />
+                    <label for="checkbox5" class="reserve__checkbox--label">歯周病</label>
+                  </div>
+                  <div class="reserve__checkbox--item">
+                    <input id="checkbox6" class="reserve__checkbox--input js-checkbox" type="checkbox" name="checkbox" value="小児歯科" required />
+                    <label for="checkbox6" class="reserve__checkbox--label">小児歯科</label>
+                  </div>
+                  <div class="reserve__checkbox--item">
+                    <input id="checkbox7" class="reserve__checkbox--input js-checkbox" type="checkbox" name="checkbox" value="入れ歯" required />
+                    <label for="checkbox7" class="reserve__checkbox--label">入れ歯</label>
+                  </div>
+                  <div class="reserve__checkbox--item">
+                    <input id="checkbox8" class="reserve__checkbox--input js-checkbox" type="checkbox" name="checkbox" value="インプラント" required />
+                    <label for="checkbox8" class="reserve__checkbox--label">インプラント</label>
+                  </div>
+                  <div class="reserve__checkbox--item">
+                    <input id="checkbox9" class="reserve__checkbox--input js-checkbox" type="checkbox" name="checkbox" value="その他" required />
+                    <label for="checkbox9" class="reserve__checkbox--label">その他</label>
+                  </div>
                 </div>
-                <div class="reserve__checkbox--item">
-                  <input id="checkbox2" class="reserve__checkbox--input" type="checkbox" name="reserve__checkbox" value="被せ物がとれた" required />
-                  <label for="checkbox2" class="reserve__checkbox--label">被せ物がとれた</label>
-                </div>
-                <div class="reserve__checkbox--item">
-                  <input id="checkbox3" class="reserve__checkbox--input" type="checkbox" name="reserve__checkbox" value="矯正歯科" required />
-                  <label for="checkbox3" class="reserve__checkbox--label">矯正歯科</label>
-                </div>
-                <div class="reserve__checkbox--item">
-                  <input id="checkbox4" class="reserve__checkbox--input" type="checkbox" name="reserve__checkbox" value="咬み合わせ" required />
-                  <label for="checkbox4" class="reserve__checkbox--label">咬み合わせ</label>
-                </div>
-                <div class="reserve__checkbox--item">
-                  <input id="checkbox5" class="reserve__checkbox--input" type="checkbox" name="reserve__checkbox" value="歯周病" required />
-                  <label for="checkbox5" class="reserve__checkbox--label">歯周病</label>
-                </div>
-                <div class="reserve__checkbox--item">
-                  <input id="checkbox6" class="reserve__checkbox--input" type="checkbox" name="reserve__checkbox" value="小児歯科" required />
-                  <label for="checkbox6" class="reserve__checkbox--label">小児歯科</label>
-                </div>
-                <div class="reserve__checkbox--item">
-                  <input id="checkbox7" class="reserve__checkbox--input" type="checkbox" name="reserve__checkbox" value="入れ歯" required />
-                  <label for="checkbox7" class="reserve__checkbox--label">入れ歯</label>
-                </div>
-                <div class="reserve__checkbox--item">
-                  <input id="checkbox8" class="reserve__checkbox--input" type="checkbox" name="reserve__checkbox" value="インプラント" required />
-                  <label for="checkbox8" class="reserve__checkbox--label">インプラント</label>
-                </div>
-                <div class="reserve__checkbox--item">
-                  <input id="checkbox9" class="reserve__checkbox--input" type="checkbox" name="reserve__checkbox" value="その他" required />
-                  <label for="checkbox9" class="reserve__checkbox--label">その他</label>
-                </div>
+                <div class="error-message"></div>
               </div>
             </div>
-
+            <!-- ご連絡方法 -->
             <div class="reserve__form--item reserve__form--item-selectbox">
               <div class="reserve__form--title">
                 <label for="selectbox" class="reserve__form--title-text">ご連絡方法</label>
                 <span class="reserve__form--require">必須</span>
               </div>
-              <div class="reserve__form--selectbox-wrapper">
-                <!-- <label for="selectbox">選択ボックス</label> -->
-                <select id="selectbox" name="selectbox" required>
-                  <option value="メール">メール</option>
-                  <option value="電話">電話</option>
-                  <option value="FAX">FAX</option>
-                </select>
+              <div class="reserve__form--input">
+                <div class="reserve__form--selectbox-wrapper js-form--wrapper">
+                  <select class="js-select" id="selectbox" name="selectbox" required>
+                    <option value="">ご連絡方法を選択ください。</option>
+                    <option value="メール">メール</option>
+                    <option value="電話">電話</option>
+                    <option value="FAX">FAX</option>
+                  </select>
+                </div>
+                <div class="error-message"></div>
               </div>
             </div>
-
+            <!-- 希望日 -->
             <div class="reserve__form--item reserve__form--item-date">
               <div class="reserve__form--title">
                 <label for="date1" class="reserve__form--title-text">希望日</label>
@@ -369,7 +391,7 @@
                 <input type="date" id="date3" name="date3" class="reserve__form--input reserve__form--input-date" aria-label="希望日" placeholder="年 / 月 / 日" required />
               </div>
             </div>
-
+            <!-- お問い合わせ内容 -->
             <div class="reserve__form--item reserve__form--item-textarea">
               <div class="reserve__form--title">
                 <label for="message" class="reserve__form--title-text">お問い合わせ内容</label>
@@ -377,7 +399,7 @@
               </div>
               <textarea id="message" name="message" class="reserve__form--input reserve__form--textarea" placeholder="ご自由にご記入ください。"></textarea>
             </div>
-            <button type="submit" class="button reserve__button">送　信</button>
+            <button id="js-submit" type="submit" class="button reserve__button">送　信</button>
           </form>
         </div>
         <div id="js-success" class="reserve__message-success">
