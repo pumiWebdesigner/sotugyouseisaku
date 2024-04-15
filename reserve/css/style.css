@@ -1153,7 +1153,7 @@ body {
   left: 0;
   width: 28px;
   height: 28px;
-  background: url(../../img/header-footer/phone.png) no-repeat center/cover;
+  background: url(../../img/header-footer/phone.webp) no-repeat center/cover;
 }
 .footer__nav .footer__info--tel-number::before {
   width: 18px;
@@ -1311,7 +1311,7 @@ body {
           transform: translateY(-50%);
   width: 6px;
   height: 12px;
-  background: url(../../img/footer/arrow-right.png);
+  background: url(../../img/footer/arrow-right.webp);
 }
 
 .footer__copy {
