@@ -53,7 +53,7 @@
  * 3. Remove gray overlay on links for iOS.
  */
 html {
-  line-height: 1.15; /* 1 */
+  line-height: normal; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
   -webkit-tap-highlight-color: transparent; /* 3*/
 }
@@ -739,7 +739,7 @@ body {
     left: 0;
     width: 28px;
     height: 28px;
-    background: url(../../img/header-footer/phone.png) no-repeat center/cover;
+    background: url(../../img/header-footer/phone.webp) no-repeat center/cover;
   }
   .header__nav {
     padding-inline: 20px;
@@ -1516,7 +1516,7 @@ body {
 
 .swiper-button-prev::after {
   left: 22px;
-  background: url("../../img/mv/arrow-left.png") no-repeat center center/cover;
+  background: url("../../img/mv/arrow-left.webp") no-repeat center center/cover;
 }
 @media (width <= 767px) {
   .swiper-button-prev::after {
@@ -1526,7 +1526,7 @@ body {
 
 .swiper-button-next::after {
   right: 18px;
-  background: url("../../img/mv/arrow-right.png") no-repeat center center/cover;
+  background: url("../../img/mv/arrow-right.webp") no-repeat center center/cover;
 }
 @media (width <= 767px) {
   .swiper-button-next::after {
@@ -1859,7 +1859,7 @@ body {
 .concept {
   margin-top: 60px;
   padding-top: 60px;
-  background: #fff url(../../img/concept/concept-bg.png) no-repeat top left 10px;
+  background: #fff url(../../img/concept/concept-bg.webp) no-repeat top left 10px;
   background-size: 147.7333333333%; /* sizeはショートハンドでかけない */
   padding-bottom: clamp(150px, 150px + -30 * (100vw - 1024px) / 256, 120px);
 }
@@ -1867,7 +1867,7 @@ body {
   .concept {
     margin-top: 96px;
     padding-top: 180px;
-    background: #fff url(../../img/concept/concept-bg.png) no-repeat top left 416px;
+    background: #fff url(../../img/concept/concept-bg.webp) no-repeat top left 416px;
   }
 }
 @media (width <= 767px) {
@@ -2144,23 +2144,23 @@ body {
 .medical::before {
   aspect-ratio: 6.3054187192;
   bottom: 100%;
-  background: url(../../img/medical/medical__bg--top-pc.png) no-repeat top center/cover;
+  background: url(../../img/medical/medical__bg--top-pc.webp) no-repeat top center/cover;
 }
 @media (width <= 767px) {
   .medical::before {
     aspect-ratio: 4.2613636364;
-    background: url(../../img/medical/medical__bg--top-sp.png) no-repeat top center/cover;
+    background: url(../../img/medical/medical__bg--top-sp.webp) no-repeat top center/cover;
   }
 }
 .medical::after {
   aspect-ratio: 13.1958762887;
   top: 100%;
-  background: url(../../img/medical/medical__bg--bottom-pc.png) no-repeat bottom center/cover;
+  background: url(../../img/medical/medical__bg--bottom-pc.webp) no-repeat bottom center/cover;
 }
 @media (width <= 767px) {
   .medical::after {
     aspect-ratio: 13.3928571429;
-    background: url(../../img/medical/medical__bg--bottom-sp.png) no-repeat bottom center/cover;
+    background: url(../../img/medical/medical__bg--bottom-sp.webp) no-repeat bottom center/cover;
   }
 }
 @media (width <= 767px) {
@@ -2184,14 +2184,14 @@ body {
   bottom: -81px;
   aspect-ratio: 57/56;
   width: 4.453125%;
-  background: url(../../img/medical/deco-kirakira-single.png) no-repeat center/cover;
+  background: url(../../img/medical/deco-kirakira-single.webp) no-repeat center/cover;
 }
 .medical__body::after {
   right: 21px;
   bottom: -103px;
   aspect-ratio: 0.9057971014;
   width: 9.765625%;
-  background: url(../../img/medical/deco-kirakira-double.png) no-repeat center/cover;
+  background: url(../../img/medical/deco-kirakira-double.webp) no-repeat center/cover;
 }
 @media (width <= 767px) {
   .medical__body::before {
@@ -3058,23 +3058,23 @@ input[type=date]::before {
 .medical-u::before {
   aspect-ratio: 6.3054187192;
   bottom: 100%;
-  background: url(../../img/medical-u/medical-u__bg--top-pc.png) no-repeat top center/cover;
+  background: url(../../img/medical/medical__bg--bottom-pc.webp) no-repeat top center/cover;
 }
 @media (width <= 767px) {
   .medical-u::before {
     aspect-ratio: 4.2613636364;
-    background: url(../../img/medical-u/medical-u__bg--top-sp.png) no-repeat top center/cover;
+    background: url(../../img/medical-u/medical-u__bg--top-sp.webp) no-repeat top center/cover;
   }
 }
 .medical-u::after {
   aspect-ratio: 13.1958762887;
   top: 100%;
-  background: url(../../img/medical-u/medical-u__bg--bottom-pc.png) no-repeat bottom center/cover;
+  background: url(../../img/medical-u/medical-u__bg--bottom-pc.webp) no-repeat bottom center/cover;
 }
 @media (width <= 767px) {
   .medical-u::after {
     aspect-ratio: 13.3928571429;
-    background: url(../../img/medical-u/medical-u__bg--bottom-sp.png) no-repeat bottom center/cover;
+    background: url(../../img/medical-u/medical-u__bg--bottom-sp.webp) no-repeat bottom center/cover;
   }
 }
 @media (width <= 767px) {
@@ -3232,14 +3232,14 @@ input[type=date]::before {
   bottom: -81px;
   aspect-ratio: 57/56;
   width: 4.453125%;
-  background: url(../../img/medical/deco-kirakira-single.png) no-repeat center/cover;
+  background: url(../../img/medical/deco-kirakira-single.webp) no-repeat center/cover;
 }
 .medical-u__body::after {
   right: 21px;
   bottom: -103px;
   aspect-ratio: 0.9057971014;
   width: 9.765625%;
-  background: url(../../img/medical/deco-kirakira-double.png) no-repeat center/cover;
+  background: url(../../img/medical/deco-kirakira-double.webp) no-repeat center/cover;
 }
 @media (width <= 767px) {
   .medical-u__body::before {

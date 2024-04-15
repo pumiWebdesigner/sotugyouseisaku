@@ -16,7 +16,7 @@
   margin-top: 64px;
   padding-top: 216px;
   padding-bottom: size-calc2(180, 100, 1024, 1280);
-  background: #fff url(../../img/concept/concept-bg.png) no-repeat top left 416px;
+  background: #fff url(../../img/concept/concept-bg.webp) no-repeat top left 416px;
   display: flex;
   flex-direction: row-reverse;
   @media screen and (max-width: 1023px) {
@@ -24,7 +24,7 @@
     margin-top: 40px;
     padding-top: 113px;
     background-position: top left 0px;
-    background: #fff url(../../img/concept/concept-bg.png) no-repeat top left 10px;
+    background: #fff url(../../img/concept/concept-bg.webp) no-repeat top left 10px;
     background-size: calc(554 / 375 * 100%); /* sizeはショートハンドでかけない */
     padding-bottom: 103px;
   }

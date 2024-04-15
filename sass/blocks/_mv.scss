@@ -99,7 +99,7 @@
     @include mq(sp) {
       left: -10px;
     }
-    background: url("../../img/mv/arrow-left.png") no-repeat center center/cover;
+    background: url("../../img/mv/arrow-left.webp") no-repeat center center/cover;
   }
 }
 .swiper-button-next {
@@ -108,7 +108,7 @@
     @include mq(sp) {
       right: -10px;
     }
-    background: url("../../img/mv/arrow-right.png") no-repeat center center/cover;
+    background: url("../../img/mv/arrow-right.webp") no-repeat center center/cover;
   }
 }
 
