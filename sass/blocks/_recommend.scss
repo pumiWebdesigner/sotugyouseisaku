@@ -2,7 +2,7 @@
 @use "../global" as *;
 
 .recommend {
-  margin-top: 111px;
+  margin-top: 81px;
   @include mq(tab) {
     margin-top: 120px;
     margin-top: 0;

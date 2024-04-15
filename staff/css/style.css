@@ -53,7 +53,7 @@
  * 3. Remove gray overlay on links for iOS.
  */
 html {
-  line-height: normal; /* 1 */
+  line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
   -webkit-tap-highlight-color: transparent; /* 3*/
 }
@@ -625,9 +625,6 @@ body {
 }
 .footer__nav .button--text span {
   font-size: 12px;
-}
-.aside__button .button--text {
-  margin-top: 11px;
 }
 
 .header {
@@ -1988,7 +1985,7 @@ body {
 }
 
 .recommend {
-  margin-top: 111px;
+  margin-top: 81px;
 }
 @media (768px <= width <= 1023px) {
   .recommend {
@@ -2402,6 +2399,9 @@ body {
     font-weight: 700;
     letter-spacing: 0.08em;
   }
+  .medical__text--title::after {
+    width: 30px;
+  }
 }
 
 .medical__text--text {
@@ -2414,6 +2414,7 @@ body {
   .medical__text--text {
     font-size: 0.75rem;
     font-weight: 700;
+    line-height: 1.5833333333;
     letter-spacing: 0.08em;
   }
 }
@@ -2437,12 +2438,12 @@ body {
 
 .blog {
   margin-top: 260px;
-  padding-bottom: 193px;
+  padding-bottom: 191px;
 }
 @media (width <= 767px) {
   .blog {
     margin-top: 132px;
-    padding-bottom: 130px;
+    padding-bottom: 132px;
   }
 }
 
@@ -2560,6 +2561,7 @@ body {
 }
 @media (width <= 767px) {
   .blog__img {
+    border-radius: revert;
     width: 39.7014925373%;
   }
   .blog__img img {
@@ -3008,7 +3010,7 @@ select {
 }
 
 input[type=date] {
-  padding: 13px 10px;
+  padding: 14px 16px;
   background: #f6f6f6 url(../../reserve/img/icon-calender.svg) no-repeat right 12px center;
   position: relative;
 }
@@ -3051,7 +3053,16 @@ input[type=date]::before {
 }
 .greeting .section__inner {
   padding-inline: clamp(40px, 40px + 100 * (100vw - 1024px) / 256, 140px);
-  padding-inline: clamp(20px, 20px + 20 * (100vw - 300px) / 75, 40px);
+}
+@media (width <= 767px) {
+  .greeting .section__inner {
+    padding-inline: 20px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .greeting .section__title {
+    font-size: 18px;
+  }
 }
 
 .greeting__container {
@@ -3086,7 +3097,7 @@ input[type=date]::before {
   }
 }
 .greeting__message p + p {
-  margin-top: 1em;
+  margin-top: 23px;
 }
 
 .greeting__message--main {
@@ -3264,7 +3275,7 @@ input[type=date]::before {
 
 .introduction {
   margin-top: 160px;
-  margin-bottom: 192px;
+  margin-bottom: 196px;
 }
 @media screen and (max-width: 1024px) {
   .introduction {
@@ -3274,7 +3285,11 @@ input[type=date]::before {
 }
 .introduction .section__inner {
   padding-inline: clamp(40px, 40px + 100 * (100vw - 1024px) / 256, 140px);
-  padding-inline: clamp(20px, 20px + 20 * (100vw - 300px) / 75, 40px);
+}
+@media (width <= 767px) {
+  .introduction .section__inner {
+    padding-inline: 20px;
+  }
 }
 
 .introduction__container {
@@ -3336,7 +3351,7 @@ input[type=date]::before {
 }
 
 .introduction__item {
-  width: calc(33% - 53.3333333333px);
+  width: 280px;
 }
 @media screen and (max-width: 1024px) {
   .introduction__item {
@@ -3400,12 +3415,17 @@ input[type=date]::before {
 }
 .introduction__profile dt,
 .introduction__profile dd {
-  width: 50%;
   padding-block: 19px;
   padding-left: 20px;
 }
 .introduction__profile dt {
   background: #dff1fd;
+  width: 50%;
+}
+@media (width <= 767px) {
+  .introduction__profile dt {
+    width: 42%;
+  }
 }
 .introduction__profile dt dd {
   -webkit-box-flex: 1;

@@ -53,7 +53,7 @@
  * 3. Remove gray overlay on links for iOS.
  */
 html {
-  line-height: normal; /* 1 */
+  line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
   -webkit-tap-highlight-color: transparent; /* 3*/
 }
@@ -625,9 +625,6 @@ body {
 }
 .footer__nav .button--text span {
   font-size: 12px;
-}
-.aside__button .button--text {
-  margin-top: 11px;
 }
 
 .header {
@@ -1988,7 +1985,7 @@ body {
 }
 
 .recommend {
-  margin-top: 111px;
+  margin-top: 81px;
 }
 @media (768px <= width <= 1023px) {
   .recommend {
@@ -2402,6 +2399,9 @@ body {
     font-weight: 700;
     letter-spacing: 0.08em;
   }
+  .medical__text--title::after {
+    width: 30px;
+  }
 }
 
 .medical__text--text {
@@ -2414,6 +2414,7 @@ body {
   .medical__text--text {
     font-size: 0.75rem;
     font-weight: 700;
+    line-height: 1.5833333333;
     letter-spacing: 0.08em;
   }
 }
@@ -2437,12 +2438,12 @@ body {
 
 .blog {
   margin-top: 260px;
-  padding-bottom: 193px;
+  padding-bottom: 191px;
 }
 @media (width <= 767px) {
   .blog {
     margin-top: 132px;
-    padding-bottom: 130px;
+    padding-bottom: 132px;
   }
 }
 
@@ -2560,6 +2561,7 @@ body {
 }
 @media (width <= 767px) {
   .blog__img {
+    border-radius: revert;
     width: 39.7014925373%;
   }
   .blog__img img {
@@ -3008,7 +3010,7 @@ select {
 }
 
 input[type=date] {
-  padding: 13px 10px;
+  padding: 14px 16px;
   background: #f6f6f6 url(../../reserve/img/icon-calender.svg) no-repeat right 12px center;
   position: relative;
 }
@@ -3055,7 +3057,12 @@ input[type=date]::before {
 .contact__inner {
   max-width: 728px;
   width: 100%;
-  padding-inline: 20px;
+  padding-inline: revert;
+}
+@media (width <= 767px) {
+  .contact__inner {
+    padding-inline: 20px;
+  }
 }
 .is-success .contact__inner {
   max-width: 768px;

@@ -10,7 +10,7 @@
   }
   @include mq(sp-tab) {
     margin-top: 69px;
-    margin-bottom: 134px;
+    margin-bottom: 137px;
   }
 }
 .staff-blog__wrapper {
@@ -87,6 +87,9 @@
   position: relative;
   display: flex;
   gap: 20px;
+  @include mq(sp) {
+    gap: 10px;
+  }
 }
 .staff-blog__blog-img {
   width: 244px;

@@ -168,7 +168,9 @@
   }
 }
 .medical-u__inner {
-  padding-inline: size-calc(20, 140, 375, 1280);
+  @include mq(sp) {
+    padding-inline: size-calc(20, 140, 375, 767);
+  }
 }
 .medical-u__items {
   margin-top: size-calc(43, 64, 375, 1280);
@@ -281,6 +283,12 @@
   width: calc(420 / 880 * 100%);
   @include mq(sp) {
     width: 100%;
+    img {
+      aspect-ratio: 295/221;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
   img {
     border-radius: 20px;

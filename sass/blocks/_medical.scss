@@ -229,13 +229,16 @@
   }
   @include mq(sp) {
     @include font(20, 700, null, 1.6);
+    &::after {
+      width: 30px;
+    }
   }
 }
 
 .medical__text--text {
   @include font(16, 700, 28, 1.28);
   @include mq(sp) {
-    @include font(12, 700, null, 0.96);
+    @include font(12, 700, 19, 0.96);
   }
 }
 
