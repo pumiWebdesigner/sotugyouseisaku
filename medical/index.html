@@ -26,6 +26,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <script src="../js/slider.js" defer></script>
+    <script src="../js/swiper.js" defer></script>
+    <!-- wow -->
+    <link rel="stylesheet" href="../css/animate.css" />
     <!-- css読み込み -->
     <link rel="stylesheet" href="./css/style.css" />
     <!-- JavaScript読み込み -->
@@ -213,7 +216,7 @@
       <div class="bread-cumb__link--second">診療案内</div>
     </div>
 
-    <div class="practice-nav">
+    <div class="practice-nav wow fadeInUp">
       <div class="practice-nav__inner">
         <div class="practice-nav--items">
           <div class="practice-nav--item">
@@ -244,7 +247,7 @@
       </div>
     </div>
 
-    <section class="general-practice medical" id="general-practice">
+    <section class="general-practice medical wow fadeInUp" id="general-practice">
       <div class="medical-u__body">
         <div class="section__inner">
           <div class="section__title">一般診療</div>
@@ -322,7 +325,7 @@
       </div>
     </section>
 
-    <section class="special-practice medical" id="special-practice">
+    <section class="special-practice medical wow fadeInUp" id="special-practice">
       <div class="medical-u__body">
         <div class="section__inner">
           <div class="section__title">特殊診療</div>
@@ -619,5 +622,10 @@
         </a>
       </div>
     </footer>
+    <!-- wow -->
+    <script src="../js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-const swiper = new Swiper(".swiper", {
+const staffSwiper = new Swiper(".staff-swiper", {
   autoplay: {
     delay: 0, // 次の画像に切替する時間
   },

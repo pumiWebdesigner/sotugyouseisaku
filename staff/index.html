@@ -27,6 +27,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <script src="../js/slider.js" defer></script>
     <script src="../js/swiper.js" defer></script>
+    <!-- wow -->
+    <link rel="stylesheet" href="../css/animate.css" />
     <!-- css読み込み -->
     <link rel="stylesheet" href="./css/style.css" />
     <!-- JavaScript読み込み -->
@@ -214,7 +216,7 @@
       <div class="bread-cumb__link--second">スタッフ紹介</div>
     </div>
 
-    <section class="section greeting" id="greeting">
+    <section class="section greeting wow fadeInUp" id="greeting">
       <div class="section__inner">
         <div class="section__title">院長のあいさつ</div>
         <div class="greeting__container">
@@ -271,7 +273,7 @@
     </section>
 
     <div class="greeting__slider">
-      <div class="swiper">
+      <div class="swiper staff-swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <img src="./img/staff-slide-1.png" alt="治療中イメージ1" width="610" height="458" />
@@ -307,7 +309,7 @@
       </div>
     </div>
 
-    <section class="section introduction" id="introduction">
+    <section class="section introduction wow fadeInUp" id="introduction">
       <div class="section__inner">
         <div class="section__title">スタッフ紹介</div>
         <div class="introduction__container is-hygienist">
@@ -665,5 +667,10 @@
         </a>
       </div>
     </footer>
+    <!-- wow -->
+    <script src="../js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
   </body>
 </html>
