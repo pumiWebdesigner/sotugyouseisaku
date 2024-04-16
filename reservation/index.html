@@ -34,6 +34,7 @@
     <!-- css読み込み -->
     <link rel="stylesheet" href="./css/style.css" />
     <!-- JavaScript読み込み -->
+    <script src="../js/contact.js" defer></script>
     <script src="../js/script.js" defer></script>
   </head>
 
@@ -139,7 +140,7 @@
                 </a>
               </li>
               <!-- blog -->
-              <li class="header__nav--item drawer__nav--item is-active">
+              <li class="header__nav--item drawer__nav--item">
                 <a href="../blog/index.html" class="header__nav--link drawer__nav--link js-drawer__nav--link">
                   <div class="header__nav--icon drawer__nav--icon">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -203,293 +204,212 @@
     <div class="page-title">
       <div class="page-title__img">
         <picture>
-          <source srcset="./img/archive_top-sp.webp" media="(max-width: 767px)" type="image/webp" />
-          <img src="./img/archive_top.webp" alt="ノートと鉛筆" width="2320" height="680" />
+          <source srcset="./img/page-contact_top-sp.webp" media="(max-width: 767px)" type="image/webp" />
+          <img src="./img/page-contact_top.webp" alt="ノートとスマホ" width="1160" height="340" loading="lazy" decoding="async" />
         </picture>
       </div>
       <div class="page-title__text">
-        <div class="page-title__text--main">スタッフブログ</div>
-        <div class="page-title__text--sub">STAFF BLOG</div>
+        <div class="page-title__text--main">WEB予約</div>
+        <div class="page-title__text--sub">RESERVE</div>
       </div>
     </div>
 
-    <div class="bread-crumb">
+    <div class="bread-crumb is-third">
       <a href="../index.html" class="bread-cumb__link--home">ホーム</a>
-      <div class="bread-cumb__link--second">スタッフブログ</div>
+      <div class="bread-cumb__link--second">WEB予約</div>
+      <div class="bread-cumb__link--third">WEB予約完了</div>
     </div>
 
-    <section class="section staff-blog wow fadeInUp">
-      <div class="section__inner">
-        <div class="staff-blog__wrapper">
-          <div class="staff-blog__blog-container">
-            <div class="staff-blog__blog-item is-new">
-              <div class="staff-blog__blog-label">NEW</div>
-              <a href="../page-name/index.html" class="staff-blog__blog-link">
-                <div class="staff-blog__blog-img">
-                  <picture>
-                    <source srcset="./img/blog-sp.webp" media="(max-width: 767px)" type="image/webp" />
-                    <img src="./img/blog.webp" alt="レントゲンを見ながら診察" width="488" height="306" loading="lazy" decoding="async" />
-                  </picture>
-                </div>
-                <div class="staff-blog__blog-text">
-                  <div class="staff-blog__blog-text--title">記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。</div>
-                  <time class="staff-blog__blog-text--data" datetime="2020-02-14">2020.02.14</time>
-                </div>
-              </a>
+    <section class="reserve wow fadeInUp" id="js-reserve">
+      <div class="section__inner reserve__inner">
+        <div class="reserve__wrapper">
+          <div class="reserve__message">
+            <div class="reserve__message--tel">
+              <div class="reserve__message--tel-title">お電話でのご予約/ご相談</div>
+              <div class="reserve__info--tel">
+                <div class="reserve__info--tel-number">03-1234-5678</div>
+                <div class="reserve__info--tel-text">(年中無休 AM9:00〜PM22:00)</div>
+              </div>
+              <div class="reserve__message--tel-text">
+                お急ぎの方は電話での連絡がスムーズです。<br />
+                混雑状況によっては当日受診をご利用いただけない場合がございます。<br />
+                あらかじめご了承ください。
+              </div>
             </div>
-            <div class="staff-blog__blog-item is-new">
-              <div class="staff-blog__blog-label">NEW</div>
-              <a href="../page-name/index.html" class="staff-blog__blog-link">
-                <div class="staff-blog__blog-img">
-                  <picture>
-                    <source srcset="./img/blog-sp.webp" media="(max-width: 767px)" type="image/webp" />
-                    <img src="./img/blog.webp" alt="レントゲンを見ながら診察" width="488" height="306" loading="lazy" decoding="async" />
-                  </picture>
-                </div>
-                <div class="staff-blog__blog-text">
-                  <div class="staff-blog__blog-text--title">記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。</div>
-                  <time class="staff-blog__blog-text--data" datetime="2020-02-14">2020.02.14</time>
-                </div>
-              </a>
-            </div>
-            <div class="staff-blog__blog-item">
-              <div class="staff-blog__blog-label">NEW</div>
-              <a href="../page-name/index.html" class="staff-blog__blog-link">
-                <div class="staff-blog__blog-img">
-                  <picture>
-                    <source srcset="./img/blog-sp.webp" media="(max-width: 767px)" type="image/webp" />
-                    <img src="./img/blog.webp" alt="レントゲンを見ながら診察" width="488" height="306" loading="lazy" decoding="async" />
-                  </picture>
-                </div>
-                <div class="staff-blog__blog-text">
-                  <div class="staff-blog__blog-text--title">記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。</div>
-                  <time class="staff-blog__blog-text--data" datetime="2020-02-14">2020.02.14</time>
-                </div>
-              </a>
-            </div>
-            <div class="staff-blog__blog-item">
-              <div class="staff-blog__blog-label">NEW</div>
-              <a href="../page-name/index.html" class="staff-blog__blog-link">
-                <div class="staff-blog__blog-img">
-                  <picture>
-                    <source srcset="./img/blog-sp.webp" media="(max-width: 767px)" type="image/webp" />
-                    <img src="./img/blog.webp" alt="レントゲンを見ながら診察" width="488" height="306" loading="lazy" decoding="async" />
-                  </picture>
-                </div>
-                <div class="staff-blog__blog-text">
-                  <div class="staff-blog__blog-text--title">記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。</div>
-                  <time class="staff-blog__blog-text--data" datetime="2020-02-14">2020.02.14</time>
-                </div>
-              </a>
-            </div>
-            <div class="staff-blog__blog-item">
-              <div class="staff-blog__blog-label">NEW</div>
-              <a href="../page-name/index.html" class="staff-blog__blog-link">
-                <div class="staff-blog__blog-img">
-                  <picture>
-                    <source srcset="./img/blog-sp.webp" media="(max-width: 767px)" type="image/webp" />
-                    <img src="./img/blog.webp" alt="レントゲンを見ながら診察" width="488" height="306" loading="lazy" decoding="async" />
-                  </picture>
-                </div>
-                <div class="staff-blog__blog-text">
-                  <div class="staff-blog__blog-text--title">記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。</div>
-                  <time class="staff-blog__blog-text--data" datetime="2020-02-14">2020.02.14</time>
-                </div>
-              </a>
-            </div>
-            <div class="staff-blog__blog-item">
-              <div class="staff-blog__blog-label">NEW</div>
-              <a href="../page-name/index.html" class="staff-blog__blog-link">
-                <div class="staff-blog__blog-img">
-                  <picture>
-                    <source srcset="./img/blog-sp.webp" media="(max-width: 767px)" type="image/webp" />
-                    <img src="./img/blog.webp" alt="レントゲンを見ながら診察" width="488" height="306" loading="lazy" decoding="async" />
-                  </picture>
-                </div>
-                <div class="staff-blog__blog-text">
-                  <div class="staff-blog__blog-text--title">記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。</div>
-                  <time class="staff-blog__blog-text--data" datetime="2020-02-14">2020.02.14</time>
-                </div>
-              </a>
-            </div>
-            <div class="staff-blog__blog-item">
-              <div class="staff-blog__blog-label">NEW</div>
-              <a href="../page-name/index.html" class="staff-blog__blog-link">
-                <div class="staff-blog__blog-img">
-                  <picture>
-                    <source srcset="./img/blog-sp.webp" media="(max-width: 767px)" type="image/webp" />
-                    <img src="./img/blog.webp" alt="レントゲンを見ながら診察" width="488" height="306" loading="lazy" decoding="async" />
-                  </picture>
-                </div>
-                <div class="staff-blog__blog-text">
-                  <div class="staff-blog__blog-text--title">記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。</div>
-                  <time class="staff-blog__blog-text--data" datetime="2020-02-14">2020.02.14</time>
-                </div>
-              </a>
-            </div>
-            <div class="staff-blog__blog-item">
-              <div class="staff-blog__blog-label">NEW</div>
-              <a href="../page-name/index.html" class="staff-blog__blog-link">
-                <div class="staff-blog__blog-img">
-                  <picture>
-                    <source srcset="./img/blog-sp.webp" media="(max-width: 767px)" type="image/webp" />
-                    <img src="./img/blog.webp" alt="レントゲンを見ながら診察" width="488" height="306" loading="lazy" decoding="async" />
-                  </picture>
-                </div>
-                <div class="staff-blog__blog-text">
-                  <div class="staff-blog__blog-text--title">記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。</div>
-                  <time class="staff-blog__blog-text--data" datetime="2020-02-14">2020.02.14</time>
-                </div>
-              </a>
-            </div>
-            <div class="staff-blog__blog-item">
-              <div class="staff-blog__blog-label">NEW</div>
-              <a href="../page-name/index.html" class="staff-blog__blog-link">
-                <div class="staff-blog__blog-img">
-                  <picture>
-                    <source srcset="./img/blog-sp.webp" media="(max-width: 767px)" type="image/webp" />
-                    <img src="./img/blog.webp" alt="レントゲンを見ながら診察" width="488" height="306" loading="lazy" decoding="async" />
-                  </picture>
-                </div>
-                <div class="staff-blog__blog-text">
-                  <div class="staff-blog__blog-text--title">記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。</div>
-                  <time class="staff-blog__blog-text--data" datetime="2020-02-14">2020.02.14</time>
-                </div>
-              </a>
-            </div>
-            <div class="staff-blog__blog-item">
-              <div class="staff-blog__blog-label">NEW</div>
-              <a href="../page-name/index.html" class="staff-blog__blog-link">
-                <div class="staff-blog__blog-img">
-                  <picture>
-                    <source srcset="./img/blog-sp.webp" media="(max-width: 767px)" type="image/webp" />
-                    <img src="./img/blog.webp" alt="レントゲンを見ながら診察" width="488" height="306" loading="lazy" decoding="async" />
-                  </picture>
-                </div>
-                <div class="staff-blog__blog-text">
-                  <div class="staff-blog__blog-text--title">記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。</div>
-                  <time class="staff-blog__blog-text--data" datetime="2020-02-14">2020.02.14</time>
-                </div>
-              </a>
-            </div>
-
-            <div class="staff-blog__blog-pagenation">
-              <a href="#" class="staff-blog__blog-pagenation--prev">前へ</a>
-              <a href="#" class="staff-blog__blog-pagenation--page">1</a>
-              <a href="#" class="staff-blog__blog-pagenation--page is-active">2</a>
-              <a href="#" class="staff-blog__blog-pagenation--page hidden-350">3</a>
-              <a href="#" class="staff-blog__blog-pagenation--page hidden-sp">4</a>
-              <a href="#" class="staff-blog__blog-pagenation--page hidden-sp">5</a>
-              <a href="#" class="staff-blog__blog-pagenation--page hidden-sp">6</a>
-              <a href="#" class="staff-blog__blog-pagenation--page hidden-350">…</a>
-              <a href="#" class="staff-blog__blog-pagenation--page">20</a>
-              <a href="#" class="staff-blog__blog-pagenation--next">次へ</a>
+            <div class="reserve__message--email">
+              <div class="reserve__message--email-title">メールでのご予約/ご相談</div>
+              <div class="reserve__message--email-text">
+                【ご予約に関しての注意点】<br />
+                メールアドレスの入力間違いにより送信できない事が発生しておりますので、メールアドレスは正しくご入力下さい。<br />
+                ※24時間以内に当院からの返信がない場合には、お電話(TEL 03-1234-5678)にてお問い合わせ下さい。
+              </div>
             </div>
           </div>
-
-          <div class="staff-blog__archive-container">
-            <div class="staff-blog__archive-item">
-              <div class="staff-blog__archive-title introduction">
-                <div class="staff-blog__archive-title--icon">
-                  <img src="./img/sidebar-icon_1.svg" alt="病院アイコン" width="24" height="24" loading="lazy" decoding="async" />
-                </div>
-                <div class="staff-blog__archive-title--text">クリニックの紹介</div>
+          <div class="section__title">予約フォーム</div>
+          <form action="#" method="post" class="reserve__form" id="js-form">
+            <!-- お名前 -->
+            <div class="reserve__form--item">
+              <div class="reserve__form--title">
+                <label for="name" class="reserve__form--title-text">お名前</label>
+                <span class="reserve__form--require">必須</span>
               </div>
-              <div class="introduction-archive__img">
-                <img src="./img/sidebar-img_1.webp" alt="診察室風景" width="600" height="376" loading="lazy" decoding="async" />
-              </div>
-              <div class="introduction-archive__text">
-                <div class="introduction-archive__text-title">みなみ歯科クリニック</div>
-                <div class="introduction-archive__text-message">お子様からご高齢の方まで、快適な空間で治療が受けられる場を作り、地域医療に貢献しきたいと考えております。</div>
-                <a href="../about/index.html" class="introduction-archive__link arrow-right">当院について</a>
+              <div class="reserve__form--input">
+                <input type="text" id="name" name="name" class="reserve__form--input js-text" aria-label="お名前（漢字）" placeholder="山田　太郎" required />
+                <div class="error-message"></div>
               </div>
             </div>
-
-            <div class="staff-blog__archive-item new-post">
-              <div class="staff-blog__archive-title">
-                <div class="staff-blog__archive-title--icon">
-                  <img src="./img/sidebar-icon_2.svg" alt="記事アイコン" width="24" height="24" loading="lazy" decoding="async" />
-                </div>
-                <div class="staff-blog__archive-title--text">新着記事</div>
+            <!-- フリガナ -->
+            <div class="reserve__form--item">
+              <div class="reserve__form--title">
+                <label for="name-input" class="reserve__form--title-text">フリガナ</label>
+                <span class="reserve__form--require">必須</span>
               </div>
-
-              <a href="../page-name/index.html" class="staff-blog__blog-item staff-blog__blog-link is-news">
-                <div class="staff-blog__blog-img">
-                  <img src="./img/side-blog.webp" alt="レントゲンを見ながら診察" width="240" height="180" loading="lazy" decoding="async" />
-                </div>
-                <div class="staff-blog__blog-text">
-                  <div class="staff-blog__blog-text--title">記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。</div>
-                  <time class="staff-blog__blog-text--data" datetime="2020-02-14">2020.02.14</time>
-                </div>
-              </a>
-              <a href="../page-name/index.html" class="staff-blog__blog-item staff-blog__blog-link is-news">
-                <div class="staff-blog__blog-img">
-                  <img src="./img/side-blog.webp" alt="レントゲンを見ながら診察" width="240" height="180" loading="lazy" decoding="async" />
-                </div>
-                <div class="staff-blog__blog-text">
-                  <div class="staff-blog__blog-text--title">記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。</div>
-                  <time class="staff-blog__blog-text--data" datetime="2020-02-14">2020.02.14</time>
-                </div>
-              </a>
-              <a href="../page-name/index.html" class="staff-blog__blog-item staff-blog__blog-link is-news">
-                <div class="staff-blog__blog-img">
-                  <img src="./img/side-blog.webp" alt="レントゲンを見ながら診察" width="240" height="180" loading="lazy" decoding="async" />
-                </div>
-                <div class="staff-blog__blog-text">
-                  <div class="staff-blog__blog-text--title">記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。</div>
-                  <time class="staff-blog__blog-text--data" datetime="2020-02-14">2020.02.14</time>
-                </div>
-              </a>
-              <a href="../page-name/index.html" class="staff-blog__blog-item staff-blog__blog-link is-news">
-                <div class="staff-blog__blog-img">
-                  <img src="./img/side-blog.webp" alt="レントゲンを見ながら診察" width="240" height="180" loading="lazy" decoding="async" />
-                </div>
-                <div class="staff-blog__blog-text">
-                  <div class="staff-blog__blog-text--title">記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。</div>
-                  <time class="staff-blog__blog-text--data" datetime="2020-02-14">2020.02.14</time>
-                </div>
-              </a>
-              <a href="../page-name/index.html" class="staff-blog__blog-item staff-blog__blog-link is-news">
-                <div class="staff-blog__blog-img">
-                  <img src="./img/side-blog.webp" alt="レントゲンを見ながら診察" width="240" height="180" loading="lazy" decoding="async" />
-                </div>
-                <div class="staff-blog__blog-text">
-                  <div class="staff-blog__blog-text--title">記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。</div>
-                  <time class="staff-blog__blog-text--data" datetime="2020-02-14">2020.02.14</time>
-                </div>
-              </a>
-              <a href="../page-name/index.html" class="staff-blog__blog-item staff-blog__blog-link is-news hidden-sp">
-                <div class="staff-blog__blog-img">
-                  <img src="./img/side-blog.webp" alt="レントゲンを見ながら診察" width="240" height="180" loading="lazy" decoding="async" />
-                </div>
-                <div class="staff-blog__blog-text">
-                  <div class="staff-blog__blog-text--title">記事のタイトルが入ります。記事のタイトルが入ります。記事のタイトルが入ります。</div>
-                  <time class="staff-blog__blog-text--data" datetime="2020-02-14">2020.02.14</time>
-                </div>
-              </a>
-            </div>
-
-            <div class="staff-blog__archive-item category">
-              <div class="staff-blog__archive-title">
-                <div class="staff-blog__archive-title--icon">
-                  <img src="./img/sidebar-icon_3.svg" alt="カテゴリアイコン" width="24" height="24" loading="lazy" decoding="async" />
-                </div>
-                <div class="staff-blog__archive-title--text">カテゴリー</div>
+              <div class="reserve__form--input">
+                <input type="text" id="name-input" name="name-input" class="reserve__form--input js-kana" aria-label="お名前（フリガナ）" placeholder="ヤマダ　タロウ" required />
+                <div class="error-message"></div>
               </div>
-              <a href="#" class="category__item">
-                <div class="category__item--text">テキストテキスト</div>
-              </a>
-              <a href="#" class="category__item">
-                <div class="category__item--text">テキストテキスト</div>
-              </a>
-              <a href="#" class="category__item">
-                <div class="category__item--text">テキストテキスト</div>
-              </a>
-              <a href="#" class="category__item">
-                <div class="category__item--text">テキストテキスト</div>
-              </a>
             </div>
-          </div>
+            <!-- 電話番号 -->
+            <div class="reserve__form--item">
+              <div class="reserve__form--title">
+                <label for="tel" class="reserve__form--title-text">電話番号</label>
+                <span class="reserve__form--require">必須</span>
+              </div>
+              <div class="reserve__form--input">
+                <input type="tel" id="tel" name="tel" class="reserve__form--input js-tel-number" placeholder="000-0000-0000" required />
+                <div class="error-message"></div>
+              </div>
+            </div>
+            <!-- メールアドレス -->
+            <div class="reserve__form--item">
+              <div class="reserve__form--title">
+                <label for="email" class="reserve__form--title-text">メールアドレス</label>
+                <span class="reserve__form--require">必須</span>
+              </div>
+              <div class="reserve__form--input">
+                <input type="email" id="email" name="email" class="reserve__form--input js-mail" placeholder="xxx@example.com" required />
+                <div class="error-message"></div>
+              </div>
+            </div>
+            <!-- 初診・再診 -->
+            <div class="reserve__form--item reserve__form--item-radio">
+              <div class="reserve__form--title">
+                <div class="reserve__form--title-text">初診/再診</div>
+                <span class="reserve__form--require">必須</span>
+              </div>
+              <div class="reserve__form--input">
+                <div class="reserve__form--radio-wrapper js-form--wrapper">
+                  <div class="reserve-radio-item">
+                    <input class="js-radio" id="radio-first" type="radio" name="radio" value="初診" aria-label="初診" required />
+                    <!-- <input id="radio-first" type="radio" name="radio" value="初診" aria-label="初診" checked required /> -->
+                    <label for="radio-first" class="reserve-radio-label">初診</label>
+                  </div>
+                  <div class="reserve-radio-item">
+                    <input class="js-radio" id="radio-continue" type="radio" name="radio" value="再診" aria-label="再診" />
+                    <label for="radio-continue" class="reserve-radio-label">再診</label>
+                  </div>
+                </div>
+                <div class="error-message"></div>
+              </div>
+            </div>
+            <!-- 診療内容 -->
+            <div class="reserve__form--item reserve__form--item-checkbox">
+              <div class="reserve__form--title">
+                <div class="reserve__form--title-text reserve__form--title-text-checkbox">
+                  <div class="reserve__form--title-text-top">診療内容</div>
+                  <div class="reserve__form--title-text-bottom">※(複数選択可)</div>
+                </div>
+                <span class="reserve__form--require">必須</span>
+              </div>
+              <div class="reserve__form--input">
+                <div class="reserve__form--checkbox-wrapper js-form--wrapper">
+                  <div class="reserve__checkbox--item">
+                    <!-- <input id="checkbox1" class="reserve__checkbox--input js-checkbox" type="checkbox" name="checkbox" value="虫歯" checked required /> -->
+                    <input id="checkbox1" class="reserve__checkbox--input js-checkbox" type="checkbox" name="checkbox" value="虫歯" />
+                    <label for="checkbox1" class="reserve__checkbox--label">虫歯</label>
+                  </div>
+                  <div class="reserve__checkbox--item">
+                    <input id="checkbox2" class="reserve__checkbox--input js-checkbox" type="checkbox" name="checkbox" value="被せ物がとれた" />
+                    <label for="checkbox2" class="reserve__checkbox--label">被せ物がとれた</label>
+                  </div>
+                  <div class="reserve__checkbox--item">
+                    <input id="checkbox3" class="reserve__checkbox--input js-checkbox" type="checkbox" name="checkbox" value="矯正歯科" />
+                    <label for="checkbox3" class="reserve__checkbox--label">矯正歯科</label>
+                  </div>
+                  <div class="reserve__checkbox--item">
+                    <input id="checkbox4" class="reserve__checkbox--input js-checkbox" type="checkbox" name="checkbox" value="咬み合わせ" />
+                    <label for="checkbox4" class="reserve__checkbox--label">咬み合わせ</label>
+                  </div>
+                  <div class="reserve__checkbox--item">
+                    <input id="checkbox5" class="reserve__checkbox--input js-checkbox" type="checkbox" name="checkbox" value="歯周病" />
+                    <label for="checkbox5" class="reserve__checkbox--label">歯周病</label>
+                  </div>
+                  <div class="reserve__checkbox--item">
+                    <input id="checkbox6" class="reserve__checkbox--input js-checkbox" type="checkbox" name="checkbox" value="小児歯科" />
+                    <label for="checkbox6" class="reserve__checkbox--label">小児歯科</label>
+                  </div>
+                  <div class="reserve__checkbox--item">
+                    <input id="checkbox7" class="reserve__checkbox--input js-checkbox" type="checkbox" name="checkbox" value="入れ歯" />
+                    <label for="checkbox7" class="reserve__checkbox--label">入れ歯</label>
+                  </div>
+                  <div class="reserve__checkbox--item">
+                    <input id="checkbox8" class="reserve__checkbox--input js-checkbox" type="checkbox" name="checkbox" value="インプラント" />
+                    <label for="checkbox8" class="reserve__checkbox--label">インプラント</label>
+                  </div>
+                  <div class="reserve__checkbox--item">
+                    <input id="checkbox9" class="reserve__checkbox--input js-checkbox" type="checkbox" name="checkbox" value="その他" />
+                    <label for="checkbox9" class="reserve__checkbox--label">その他</label>
+                  </div>
+                </div>
+                <div class="error-message"></div>
+              </div>
+            </div>
+            <!-- ご連絡方法 -->
+            <div class="reserve__form--item reserve__form--item-selectbox">
+              <div class="reserve__form--title">
+                <label for="selectbox" class="reserve__form--title-text">ご連絡方法</label>
+                <span class="reserve__form--require">必須</span>
+              </div>
+              <div class="reserve__form--input">
+                <div class="reserve__form--selectbox-wrapper js-form--wrapper">
+                  <select class="js-select" id="selectbox" name="selectbox" required>
+                    <option value="">ご連絡方法を選択ください。</option>
+                    <option value="メール">メール</option>
+                    <option value="電話">電話</option>
+                    <option value="FAX">FAX</option>
+                  </select>
+                </div>
+                <div class="error-message"></div>
+              </div>
+            </div>
+            <!-- 希望日 -->
+            <div class="reserve__form--item reserve__form--item-date">
+              <div class="reserve__form--title">
+                <label for="date1" class="reserve__form--title-text">希望日</label>
+              </div>
+              <div class="reserve__form--date-wrapper">
+                <input type="date" id="date1" name="date1" class="reserve__form--input reserve__form--input-date" aria-label="希望日" placeholder="年 / 月 / 日" />
+                <input type="date" id="date2" name="date2" class="reserve__form--input reserve__form--input-date" aria-label="希望日" placeholder="年 / 月 / 日" />
+                <input type="date" id="date3" name="date3" class="reserve__form--input reserve__form--input-date" aria-label="希望日" placeholder="年 / 月 / 日" />
+              </div>
+            </div>
+            <!-- お問い合わせ内容 -->
+            <div class="reserve__form--item reserve__form--item-textarea">
+              <div class="reserve__form--title">
+                <label for="message" class="reserve__form--title-text">お問い合わせ内容</label>
+                <!-- <span class="reserve__form--require">必須</span> -->
+              </div>
+              <textarea id="message" name="message" class="reserve__form--input reserve__form--textarea" placeholder="ご自由にご記入ください。"></textarea>
+            </div>
+            <button id="js-submit" type="submit" class="button reserve__button">送　信</button>
+          </form>
+        </div>
+        <div id="js-success" class="reserve__message-success">
+          <p>
+            WEBよりご予約いただき誠にありがとうございます。<br />
+            送信いただいた内容を確認して1営業日以内に返信いたします。<br />
+            <span class="accent">※1営業日以内に当院からの返信がない場合には、お電話(TEL 03-1234-5678)にてお問い合わせ下さい。</span>
+          </p>
         </div>
       </div>
     </section>

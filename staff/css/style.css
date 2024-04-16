@@ -2765,8 +2765,6 @@ body {
 @media (width <= 767px) {
   .page-title__text {
     gap: 22px;
-    -webkit-transform: translate(-49%, -49%);
-            transform: translate(-49%, -49%);
   }
 }
 
@@ -2780,6 +2778,8 @@ body {
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 0.2em;
+    margin-top: 5px;
+    margin-left: 5px;
   }
 }
 
@@ -2793,8 +2793,7 @@ body {
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.1em;
-    -webkit-transform: translateX(-2px);
-            transform: translateX(-2px);
+    margin-left: 5px;
   }
 }
 
@@ -3034,6 +3033,12 @@ input[type=date]::before {
   width: 100%;
   color: #c2c2c2;
 }
+input[type=date].is-input::-webkit-datetime-edit-fields-wrapper {
+  display: revert;
+}
+input[type=date].is-input::before {
+  display: none;
+}
 
 .error-message {
   display: none;
@@ -3046,7 +3051,7 @@ input[type=date]::before {
 .greeting {
   margin-top: 87px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .greeting {
     margin-top: 66px;
   }
@@ -3072,7 +3077,7 @@ input[type=date]::before {
   width: 100%;
   margin-inline: auto;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .greeting__container {
     max-width: 460px;
     margin-inline: auto;
@@ -3090,7 +3095,7 @@ input[type=date]::before {
     width: revert;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .greeting__message {
     padding-bottom: 40px;
     margin-inline: auto;
@@ -3106,7 +3111,7 @@ input[type=date]::before {
   line-height: 1.5714285714;
   letter-spacing: 0.08em;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .greeting__message--main {
     font-size: 1.25rem;
     font-weight: 700;
@@ -3121,7 +3126,7 @@ input[type=date]::before {
   line-height: 1.7142857143;
   margin-top: 36px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .greeting__message--sub {
     font-size: 0.875rem;
     font-weight: 500;
@@ -3137,7 +3142,7 @@ input[type=date]::before {
   font-weight: 500;
   line-height: 1.7142857143;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .greeting__name {
     margin-top: 34px;
   }
@@ -3157,7 +3162,7 @@ input[type=date]::before {
      object-fit: cover;
   border-radius: 20px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .greeting__img {
     position: revert;
     width: revert;
@@ -3169,7 +3174,7 @@ input[type=date]::before {
   width: clamp(355px, 355px + 105 * (100vw - 768px) / 512, 460px);
   width: 460px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .greeting__profile {
     width: revert;
   }
@@ -3178,7 +3183,7 @@ input[type=date]::before {
 .greeting__brief-history {
   margin-top: 59px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .greeting__brief-history {
     margin-top: 42px;
   }
@@ -3230,7 +3235,7 @@ input[type=date]::before {
 .greeting__qualification {
   margin-top: 30px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .greeting__qualification {
     margin-top: 38px;
   }
@@ -3239,7 +3244,7 @@ input[type=date]::before {
 .greeting__slider {
   margin-top: 160px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .greeting__slider {
     margin-top: 98px;
   }
@@ -3253,7 +3258,7 @@ input[type=date]::before {
 .swiper-slide {
   width: 305px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .swiper-slide {
     width: 200px;
   }
@@ -3266,7 +3271,7 @@ input[type=date]::before {
      object-fit: cover;
   border-radius: 20px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .swiper-slide img {
     width: 200px;
     aspect-ratio: 200/150;
@@ -3277,7 +3282,7 @@ input[type=date]::before {
   margin-top: 160px;
   margin-bottom: 196px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .introduction {
     margin-top: 100px;
     margin-bottom: 130px;
@@ -3299,7 +3304,7 @@ input[type=date]::before {
 .introduction__container.is-assistant {
   margin-top: 63px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .introduction__container {
     max-width: 460px;
     margin-inline: auto;
@@ -3339,7 +3344,7 @@ input[type=date]::before {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .introduction__wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3353,7 +3358,7 @@ input[type=date]::before {
 .introduction__item {
   width: 280px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .introduction__item {
     width: 100%;
   }
@@ -3398,7 +3403,7 @@ input[type=date]::before {
 .introduction__profile {
   margin-top: 18px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .introduction__profile {
     margin-top: 21px;
   }

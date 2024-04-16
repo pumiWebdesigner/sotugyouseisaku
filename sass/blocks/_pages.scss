@@ -87,7 +87,6 @@
   color: #fff;
   @include mq(sp) {
     gap: 22px;
-    transform: translate(-49%, -49%);
   }
 }
 
@@ -95,6 +94,8 @@
   @include font(32, 700, null, 3.2);
   @include mq(sp) {
     @include font(24, 700, null, 4.8);
+    margin-top: 5px;
+    margin-left: 5px;
   }
 }
 
@@ -102,7 +103,7 @@
   @include font(14, 700, null, 1.4);
   @include mq(sp) {
     @include font(12, 700, null, 1.2);
-    transform: translateX(-2px);
+    margin-left: 5px;
   }
 }
 

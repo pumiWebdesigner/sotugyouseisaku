@@ -50,104 +50,44 @@
     }
   });
 
-  // チェックボックスのみ一つだけ選択したらバリデーションチェックエラーの解除ができなかった
+  // 入力後もplaceholderが表示され続ける＆入力値が表示されない問題への対処
   $(document).ready(function () {
-    var $require = $("#js-form [required]");
-
-    // blur: フォーカスが外れた時
-    $require.on("blur", function () {
-      // this=requreied属性を持つ要素のうち、フォーカスが外れた要素
-      var $this = $(this); // 毎回$(this)を実行するのは無駄なので変数に格納
-
-      // input要素が単体：input要素のnextにエラーメッセージ
-      // text, kana, tel, mail
-      var $errorContainerInputNext = $this.next(".error-message"); //thisに対するエラーメッセージの要素
-      // input要素が複数：input要素の親要素のjs-form-wrapperのnextにエラーメッセージ
-      // radio, select
-      // checkboxは別途処理
-      var $errorMessageWrapperNext = $this.closest(".js-form--wrapper").next(".error-message");
-
-      // お名前、お問い合わせ内容のバリデーション
-      if ($this.hasClass("js-text")) {
-        // お名前、お問い合わせ内容が入力必須の場合は、空文字か否かのチェックのみ行う
-        // trimで空白を削除し、空白削除後が空文字かチェック
-        if ($this.val().trim() === "") {
-          $errorContainerInputNext.text("このフィールドは必須です。").show();
-        } else {
-          $errorContainerInputNext.hide(); // 条件を満たす場合はエラーメッセージを隠す
-        }
-      }
-
-      // カナ入力のバリデーション
-      if ($this.hasClass("js-kana")) {
-        // カナ入力のパターン
-        var kanaPattern = /^([ァ-ンー\s]+)$/;
-        // カタカナ、長音符、空白以外が入っていた際の処理
-        if (!$this.val().match(kanaPattern)) {
-          $errorContainerInputNext.text("全角カタカナ（スペース含む）で入力してください。").show();
-        } else {
-          $errorContainerInputNext.hide(); // 条件を満たす場合はエラーメッセージを隠す
-        }
-      }
-      // 電話番号のバリデーション
-      if ($this.hasClass("js-tel-number")) {
-        // 電話番号のパターン
-        var telPattern = /^\+?\d{1,4}[-\s]?\d{1,4}[-\s]?\d{1,4}[-\s]?\d{1,4}$/;
-        if (!$this.val().match(telPattern)) {
-          $errorContainerInputNext.text("有効な電話番号を入力してください。（例: 0123-456-789）").show();
-        } else {
-          $errorContainerInputNext.hide(); // 条件を満たす場合はエラーメッセージを隠す
-        }
-      }
-      // メールアドレスのバリデーション
-      if ($this.hasClass("js-mail")) {
-        // メールアドレスのパターン
-        var mailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!$this.val().match(mailPattern)) {
-          $errorContainerInputNext.text("有効なメールアドレスを入力してください。（例: user@example.com）").show();
-        } else {
-          $errorContainerInputNext.hide(); // 条件を満たす場合はエラーメッセージを隠す
-        }
-      }
-
-      // ラジオボタンのバリデーション
-      if ($this.hasClass("js-radio")) {
-        if ($('input[name="radio"]:checked').length === 0) {
-          $errorMessageWrapperNext.text("初診・再診どちらか選んでください。").show();
-        } else {
-          $errorMessageWrapperNext.hide(); // 条件を満たす場合はエラーメッセージを隠す
-        }
-      }
-
-      // セレクトボックスのバリデーション
-      if ($this.hasClass("js-select")) {
-        if ($this.val() === "") {
-          $errorMessageWrapperNext.text("プルダウンよりご連絡方法を選んでください。").show();
-        } else {
-          $errorMessageWrapperNext.hide(); // 条件を満たす場合はエラーメッセージを隠す
-        }
+    var $date = $("input[type='date']");
+    $date.on("input", function () {
+      console.log("test");
+      if ($(this).val().trim() !== "") {
+        $(this).addClass("is-input");
+      } else {
+        $(this).removeClass("is-input");
       }
     });
   });
 
-  $(document).ready(function () {
-    var $checkbox = $(".js-checkbox");
+  // $(document).ready(function () {
+  //   var $date = $("input [date]");
 
-    // blur: フォーカスが外れた時
-    $checkbox.on("blur", function () {
-      // this=requreied属性を持つ要素のうち、フォーカスが外れた要素
-      var $this = $(this); // 毎回$(this)を実行するのは無駄なので変数に格納
-      var $errorMessageWrapperNext = $this.closest(".js-form--wrapper").next(".error-message");
+  //   // blur: フォーカスが外れた時
+  //   $require.on("blur", function () {
+  //     // this=requreied属性を持つ要素のうち、フォーカスが外れた要素
+  //     var $this = $(this); // 毎回$(this)を実行するのは無駄なので変数に格納
 
-      // input要素が複数：input要素の親要素のjs-form-wrapperのnextにエラーメッセージ
-      // チェックボックスのバリデーション
-      if ($this.hasClass("js-checkbox")) {
-        if ($('input[name="checkbox"]:checked').length === 0) {
-          $errorMessageWrapperNext.text("一つ以上の診療内容を選んでください。").show();
-        } else {
-          $errorMessageWrapperNext.hide(); // 条件を満たす場合はエラーメッセージを隠す
-        }
-      }
-    });
-  });
+  //     // input要素が単体：input要素のnextにエラーメッセージ
+  //     // text, kana, tel, mail
+  //     var $errorContainerInputNext = $this.next(".error-message"); //thisに対するエラーメッセージの要素
+  //     // input要素が複数：input要素の親要素のjs-form-wrapperのnextにエラーメッセージ
+  //     // radio, select
+  //     // checkboxは別途処理
+  //     var $errorMessageWrapperNext = $this.closest(".js-form--wrapper").next(".error-message");
+
+  //     // お名前、お問い合わせ内容のバリデーション
+  //     if ($this.hasClass("js-text")) {
+  //       // お名前、お問い合わせ内容が入力必須の場合は、空文字か否かのチェックのみ行う
+  //       // trimで空白を削除し、空白削除後が空文字かチェック
+  //       if ($this.val().trim() === "") {
+  //         $errorContainerInputNext.text("このフィールドは必須です。").show();
+  //       } else {
+  //         $errorContainerInputNext.hide(); // 条件を満たす場合はエラーメッセージを隠す
+  //       }
+  //     }
+  //   });
 }
