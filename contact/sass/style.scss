@@ -111,10 +111,6 @@
   }
 }
 .contact__message-success {
-  display: none;
-  .is-success & {
-    display: revert;
-  }
   max-width: 728px;
   width: 100%;
   margin-inline: auto;

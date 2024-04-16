@@ -3424,7 +3424,6 @@ input[type=date].is-input::before {
 }
 
 .reserve__message-success {
-  display: none;
   max-width: 728px;
   width: 100%;
   margin-inline: auto;
@@ -3432,7 +3431,4 @@ input[type=date].is-input::before {
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 1.7142857143;
-}
-.is-success .reserve__message-success {
-  display: revert;
 }
