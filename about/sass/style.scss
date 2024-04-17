@@ -4,7 +4,7 @@
 
 .policy-feature {
   margin-top: 88px;
-  @include mq(sp) {
+  @media screen and (max-width: 1023px) {
     margin-top: 65px;
   }
 }
@@ -33,8 +33,7 @@
   padding-top: 92px;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  @include mq(sp) {
+  @media screen and (max-width: 1023px) {
     padding-top: 0;
     flex-direction: column;
   }
@@ -113,7 +112,7 @@
       aspect-ratio: 640/438;
     }
   }
-  @include mq(sp) {
+  @media screen and (max-width: 1023px) {
     margin-top: 35px;
   }
 }
@@ -121,7 +120,7 @@
 .inside {
   margin-top: 205px;
   padding-bottom: 192px;
-  @include mq(sp) {
+  @media screen and (max-width: 1023px) {
     margin-top: 103px;
     padding-bottom: 136px;
   }
@@ -133,7 +132,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 24px;
-  @include mq(sp) {
+  @media screen and (max-width: 1023px) {
     gap: 11px;
     margin-top: 42px;
   }
@@ -149,7 +148,7 @@
     height: 100%;
     object-fit: cover;
   }
-  @include mq(sp) {
+  @media screen and (max-width: 1023px) {
     width: calc(162 / 375 * 100%);
   }
 }

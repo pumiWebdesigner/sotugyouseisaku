@@ -1872,6 +1872,11 @@ body {
     padding-bottom: 0;
   }
 }
+@media screen and (min-width: 1500px) {
+  .concept {
+    margin-top: 150px;
+  }
+}
 
 .concept__inner {
   max-width: 1280px;

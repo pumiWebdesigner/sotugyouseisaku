@@ -16,6 +16,9 @@
   @include mq(sp) {
     padding-bottom: 0;
   }
+  @media screen and (min-width: 1500px) {
+    margin-top: 150px;
+  }
 }
 
 .concept__inner {
