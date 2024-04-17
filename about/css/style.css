@@ -560,7 +560,7 @@ body {
   line-height: normal;
 }
 .button--reservation:hover {
-  background: var(--01, #0060a0);
+  background-color: var(--sub1, #0060a0);
 }
 
 .button--label {
@@ -2531,7 +2531,8 @@ body {
 }
 @media (hover: hover) {
   .blog__link:hover .blog__img img {
-    scale: 1.1;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
   .blog__link:hover .blog__title {
     color: var(--main);
@@ -3127,6 +3128,7 @@ input[type=date].is-input::before {
     padding-right: clamp(40px, 40px + 98 * (100vw - 1024px) / 256, 138px);
   }
   .policy-feature__contents.feature__contents {
+    padding-top: 40px;
     padding-right: clamp(40px, 40px + 54 * (100vw - 1024px) / 256, 94px);
     padding-left: clamp(40px, 40px + 100 * (100vw - 1024px) / 256, 140px);
   }

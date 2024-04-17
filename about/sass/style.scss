@@ -48,6 +48,7 @@
     padding-left: size-calc(40, 95, 1024, 1280);
     padding-right: size-calc(40, 138, 1024, 1280);
     &.feature__contents {
+      padding-top: 40px;
       padding-right: size-calc(40, 94, 1024, 1280);
       padding-left: size-calc(40, 140, 1024, 1280);
     }

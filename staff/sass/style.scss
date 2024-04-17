@@ -220,7 +220,7 @@
   }
 }
 .introduction__item {
-  width: 280px;
+  width: size-calc(260, 280, 1024, 1280);
   @media screen and (max-width: 1023px) {
     width: 100%;
   }

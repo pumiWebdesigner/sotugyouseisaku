@@ -72,7 +72,7 @@
     &:hover {
       .blog__img {
         img {
-          scale: 1.1;
+          transform: scale(1.1);
         }
       }
       .blog__title {
