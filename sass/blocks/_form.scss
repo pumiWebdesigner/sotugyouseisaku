@@ -17,6 +17,7 @@ textarea {
   padding: 14px 15px;
   font-family: inherit;
   color: var(--font);
+  text-align: left;
   &::placeholder {
     color: #c2c2c2;
     @include font(16, 500, null, null);

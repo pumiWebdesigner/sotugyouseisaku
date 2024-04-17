@@ -2866,6 +2866,7 @@ textarea {
   padding: 14px 15px;
   font-family: inherit;
   color: var(--font);
+  text-align: left;
 }
 input[type=text]::-webkit-input-placeholder, input[type=email]::-webkit-input-placeholder, input[type=tel]::-webkit-input-placeholder, input[type=date]::-webkit-input-placeholder, select::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   color: #c2c2c2;

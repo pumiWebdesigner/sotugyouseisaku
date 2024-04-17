@@ -17,13 +17,15 @@
       statusCode: {
         0: function () {
           //送信に成功したときの処理
-          form.slideUp();
-          jQuery("#js-success").slideDown();
+          window.location.href = "./thanks/index.html";
+          // form.slideUp();
+          // jQuery("#js-success").slideDown();
         },
         200: function () {
           //送信に失敗したときの処理
-          form.slideUp();
-          jQuery("#js-error").slideDown();
+          window.location.href = "./index.html";
+          // form.slideUp();
+          // jQuery("#js-error").slideDown();
         },
       },
     });
