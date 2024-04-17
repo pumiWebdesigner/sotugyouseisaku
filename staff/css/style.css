@@ -3006,7 +3006,7 @@ input[type=checkbox] + label::after {
 }
 
 select {
-  background: #f6f6f6 url(../../reserve/img/select-arrow.svg) no-repeat right 12px center;
+  background: #f6f6f6 url(../../reservation/img/select-arrow.svg) no-repeat right 12px center;
 }
 @media (width <= 767px) {
   select {
@@ -3016,7 +3016,7 @@ select {
 
 input[type=date] {
   padding: 14px 16px;
-  background: #f6f6f6 url(../../reserve/img/icon-calender.svg) no-repeat right 12px center;
+  background: #f6f6f6 url(../../reservation/img/icon-calender.svg) no-repeat right 12px center;
   position: relative;
 }
 input[type=date]::-webkit-calendar-picker-indicator {
