@@ -30,7 +30,12 @@
     <script src="../js/slider.js" defer></script>
     <script src="../js/swiper.js" defer></script>
     <!-- wow -->
-    <link rel="stylesheet" href="../css/animate.css" />
+    <link rel="stylesheet" href="./css/animate.css" />
+    <!-- wow.jsはwow().initより先に実行する必要があるので、deferを外す -->
+    <script src="../js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
     <!-- css読み込み -->
     <link rel="stylesheet" href="./css/style.css" />
     <!-- JavaScript読み込み -->
@@ -550,10 +555,5 @@
         </a>
       </div>
     </footer>
-    <!-- wow -->
-    <script src="../js/wow.min.js"></script>
-    <script>
-      new WOW().init();
-    </script>
   </body>
 </html>

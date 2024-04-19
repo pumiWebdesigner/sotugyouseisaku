@@ -17,7 +17,7 @@
       statusCode: {
         0: function () {
           //送信に成功したときの処理
-          // window.location.href = "./thanks/index.html";
+          window.location.href = "./thanks/index.html";
           // form.slideUp();
           // jQuery("#js-success").slideDown();
         },
