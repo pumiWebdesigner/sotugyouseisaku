@@ -2864,6 +2864,9 @@ input[type=tel],
 input[type=date],
 select,
 textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   overflow: hidden;
   border: 1px solid transparent;
   border-radius: 4px;
@@ -3030,6 +3033,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
   input[type=date] {
     background-position: right 9px center;
   }
+}
+.firefox input[type=date] {
+  background: revert;
 }
 
 input[type=date]::-webkit-datetime-edit-fields-wrapper {

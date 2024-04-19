@@ -9,6 +9,7 @@ input[type="date"],
 select,
 textarea {
   // 入力場所
+  appearance: none;
   overflow: hidden; // 長文のはみ出し対策
   border: 1px solid transparent; // ガタツキ防止
   border-radius: 4px;
@@ -144,6 +145,9 @@ input[type="date"] {
   @include mq(sp) {
     background-position: right 9px center;
   }
+  .firefox & {
+    background: revert;
+  }
 }
 input[type="date"] {
   // 標準設定を削除
@@ -173,3 +177,18 @@ input[type="date"] {
   @include font(14, 500, null, null);
   margin-top: 8px;
 }
+// input[type="date"]::-webkit-calendar-picker-indicator {
+//   background: none;
+//   display: none;
+// }
+// input[type="date"] {
+//   color: transparent; /* 文字色を透明にする */
+//   // background: white url("path_to_custom_icon") no-repeat right; /* カスタムアイコンを使用 */
+//   cursor: pointer;
+// }
+
+// input[type="date"]::after {
+//   content: attr(date-placeholder);
+//   color: black; /* 入力がない時のプレースホルダーの色 */
+//   pointer-events: none;
+// }

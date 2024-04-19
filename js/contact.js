@@ -17,7 +17,7 @@
       statusCode: {
         0: function () {
           //送信に成功したときの処理
-          window.location.href = "./thanks/index.html";
+          // window.location.href = "./thanks/index.html";
           // form.slideUp();
           // jQuery("#js-success").slideDown();
         },
@@ -38,8 +38,8 @@
     // checkboxはrequired設定されているcheckboxのみをチェック対象としてしまうので、
     // 全てのcheckboxをチェックさせるよう個別にチェックを行う
     if (form.get(0).checkValidity()) {
-      if ($('input[name="checkbox"]').length > 0) {
-        if ($('input[name="checkbox"]:checked').length > 0) {
+      if ($('input[type="checkbox"]').length > 0) {
+        if ($('input[type="checkbox"]:checked').length > 0) {
           submit.prop("disabled", false);
         } else {
           submit.prop("disabled", true);
@@ -52,25 +52,14 @@
     }
   });
 
-  // 入力後もplaceholderが表示され続ける＆入力値が表示されない問題への対処
-  $(document).ready(function () {
-    var $date = $("input[type='date']");
-    $date.on("input", function () {
-      console.log("test");
-      if ($(this).val().trim() !== "") {
-        $(this).addClass("is-input");
-      } else {
-        $(this).removeClass("is-input");
-      }
-    });
-  });
-
-  // チェックボックスのみ一つだけ選択したらバリデーションチェックエラーの解除ができなかった
-  $(document).ready(function () {
+  // チェックボックスのみバリデーションチェックエラーの解除ができなかったので、専用のチェックを別途記載
+  // $(document).ready(function () {
+  $(window).on("load", function () {
     var $require = $("#js-form [required]");
-
     // blur: フォーカスが外れた時
-    $require.on("blur", function () {
+    // $require.on("blur", function () {
+    // safariがblurイベントに対応していないため、changeを使う
+    $require.on("change", function () {
       // this=requreied属性を持つ要素のうち、フォーカスが外れた要素
       var $this = $(this); // 毎回$(this)を実行するのは無駄なので変数に格納
 
@@ -127,7 +116,9 @@
 
       // ラジオボタンのバリデーション
       if ($this.hasClass("js-radio")) {
-        if ($('input[name="radio"]:checked').length === 0) {
+        console.log($(".js-radio:checked").length);
+        console.log($(".js-radio:checked"));
+        if ($(".js-radio:checked").length === 0) {
           $errorMessageWrapperNext.text("初診・再診どちらか選んでください。").show();
         } else {
           $errorMessageWrapperNext.hide(); // 条件を満たす場合はエラーメッセージを隠す
@@ -149,7 +140,7 @@
     var $checkbox = $(".js-checkbox");
 
     // blur: フォーカスが外れた時
-    $checkbox.on("blur", function () {
+    $checkbox.on("change", function () {
       // this=requreied属性を持つ要素のうち、フォーカスが外れた要素
       var $this = $(this); // 毎回$(this)を実行するのは無駄なので変数に格納
       var $errorMessageWrapperNext = $this.closest(".js-form--wrapper").next(".error-message");
@@ -157,12 +148,32 @@
       // input要素が複数：input要素の親要素のjs-form-wrapperのnextにエラーメッセージ
       // チェックボックスのバリデーション
       if ($this.hasClass("js-checkbox")) {
-        if ($('input[name="checkbox"]:checked').length === 0) {
+        if ($(".js-checkbox:checked").length === 0) {
           $errorMessageWrapperNext.text("一つ以上の診療内容を選んでください。").show();
         } else {
           $errorMessageWrapperNext.hide(); // 条件を満たす場合はエラーメッセージを隠す
         }
       }
     });
+  });
+
+  // 入力後もplaceholderが表示され続ける＆入力値が表示されない問題への対処
+  $(document).ready(function () {
+    var $date = $("input[type='date']");
+    $date.on("input", function () {
+      if ($(this).val().trim() !== "") {
+        $(this).addClass("is-input");
+      } else {
+        $(this).removeClass("is-input");
+      }
+    });
+  });
+
+  // firefoxのみ標準のラジオボタンを消せないので、標準のラジオボタンを使うためのクラスを追加する
+  $(document).ready(function () {
+    var ua = navigator.userAgent.toLowerCase(); // userAgentの取得と小文字に統一
+    if (ua.indexOf("firefox") !== -1) {
+      $("body").addClass("firefox");
+    }
   });
 }
