@@ -1,6 +1,6 @@
 @use "sass:map";
-@use "../../sass/global/" as *;
-@use "../../sass/blocks/" as *;
+@use "../sass/global/" as *;
+@use "../sass/blocks/" as *;
 
 .greeting {
   margin-top: 87px;

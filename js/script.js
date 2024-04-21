@@ -2,17 +2,16 @@
   // ページ外からの遷移
   // ページがロードされた後にhash有無をチェックして処理
   // DOM準備完了時点なら↓でもOK
-  $(document).ready(function () {
+  jQuery(document).ready(function () {
     ////// 画像含めてリソースがロードされてからなら↓
-    ////// $(window).on('load', function () {
+    ////// jQuery(window).on('load', function () {
     // URLのhashが遷移する先（例：#access）
     var hash = window.location.hash; // #～を取得
     // URLにhashがあるかチェック
-    console.log(hash);
     if (hash) {
       var scrollDistance = 0; // スクロール先までの距離（#は初期値0）
       // hashが存在し、かつ#でない場合のみスクロールする距離を計算する
-      if ($(hash).length > 0) {
+      if (jQuery(hash).length > 0) {
         // 遷移する先とheaderの高さからスクロールする距離を計算
         scrollDistance = calcDistance(hash);
       }
@@ -53,8 +52,8 @@
   });
   // 遷移する先とheaderの高さからスクロールする距離を計算
   function calcDistance(hash) {
-    var elementDistance = $(hash).offset().top; //要素の位置（画面最上部から要素上端の距離）
-    var headerHeight = $(".header").outerHeight(true); // ヘッダーの高さ（マージン含む）
+    var elementDistance = jQuery(hash).offset().top; //要素の位置（画面最上部から要素上端の距離）
+    var headerHeight = jQuery(".header").outerHeight(true); // ヘッダーの高さ（マージン含む）
     return elementDistance - headerHeight - 20; // 20px余裕を持たせる
   }
   // 距離とスピードを渡してスムーズスクロール

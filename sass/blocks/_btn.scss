@@ -31,13 +31,13 @@
     right: 0.83em;
     width: 12px;
     height: 12px;
-    background: url(../../img/concept/arrow-right.svg) no-repeat center/cover;
+    background: url(./img/arrow-right.svg) no-repeat center/cover;
     transition: all 0.3s ease;
   }
   @media (hover: hover) {
     &:hover {
       &::after {
-        background: url(../../img/concept/arrow-right-white.svg) no-repeat center/cover;
+        background: url(./img/arrow-right-white.svg) no-repeat center/cover;
         transform: translate(4px, -50%);
       }
     }

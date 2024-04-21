@@ -125,14 +125,14 @@ input[type="checkbox"] {
   }
 }
 select {
-  background: #f6f6f6 url(../../reservation/img/select-arrow.svg) no-repeat right 12px center;
+  background: #f6f6f6 url(../img/select-arrow.svg) no-repeat right 12px center;
   @include mq(sp) {
     background-position: right 9px center;
   }
 }
 input[type="date"] {
   padding: 14px 16px;
-  background: #f6f6f6 url(../../reservation/img/icon-calender.svg) no-repeat right 12px center;
+  background: #f6f6f6 url(../img/icon-calender.svg) no-repeat right 12px center;
   position: relative;
   &::-webkit-calendar-picker-indicator {
     // デフォルトのカレンダーを非表示にする

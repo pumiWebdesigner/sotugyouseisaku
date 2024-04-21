@@ -513,13 +513,13 @@ body {
   right: 0.83em;
   width: 12px;
   height: 12px;
-  background: url(../../img/concept/arrow-right.svg) no-repeat center/cover;
+  background: url(./img/arrow-right.svg) no-repeat center/cover;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 @media (hover: hover) {
   .button--arrow-right:hover::after {
-    background: url(../../img/concept/arrow-right-white.svg) no-repeat center/cover;
+    background: url(./img/arrow-right-white.svg) no-repeat center/cover;
     -webkit-transform: translate(4px, -50%);
             transform: translate(4px, -50%);
   }
@@ -736,7 +736,7 @@ body {
     left: 0;
     width: 28px;
     height: 28px;
-    background: url(../../img/header-footer/phone.webp) no-repeat center/cover;
+    background: url(../img/phone.webp) no-repeat center/cover;
   }
   .header__nav {
     padding-inline: 20px;
@@ -907,7 +907,7 @@ body {
     width: 100%;
     height: 1px;
     left: 0;
-    background: url(../../img/header/drawer-line.svg) no-repeat center;
+    background: url(../img/drawer-line.svg) no-repeat center;
   }
   .drawer__nav--item:last-child::after {
     content: "";
@@ -916,7 +916,7 @@ body {
     width: 100%;
     height: 1px;
     left: 0;
-    background: url(../../img/header/drawer-line.svg) no-repeat center;
+    background: url(../img/drawer-line.svg) no-repeat center;
   }
   .drawer__nav--link {
     padding-top: 16px;
@@ -952,7 +952,7 @@ body {
     height: 14px;
     display: inline-block;
     margin-left: auto;
-    background: url(../../img/header/icon-arrow-right.svg) no-repeat center right;
+    background: url(../img/icon-arrow-right.svg) no-repeat center right;
   }
 }
 .section__inner {
@@ -987,7 +987,7 @@ body {
           transform: translateY(-50%);
   width: 67px;
   height: 20px;
-  background: url(../../img/section-bar.svg);
+  background: url(../img/section-bar.svg);
 }
 .section__title::before {
   left: 0;
@@ -1005,7 +1005,7 @@ body {
   .section__title::before, .section__title::after {
     width: 49px;
     height: 13px;
-    background: url(../../img/section-bar-sp.svg);
+    background: url(../img/section-bar-sp.svg);
   }
 }
 
@@ -1027,11 +1027,11 @@ body {
   left: 0;
   width: 100%;
   height: 32px;
-  background: repeat-x url("../../img/footer/footer-wave.svg") left bottom;
+  background: repeat-x url("../img/footer-wave.svg") left bottom;
 }
 @media (width <= 767px) {
   .footer::before {
-    background: repeat-x url("../../img/footer/footer-wave.svg") left 20px bottom;
+    background: repeat-x url("../img/footer-wave.svg") left 20px bottom;
   }
 }
 
@@ -1150,7 +1150,7 @@ body {
   left: 0;
   width: 28px;
   height: 28px;
-  background: url(../../img/header-footer/phone.webp) no-repeat center/cover;
+  background: url(../img/phone.webp) no-repeat center/cover;
 }
 .footer__nav .footer__info--tel-number::before {
   width: 18px;
@@ -1308,7 +1308,7 @@ body {
           transform: translateY(-50%);
   width: 6px;
   height: 12px;
-  background: url(../../img/footer/arrow-right.webp);
+  background: url(../img/arrow-right.webp);
 }
 
 .footer__copy {
@@ -1513,7 +1513,7 @@ body {
 
 .swiper-button-prev::after {
   left: 22px;
-  background: url("../../img/mv/arrow-left.webp") no-repeat center center/cover;
+  background: url("../img/arrow-left-swiper.webp") no-repeat center center/cover;
 }
 @media (width <= 767px) {
   .swiper-button-prev::after {
@@ -1523,7 +1523,7 @@ body {
 
 .swiper-button-next::after {
   right: 18px;
-  background: url("../../img/mv/arrow-right.webp") no-repeat center center/cover;
+  background: url("../img/arrow-right-swiper.webp") no-repeat center center/cover;
 }
 @media (width <= 767px) {
   .swiper-button-next::after {
@@ -1856,7 +1856,7 @@ body {
 .concept {
   margin-top: 60px;
   padding-top: 60px;
-  background: #fff url(../../img/concept/concept-bg.webp) no-repeat top left 10px;
+  background: #fff url(./img/concept-bg.webp) no-repeat top left 10px;
   background-size: 147.7333333333%; /* sizeはショートハンドでかけない */
   padding-bottom: clamp(150px, 150px + -30 * (100vw - 1024px) / 256, 120px);
 }
@@ -1864,7 +1864,7 @@ body {
   .concept {
     margin-top: 96px;
     padding-top: 180px;
-    background: #fff url(../../img/concept/concept-bg.webp) no-repeat top left 416px;
+    background: #fff url(./img/concept-bg.webp) no-repeat top left 416px;
   }
 }
 @media (width <= 767px) {
@@ -2098,7 +2098,7 @@ body {
           transform: translateX(-50%);
   width: 20px;
   height: 26px;
-  background: url(../../img/recommend/recommend-poligon.svg) no-repeat center/cover;
+  background: url(./img/recommend-poligon.svg) no-repeat center/cover;
 }
 .recommend__item:nth-child(2) .recommend__message {
   margin-left: 3px;
@@ -2146,23 +2146,23 @@ body {
 .medical::before {
   aspect-ratio: 6.3054187192;
   bottom: 100%;
-  background: url(../../img/medical/medical__bg--top-pc.webp) no-repeat top center/cover;
+  background: url(../img/medical__bg--top-pc.webp) no-repeat top center/cover;
 }
 @media (width <= 767px) {
   .medical::before {
     aspect-ratio: 4.2613636364;
-    background: url(../../img/medical/medical__bg--top-sp.webp) no-repeat top center/cover;
+    background: url(../img/medical__bg--top-sp.webp) no-repeat top center/cover;
   }
 }
 .medical::after {
   aspect-ratio: 13.1958762887;
   top: 100%;
-  background: url(../../img/medical/medical__bg--bottom-pc.webp) no-repeat bottom center/cover;
+  background: url(../img/medical__bg--bottom-pc.webp) no-repeat bottom center/cover;
 }
 @media (width <= 767px) {
   .medical::after {
     aspect-ratio: 13.3928571429;
-    background: url(../../img/medical/medical__bg--bottom-sp.webp) no-repeat bottom center/cover;
+    background: url(../img/medical__bg--bottom-sp.webp) no-repeat bottom center/cover;
   }
 }
 @media (width <= 767px) {
@@ -2186,14 +2186,14 @@ body {
   bottom: -81px;
   aspect-ratio: 57/56;
   width: 4.453125%;
-  background: url(../../img/medical/deco-kirakira-single.webp) no-repeat center/cover;
+  background: url(./img/deco-kirakira-single.webp) no-repeat center/cover;
 }
 .medical__body::after {
   right: 21px;
   bottom: -103px;
   aspect-ratio: 0.9057971014;
   width: 9.765625%;
-  background: url(../../img/medical/deco-kirakira-double.webp) no-repeat center/cover;
+  background: url(./img/deco-kirakira-double.webp) no-repeat center/cover;
 }
 @media (width <= 767px) {
   .medical__body::before {
@@ -3010,7 +3010,7 @@ input[type=checkbox] + label::after {
 }
 
 select {
-  background: #f6f6f6 url(../../reservation/img/select-arrow.svg) no-repeat right 12px center;
+  background: #f6f6f6 url(./img/select-arrow.svg) no-repeat right 12px center;
 }
 @media (width <= 767px) {
   select {
@@ -3020,7 +3020,7 @@ select {
 
 input[type=date] {
   padding: 14px 16px;
-  background: #f6f6f6 url(../../reservation/img/icon-calender.svg) no-repeat right 12px center;
+  background: #f6f6f6 url(./img/icon-calender.svg) no-repeat right 12px center;
   position: relative;
 }
 input[type=date]::-webkit-calendar-picker-indicator {

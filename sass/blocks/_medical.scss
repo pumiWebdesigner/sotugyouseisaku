@@ -18,20 +18,20 @@
   &::before {
     aspect-ratio: calc(1280 / 203);
     bottom: 100%;
-    background: url(../../img/medical/medical__bg--top-pc.webp) no-repeat top center/cover;
+    background: url(../img/medical__bg--top-pc.webp) no-repeat top center/cover;
     @include mq(sp) {
       aspect-ratio: calc(375 / 88);
-      background: url(../../img/medical/medical__bg--top-sp.webp) no-repeat top center/cover;
+      background: url(../img/medical__bg--top-sp.webp) no-repeat top center/cover;
     }
   }
 
   &::after {
     aspect-ratio: calc(1280 / 97);
     top: 100%;
-    background: url(../../img/medical/medical__bg--bottom-pc.webp) no-repeat bottom center/cover;
+    background: url(../img/medical__bg--bottom-pc.webp) no-repeat bottom center/cover;
     @include mq(sp) {
       aspect-ratio: calc(375 / 28);
-      background: url(../../img/medical/medical__bg--bottom-sp.webp) no-repeat bottom center/cover;
+      background: url(../img/medical__bg--bottom-sp.webp) no-repeat bottom center/cover;
     }
   }
   @include mq(sp) {
@@ -53,14 +53,14 @@
     bottom: -81px;
     aspect-ratio: 57/56;
     width: calc(57 / 1280 * 100%);
-    background: url(../../img/medical/deco-kirakira-single.webp) no-repeat center/cover;
+    background: url(./img/deco-kirakira-single.webp) no-repeat center/cover;
   }
   &::after {
     right: 21px;
     bottom: -103px;
     aspect-ratio: calc(125 / 138);
     width: calc(125 / 1280 * 100%);
-    background: url(../../img/medical/deco-kirakira-double.webp) no-repeat center/cover;
+    background: url(./img/deco-kirakira-double.webp) no-repeat center/cover;
   }
   @include mq(sp) {
     &::before {
