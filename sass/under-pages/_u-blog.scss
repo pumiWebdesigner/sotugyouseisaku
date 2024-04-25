@@ -1,6 +1,5 @@
 @use "sass:map";
-@use "../sass/global/" as *;
-@use "../sass/blocks/" as *;
+@use "../global" as *;
 
 .staff-blog {
   margin-top: 80px;
@@ -273,12 +272,12 @@
     left: 16px;
     width: 16px;
     height: 16px;
-    background: url(../img/pagenation-arrow-left.svg) no-repeat;
+    background: url(./img/pagenation-arrow-left.svg) no-repeat;
     @include mq(sp-tab) {
       top: 7px;
       transform: revert;
       left: 14px;
-      background: url(../img/pagenation-arrow-left-sp.svg) no-repeat;
+      background: url(img/pagenation-arrow-left-sp.svg) no-repeat;
     }
   }
 }
@@ -314,12 +313,12 @@
     right: 15px;
     width: 16px;
     height: 16px;
-    background: url(../img/pagenation-arrow-right.svg) no-repeat;
+    background: url(img/pagenation-arrow-right.svg) no-repeat;
     @include mq(sp-tab) {
       top: 7px;
       transform: revert;
       right: 12px;
-      background: url(../img/pagenation-arrow-right-sp.svg) no-repeat;
+      background: url(img/pagenation-arrow-right-sp.svg) no-repeat;
     }
   }
 }
@@ -403,7 +402,7 @@
       right: 0;
       width: 18px;
       height: 18px;
-      background: url(../img/link-arrow-right.svg) no-repeat;
+      background: url(img/link-arrow-right.svg) no-repeat;
     }
   }
 }
@@ -438,7 +437,7 @@
     left: 20px;
     width: 6px;
     height: 12px;
-    background: url(../img/category-arrow.svg) no-repeat;
+    background: url(img/category-arrow.svg) no-repeat;
   }
   transition: all 0.3s ease;
   @media (hover: hover) {

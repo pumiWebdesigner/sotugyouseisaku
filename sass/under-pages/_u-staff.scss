@@ -1,6 +1,5 @@
 @use "sass:map";
-@use "../sass/global/" as *;
-@use "../sass/blocks/" as *;
+@use "../global" as *;
 
 .greeting {
   margin-top: 87px;
@@ -142,10 +141,11 @@
     margin-top: 98px;
   }
 }
-.swiper-wrapper {
+
+.staff-wrapper {
   transition-timing-function: linear;
 }
-.swiper-slide {
+.staff-slide {
   width: 305px;
   @media screen and (max-width: 1023px) {
     width: 200px;

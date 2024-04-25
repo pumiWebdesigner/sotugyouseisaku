@@ -1,6 +1,5 @@
 @use "sass:map";
-@use "../sass/global/" as *;
-@use "../sass/blocks/" as *;
+@use "../global" as *;
 
 .medical-u {
   margin-top: 338px;
