@@ -4089,6 +4089,8 @@ input[type="date"].is-input::before {
 
 .practice-nav__inner {
   padding-inline: clamp(20px, 20px + 42 * (100vw - 375px) / 905, 62px);
+  margin-inline: auto;
+  max-width: 1124px;
 }
 
 .practice-nav--items {
